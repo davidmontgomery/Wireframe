@@ -1,0 +1,278 @@
+/* =General
+-------------------------------------------- */
+html {
+  overflow-y: scroll;
+}
+
+body {
+  background: #ccc;
+  color: #333;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
+  /* font-family: "Georgia", "Times New Roman", "Times", "serif"; */
+  line-height: 1;
+  font-size: 75%; /* 12/16 = 0.75 - http://pxtoem.com/ */
+}
+
+/* =Sticky footer
+----------------------------------------- */
+html, body {
+  height: 100%;
+}
+
+#container {
+  height: 100%;
+  height: auto !important;
+  min-height: 100%;
+  position: relative;
+}
+
+#layout {
+  padding-bottom: 150px;
+  /* Height of footer */
+
+}
+#footer {
+  background: #666;
+  height: 150px;
+  margin-top: -150px;
+  /* Height of footer */
+  position: relative;
+}
+
+/* =Footer
+----------------------------------------------- */
+#inner_footer {
+  background: #000000;
+  height: 110px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 920px;
+}
+
+/* =Header
+----------------------------------------- */
+#header {
+  background: #7b7b7b;
+  height: 185px;
+  position: relative;
+}
+
+#header h1 {
+  color: #333;
+  font-size: 2.25em;
+  font-weight: bold;
+}
+
+#header h1 a {
+  color: green;
+}
+
+#header .tagline {
+  color: #ccc;
+  font-size: 1.167em;
+  font-style: italic;
+}
+
+.branding {
+  left: 140px;
+  position: absolute;
+  top: 50px;
+}
+
+.tagline {
+  color: #ccc;
+}
+
+.logo {
+  background: url(../images/temp-logo.png) no-repeat 0 0;
+  display: block;
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+/* =Navigation
+----------------------------------------- */
+
+/* Main nav */
+#nav {
+  background: #7b7b7b;
+  bottom: 0;
+  position: absolute;
+  right: 0;
+}
+
+#nav ul {
+  float: right;
+  margin-right: 10px;
+}
+
+#nav li {
+  float: left;
+  list-style: none;
+  margin-right: 2px;
+}
+
+#nav a {
+  background: #c2c2c2;
+  color: #333;
+  display: block;
+  float: left;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#nav a:hover {
+  background: #93C7E7;
+  color: #fff;
+}
+
+#nav a:hover,
+#nav a.current,
+#nav a.section,
+#nav a.section:hover,
+#nav.current:hover {
+  background: #fff;
+  color: #2361A1;
+}
+
+/* Subnav */
+.typography .subnav {
+  margin: 0;
+  padding: 0;
+}
+
+.typography .subnav li {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.typography .subnav li.current a {
+  color: #000;
+}
+
+/* =Breadcrumbs
+-------------------------------------------- */
+#breadcrumbs {
+  color: #B7C0C5;
+  font-size: 0.9em;
+  margin: 0px 5px 10px 0;
+  text-align: left;
+}
+
+#breadcrumbs p {
+  margin: 0;
+}
+
+/* =Layout
+----------------------------------------- */
+#container {
+  background: #fff;
+  margin: 0 auto;
+  width: 960px;
+}
+
+/* Layout */
+#layout {
+  padding: 20px;
+  padding-bottom: 170px;
+  /* Sticky footer + extra bottom spacing */
+
+}
+
+/* Column */
+.col {
+  background: #f2f2f2;
+  float: left;
+  margin-right: 20px;
+  width: 290px;
+}
+
+/* Grids */
+.grid_1 {
+  width: 700px;
+}
+
+.grid_2 {
+  width: 200px;
+}
+
+.col.last {
+  margin-right: 0;
+}
+
+/* Padding */
+.padding_10 {
+  padding: 10px;
+}
+/* =Home
+-------------------------------------------- */
+/* =About
+-------------------------------------------- */
+/* =Contact
+-------------------------------------------- */
+
+/* =Media queries
+----------------------------------------------- */
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+/* =Print
+----------------------------------------------- */
+@media print {
+  * {
+    background: transparent !important;
+    color: black !important;
+    text-shadow: none !important;
+    filter: none !important;
+    -ms-filter: none !important;
+  }
+  /* Black prints faster: sanbeiji.com/archives/953 */
+  a, a:visited {
+    color: #444 !important;
+    text-decoration: underline;
+  }
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+  .ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+    content: "";
+  }
+  /* Don't show links for images, or javascript/internal links */
+  pre, blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+  thead {
+    display: table-header-group;
+  }
+  /* css-discuss.incutio.com/wiki/Printing_Tables */
+  tr, img {
+    page-break-inside: avoid;
+  }
+  @page  {
+    margin: 0.5cm;
+  }
+  p, h2, h3 {
+    orphans: 3;
+    widows: 3;
+  }
+  h2, h3 {
+    page-break-after: avoid;
+  }
+}
