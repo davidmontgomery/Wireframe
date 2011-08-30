@@ -1,3 +1,7 @@
+/* @override http://wireframe/themes/wireframe/css/layout.css?m=1314685876 */
+
+/* @override http://wireframe/themes/wireframe/css/layout.css?m=1314685777 */
+
 /* =General
 -------------------------------------------- */
 html {
@@ -13,6 +17,9 @@ body {
   font-size: 75%; /* 12/16 = 0.75 - http://pxtoem.com/ */
 }
 
+.accessibility {
+	display: none;
+}
 /* =Sticky footer
 ----------------------------------------- */
 html, body {
@@ -31,6 +38,7 @@ html, body {
   /* Height of footer */
 
 }
+
 #footer {
   background: #666;
   height: 150px;
@@ -42,7 +50,7 @@ html, body {
 /* =Footer
 ----------------------------------------------- */
 #inner_footer {
-  background: #000000;
+  background: #333;
   height: 110px;
   margin: 0 auto;
   padding: 20px;
@@ -58,9 +66,10 @@ html, body {
 }
 
 #header h1 {
-  color: #333;
+  color: #000;
   font-size: 2.25em;
   font-weight: bold;
+  margin: 0 0 5px 0;
 }
 
 #header h1 a {
@@ -74,9 +83,9 @@ html, body {
 }
 
 .branding {
-  left: 140px;
+  left: 160px;
   position: absolute;
-  top: 50px;
+  top: 52px;
 }
 
 .tagline {
@@ -86,10 +95,10 @@ html, body {
 .logo {
   background: url(../images/temp-logo.png) no-repeat 0 0;
   display: block;
-  height: 100px;
-  width: 100px;
+  height: 59px;
+  width: 125px;
   position: absolute;
-  top: 20px;
+  top: 50px;
   left: 20px;
 }
 
@@ -102,11 +111,14 @@ html, body {
   bottom: 0;
   position: absolute;
   right: 0;
+
 }
 
 #nav ul {
   float: right;
+  margin: 0;
   margin-right: 10px;
+  
 }
 
 #nav li {
@@ -208,6 +220,29 @@ html, body {
 .padding_10 {
   padding: 10px;
 }
+
+/* =Buttons
+----------------------------------------- */
+.button {
+    background: #E1E1E1;
+    border: 1px solid #B8B8B8;
+    border-radius: 4px;
+    color: #525252;
+    cursor: pointer;
+    font-weight: bold;
+    height: 25px;
+    line-height: 22px;
+    margin: 0;
+    padding: 3px 6px;
+    text-align: center;
+    text-shadow: 0 1px 0 white;
+}
+
+.button:hover {
+	background: #ccc;
+}
+
+
 /* =Home
 -------------------------------------------- */
 /* =About

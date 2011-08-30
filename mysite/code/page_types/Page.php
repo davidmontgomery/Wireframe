@@ -9,6 +9,11 @@ class Page extends SiteTree {
 }
 
 class Page_Controller extends ContentController {
+	
+	protected function CacheSegment() {
+		return $_SERVER["REQUEST_URI"];
+	}
+	
 	public function init() {
 		parent::init();
 

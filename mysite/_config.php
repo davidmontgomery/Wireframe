@@ -9,7 +9,7 @@ $project          = 'mysite'; // Sets mysite directory
 $projectName      = 'wireframe'; // Sets theme directory name
 $siteName         = 'My website'; // Sets website name for contact email
 $emailSubjectLine = 'Contact email subject line.'; // Sets contact email subject line
-$adminEmail       = 'contact@davidmontgomery.co.nz'; // Sets administrators email address
+$adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email address
 
 
 /**********************
@@ -45,28 +45,39 @@ define('SITE_NAME', $siteName);
 // Director::set_environment_type('live');
 // if(Director::isTest() BasicAuth::protect_entire_site();
 
+
+// custom site config
+DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
+
 Director::set_dev_servers(array(
 	$projectName
 ));
 
 
-if(Director::isLive()) {
-	// Site is in LIVE MODE
+if (Director::isLive()) {
+	// Site is in Live mode
 	$databaseConfig = array(
 		'type' => '',
 		'server' => '',
 		'username' => '',
 		'password' => '',
 		'database' => $projectName
-	); 
-} else {
+	);
+	
+	SS_Cache::set_cache_lifetime('any', 3600, 100);
+	
+} else if (Director::isDev()) {
+	// Site is in Dev and Test mode
+	SS_Cache::set_cache_lifetime('any', -1, 100); // No partial caching
 	SSViewer::flush_template_cache(); // Prevents needing ?flush=1 on the end of a URL
+} else {
+	// Site is Test
+	SS_Cache::set_cache_lifetime('any', 3600, 100);
 }
 
 // Local database settings
 $database = $projectName;
 require_once("conf/ConfigureFromEnv.php");
-
 
 
 /**********************

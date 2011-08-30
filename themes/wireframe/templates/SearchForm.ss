@@ -1,4 +1,4 @@
-<form id="searchform" $FormAttributes>
-	<input name="Search" type="text" class="search" placeholder="search">
-	<input type="submit" class="searchButton" value="Go">
+<form id="searchForm" $FormAttributes>
+	<input name="Search" type="text" placeholder="Search">
+	<input type="submit" class="button" value="Go">
 </form>

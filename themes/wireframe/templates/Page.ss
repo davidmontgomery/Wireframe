@@ -1,5 +1,8 @@
 <!DOCTYPE html>
-<html class="no-js" lang="$ContentLocale">
+<!--[if lt IE 7 ]><html class="no-js ie6" lang="en"><![endif]-->
+<!--[if IE 7 ]>   <html class="no-js ie7" lang="en"><![endif]-->
+<!--[if IE 8 ]>   <html class="no-js ie8" lang="en"><![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html class="no-js" lang="$ContentLocale"><!--<![endif]-->
 <head>
 	<% base_tag %>
 	<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
@@ -13,11 +16,11 @@
 			$SearchForm
 			<% include Branding %>
 			<% include Navigation %>
-		</div><!-- /#header -->
+		</div><!-- /header -->
 		<div id="layout" class="typography clearfix">
 			$Layout
-		</div><!-- /#layout -->
-	</div><!-- /#container -->
-	<% include Footer %>
+		</div><!-- /layout -->
+	</div><!-- /container -->
+	<% include Footer %> 
 </body>
 </html>

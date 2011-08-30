@@ -1,11 +1,14 @@
-<div id="nav" class="clearfix">
-	<ul>
-		<% control Menu(1) %>
-			<li class="$URLSegment">
-				<a href="$Link" title="Go to the $Title page" class="$LinkingMode" accesskey="$Pos">
-					<span>$MenuTitle</span>
-				</a>
-			</li>
-		<% end_control %>
-	</ul>
-</div>
+<!-- Maybe only required if heavy navigation -->
+<% cached 'Navigation', ID, Aggregate(Page).Max(LastEdited), Aggregate(SiteConfig).Max(LastEdited) %>
+	<div id="nav" class="clearfix">
+		<ul>
+			<% control Menu(1) %>
+				<li class="$URLSegment">
+					<a href="$Link" title="Go to the $Title page" class="$LinkingMode" accesskey="$Pos">
+						<span>$MenuTitle</span>
+					</a>
+				</li>
+			<% end_control %>
+		</ul>
+	</div>
+<% end_cached %>

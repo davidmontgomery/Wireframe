@@ -1,0 +1,10 @@
+<?php
+				$classes = array (
+  0 => 
+  array (
+    'className' => 'ImageUploadField',
+    'extends' => 'FileUploadField',
+  ),
+);
+				$interfaces = array (
+);
