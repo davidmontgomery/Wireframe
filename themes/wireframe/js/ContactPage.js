@@ -1,6 +1,7 @@
 (function($) {
 	$(document).ready(function() {
-
+		
+		// http:docs.jquery.com/Plugins/Validation/validate
 		$("#ContactForm_ContactForm").validate({
 			// debug: true,
 			// highlight adds a class of errorClass on the field div
@@ -29,6 +30,9 @@
 			},
 			*/
 			rules: {
+				Title: {
+					required: true,
+				},
 				Name: {
 					required: true,
 					minlength: 2
@@ -39,19 +43,34 @@
 				},
 				Message: {
 					required: true
+				},
+				TermsConditions: {
+					required: true
+				},
+				Sex: {
+					required: true
 				}
 			},
 			messages: {
+				Title: {
+					required: "You must select one option"
+				},
 				Name: {
-					required: "The name is required (Custom)",
-					minlength: jQuery.format("At least {0} characters required! (Custom)")
+					required: "The name is required",
+					minlength: jQuery.format("At least {0} characters required!")
 				},
 				Email: {
-					required: "The email is required (Custom)",
-					email: "Please provide a valid email address (Custom)"
+					required: "The email is required",
+					email: "Please provide a valid email address"
 				},
 				Message: {
-					required: "The message is required (Custom)"
+					required: "The message is required"
+				},
+				TermsConditions: {
+					required: "You must read the terms and conditions"
+				},
+				Sex: {
+					required: "You must select at least one option"
 				}
 			}
 		});

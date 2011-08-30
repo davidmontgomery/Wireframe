@@ -36,15 +36,18 @@ define('EMAIL_SUBJECT_LINE', $emailSubjectLine);
 define('SITE_NAME', $siteName);
 
 
+
+
+
 /**********************
  * 
  * Environment
  * 
  **********************/
-//Director::set_environment_type('test');
+// Director::set_environment_type('test');
 // Director::set_environment_type('live');
 // if(Director::isTest() BasicAuth::protect_entire_site();
-
+// CMSMenu::remove_menu_item('ReportAdmin');
 
 // custom site config
 DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
@@ -96,7 +99,7 @@ require_once("conf/ConfigureFromEnv.php");
 LeftAndMain::setApplicationName('Wireframe');
 LeftAndMain::setLogo('themes/wireframe/images/cms-logo.png', 'margin-top: -3px;');
 LeftAndMain::set_loading_image('themes/wireframe/images/CMSLoading.gif');
-
+//LeftAndMain::require_css('themes/wireframe/css/cms.css');
 
 /**********************
 *
@@ -131,6 +134,7 @@ i18n::set_locale('en_US');
 
 // Enable nested URLs for this site (e.g. page/sub-page/)
 SiteTree::enable_nested_urls();
+SiteTree::$breadcrumbs_delimiter = ' >> ';
 
 // Image Quality
 GD::set_default_quality(100);

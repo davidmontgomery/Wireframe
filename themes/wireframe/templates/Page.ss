@@ -21,6 +21,6 @@
 			$Layout
 		</div><!-- /layout -->
 	</div><!-- /container -->
-	<% include Footer %> 
+	<% include Footer %>
 </body>
 </html>

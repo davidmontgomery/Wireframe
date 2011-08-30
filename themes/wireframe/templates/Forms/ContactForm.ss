@@ -7,6 +7,7 @@
 		<p id="{$FormName}_error" class="message $MessageType"></p>
 	<% end_if %>
 	
+	<!-- Error block for jQuery messages -->
 	<div id="errorBox">
 		<ul></ul>
 	</div>
@@ -29,22 +30,16 @@
 	</div>
 	<div class="field checkbox">
 		$dataFieldByName(TermsConditions)
-		<label for="$dataFieldByName(TermsConditions).id">Terms and conditions</label>
+		<label for="$dataFieldByName(EmailUpdates).id">Send me email updates</label>
 	</div>
 	<div class="field radio">
 		<label for="$dataFieldByName(Sex).id">Sex:</label>
 		$dataFieldByName(Sex)
 	</div>
-
 	$dataFieldByName(SecurityID)
-
 	<% if Actions %>
-	<div class="Actions">
-
-					<input type="submit" title="Send" value="Send" name="action_SendContactForm" class="action ">
-				</div>
-				<% end_if %>
-			
-			
-
+		<div class="Actions">
+			<input type="submit" title="Send" value="Send" name="action_SendContactForm" class="action ">
+		</div>
+	<% end_if %>
 </form>

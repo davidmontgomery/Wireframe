@@ -184,7 +184,7 @@ $val .=  $item->XML_val("Layout",null,true) ;
 	<div id="inner_footer">
 
 	</div>
-</div> 
+</div>
 </body>
 </html>
 SSVIEWER;
