@@ -185,6 +185,7 @@ $val .=  $item->XML_val("Layout",null,true) ;
 
 	</div>
 </div>
+	
 </body>
 </html>
 SSVIEWER;

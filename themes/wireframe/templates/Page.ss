@@ -22,5 +22,6 @@
 		</div><!-- /layout -->
 	</div><!-- /container -->
 	<% include Footer %>
+	<% include GoogleAnalytics %>
 </body>
 </html>

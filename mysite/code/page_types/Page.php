@@ -14,6 +14,10 @@ class Page_Controller extends ContentController {
 		return $_SERVER["REQUEST_URI"];
 	}
 	
+	protected function IsLive() {
+		return Director::isLive();
+	}
+	
 	public function init() {
 		parent::init();
 
@@ -51,15 +55,6 @@ class Page_Controller extends ContentController {
 		// Modernizr - to be put in the document head section
 		Requirements::insertHeadTags('<script src="' . JS_PATH . '/modernizr-1.7.min.js"></script>');
 		
-		if (Director::isLive()) { 
-			Requirements::customScript("
-				var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-				(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-				g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-				s.parentNode.insertBefore(g,s)}(document,'script'));
-			", 'google-analytics');
-		}
-		
 		// Requirements
 		foreach ($css as $c) {
 			Requirements::css($c);
@@ -74,5 +69,6 @@ class Page_Controller extends ContentController {
 			Requirements::combine_files('combined.css', $css);
 			Requirements::combine_files('combined.js', $js);
 			Requirements::process_combined_files();
-	} 
+	}
+	
 }
