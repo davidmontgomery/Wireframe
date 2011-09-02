@@ -1,14 +1,20 @@
 <div class="content">
-	<div class="col_1">
+	<div class="grid_full">
 		<% include BreadCrumbs %>
-		<h1>$Title</h1>
-		$Content
-		$Form
-		$PageComments
-	</div><!-- /col_1 -->
-	<div class="col_2">
-		<% if Menu(2) %>
-			<% include SubNavigation %>
-		<% end_if %>
+	</div>
+	<div class="grid_1">
+		<div class="inner padding_1">
+				<h1>$Title</h1>
+				$Content
+				$Form
+				$PageComments
+		</div>
+	</div><!-- /grid_1 -->
+	<div class="grid_2">
+		<div class="inner padding_1">
+			<% if Menu(2) %>
+				<% include SubNavigation %>
+			<% end_if %>
+		</div>
 	</div><!-- /col_2 -->
 </div><!-- /content -->

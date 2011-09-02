@@ -1,6 +1,6 @@
-/* @override http://wireframe/themes/wireframe/css/layout.css?m=1314685876 */
-
-/* @override http://wireframe/themes/wireframe/css/layout.css?m=1314685777 */
+/*
+	Comments - sentence case.
+*/
 
 /* =General
 -------------------------------------------- */
@@ -182,42 +182,38 @@ html, body {
 /* =Layout
 ----------------------------------------- */
 #container {
-  background: #fff;
-  margin: 0 auto;
-  width: 960px;
+	background: #fff;
+	margin: 0 auto;
+	width: 960px;
 }
 
-/* Layout */
-#layout {
-  padding: 20px;
-  padding-bottom: 170px;
-  /* Sticky footer + extra bottom spacing */
-
+.content {
+	padding: 20px 20px 100px 20px;
 }
 
-/* Column */
-.col {
-  background: #f2f2f2;
-  float: left;
-  margin-right: 20px;
-  width: 290px;
+/*
+	Grid System:
+	Define grid size. Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
+*/
+.grid_full {
+	background: #f2f2f2;
 }
 
-/* Grids */
 .grid_1 {
-  width: 700px;
+	background: #f2f2f2;
+	float: left;
+	margin-right: 20px;
+	width: 700px;
 }
 
 .grid_2 {
-  width: 200px;
+	background: #f2f2f2;
+	float: left;
+	width: 200px;
 }
 
-.col.last {
-  margin-right: 0;
-}
-
-/* Padding */
-.padding_10 {
+/* Padding helpers */
+.padding_1 {
   padding: 10px;
 }
 
