@@ -89,7 +89,7 @@ html, body {
   min-height: 100%;
   position: relative;
 }
-#layout {
+.layout {
   padding-bottom: 150px;
   /* height of footer */
 
@@ -213,8 +213,10 @@ html, body {
   margin: 0 auto;
   width: 960px;
 }
-.content {
-  padding: 20px 20px 100px 20px;
+.layout {
+  padding-top: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 /*
  Grid System:

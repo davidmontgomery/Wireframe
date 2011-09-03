@@ -17,7 +17,7 @@
 			<% include Branding %>
 			<% include Navigation %>
 		</div><!-- /header -->
-		<div id="layout" class="typography clearfix">
+		<div class="layout typography clearfix">
 			$Layout
 		</div><!-- /layout -->
 	</div><!-- /container -->

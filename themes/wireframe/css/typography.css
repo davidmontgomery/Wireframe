@@ -48,6 +48,13 @@ body {
 }
 /* Headings
 -------------------------------------------- */
+.typography p + h2,
+.typography p + h3,
+.typography p + h4,
+.typography p + h5,
+.typography p + h6 {
+  margin-top: 30px;
+}
 .typography h1 {
   font-weight: normal;
   font-size: 2em;
@@ -70,19 +77,19 @@ body {
   font-weight: normal;
   font-size: 16px;
   color: #333;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 .typography h5 {
   font-weight: normal;
   font-size: 14px;
   color: #333;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 .typography h6 {
   font-weight: normal;
   font-size: 13px;
   color: #333;
-  margin: 0 0 5px 0;
+  margin: 0 0 10px 0;
 }
 /* Quotes
 -------------------------------------------- */

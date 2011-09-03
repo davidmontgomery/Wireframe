@@ -1,31 +1,43 @@
-<div class="content">
-	<div class="grid_full">
-		<% include BreadCrumbs %>
+<div class="grid_full">
+	<% include BreadCrumbs %>
+</div>
+<div class="grid_1">
+	<div class="padding_1">
+		<h1>$Title</h1>
+		<h2>Heading level 2</h2>
+		<p>This is a <a href="#">link</a> dolor sit amet, <strong>bold text</strong> and  <em>emphasized</em>, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>This is an <a href="http://www.test.com">external link</a>, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<ul>
+			<li><a href="#">List item</a></li>
+			<li>List item</li>
+			<li>List item</li>
+		</ul>
+		<ol>
+			<li><a href="#">List item</a></li>
+			<li>List item</li>
+			<li>List item</li>
+		</ol>
+		<h3>Heading level 3</h3>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h4>Heading level 4</h4>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h4>Heading level 5</h4>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<h4>Heading level 6</h4>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 	</div>
-	<div class="grid_1">
+</div><!-- /grid_1 -->
+<div class="grid_2">
+	<div class="box">
 		<div class="padding_1">
-			<h1>$Title</h1>
-			<h2>Heading level 2</h2>
-			<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<h3>Heading level 3</h3>
-			<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-			<ul>
-				<li>List item</li>
-				<li>List item</li>
-				<li>List item</li>
-			</ul>
+			<p>Here is and example of a box class.</p>
 		</div>
-	</div><!-- /grid_1 -->
-	<div class="grid_2">
-		<div class="box">
-			<div class="padding_1">
-				<p>Here is and example of a box class.</p>
-			</div>
-		</div>
-		<% if Menu(2) %>
-			<% include SubNavigation %>
-		<% end_if %>
-	</div><!-- /col_2 -->
-</div><!-- /content -->
+	</div>
+	<% if Menu(2) %>
+		<% include SubNavigation %>
+	<% end_if %>
+</div><!-- /col_2 -->
