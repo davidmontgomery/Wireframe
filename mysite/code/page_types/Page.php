@@ -38,8 +38,9 @@ class Page_Controller extends ContentController {
 		// CSS
 		$css = array(
 			CSS_PATH . '/reset.css',
+			CSS_PATH . '/editor.css',
+			CSS_PATH . '/variables.css',
 			CSS_PATH . '/layout.css',
-			CSS_PATH . '/typography.css',
 			CSS_PATH . '/form.css',
 			CSS_PATH . '/prettyPhoto.css'
 		);
@@ -65,10 +66,10 @@ class Page_Controller extends ContentController {
 		}
 		
 		// Combine: To test set to 'test' in _config
-			Requirements::set_combined_files_folder(COMBINE_PATH);
-			Requirements::combine_files('combined.css', $css);
-			Requirements::combine_files('combined.js', $js);
-			Requirements::process_combined_files();
+		Requirements::set_combined_files_folder(COMBINE_PATH);
+		Requirements::combine_files('combined.css', $css);
+		Requirements::combine_files('combined.js', $js);
+		Requirements::process_combined_files();
 	}
 	
 }

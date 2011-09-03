@@ -1,0 +1,286 @@
+@import "variables.less";
+
+/* --------------------------------------------------------
+ * Mini reset
+ * -------------------------------------------------------- */
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td { margin: 0; padding: 0; }
+table { border-collapse: collapse; border-spacing: 0; width: 100%; }
+fieldset, img { border: 0; }
+
+/* --------------------------------------------------------
+ * General
+ * -------------------------------------------------------- */
+html {
+  overflow-y: scroll;
+}
+
+body {
+	background: #ccc;
+	color: #333; 
+	line-height: 1;
+	font-size: 75%; /* 12/16 = 0.75 - http://pxtoem.com/ */
+}
+
+.accessibility {
+	display: none;
+}
+
+/* --------------------------------------------------------
+ * Modules
+ * -------------------------------------------------------- */
+.box {
+	width: 175px;
+	background: #f2f2f2;
+	margin-bottom: 20px;
+	.border_radius(5px);
+	.box_shadow(0, 0, 5px, 0.4);
+	&.large {
+		width: 300px;
+	}
+}
+
+/* --------------------------------------------------------
+ * Sticky footer
+ * -------------------------------------------------------- */
+html, body {
+	height: 100%;
+}
+
+#container {
+	height: 100%;
+	height: auto !important;
+	min-height: 100%;
+	position: relative;
+}
+
+#layout {
+  padding-bottom: 150px;  /* height of footer */
+}
+
+#footer {
+	background: #666;
+	height: 150px; /* height of footer */
+	margin-top: -150px;
+	position: relative;
+}
+
+/* --------------------------------------------------------
+ * Footer
+ * -------------------------------------------------------- */
+#inner_footer {
+	background: #333;
+	height: 110px;
+	margin: 0 auto;
+	padding: 20px;
+	width: 920px;
+}
+
+/* --------------------------------------------------------
+ * Header
+ * -------------------------------------------------------- */
+#header {
+	background: #7b7b7b;
+	height: 185px;
+	position: relative;
+	h1 {
+		color: #000;
+		font-size: 2.25em;
+		font-weight: bold;
+		margin: 0 0 5px 0;
+	}
+	.tagline {
+		color: #ccc;
+		font-size: 1.167em;
+		font-style: italic;
+	}
+	.branding {
+		left: 160px;
+		position: absolute;
+		top: 52px;
+	}
+	.logo {
+		background: url(../images/temp-logo.png) no-repeat 0 0;
+		display: block;
+		height: 59px;
+		width: 125px;
+		position: absolute;
+		top: 50px;
+		left: 20px;
+	}
+}
+
+/* --------------------------------------------------------
+ * Navigation
+ * -------------------------------------------------------- */
+#nav {
+	background: #7b7b7b;
+	bottom: 0;
+	position: absolute;
+	right: 0;
+	ul {
+		float: right;
+		margin: 0;
+		margin-right: 10px;
+	}
+	li {
+		float: left;
+		list-style: none;
+		margin-right: 2px;
+	}
+	a {
+		background: #c2c2c2;
+		color: #333;
+		display: block;
+		float: left;
+		padding: 10px;
+		text-decoration: none;
+		&:hover,
+		&.current,
+		&.section,
+		&.current:hover,
+		&.section:hover {
+			background: #fff;
+			color: #2361A1;
+		}
+	}
+}
+
+/* Subnav */
+.typography .subnav {
+  margin: 0;
+  padding: 0;
+}
+
+.typography .subnav li {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 5px 0;
+}
+
+.typography .subnav li.current a {
+  color: #000;
+}
+
+/* --------------------------------------------------------
+ * Breadcrumbs
+ * -------------------------------------------------------- */
+#breadcrumbs {
+	color: #B7C0C5;
+	font-size: 0.9em;
+	margin: 0px 5px 10px 0;
+	text-align: left;
+	p {
+		margin: 0;
+	}
+}
+
+/* --------------------------------------------------------
+ * Layout
+ * -------------------------------------------------------- */
+#container {
+	background: #fff;
+	margin: 0 auto;
+	width: 960px;
+}
+
+.content {
+	padding: 20px 20px 100px 20px;
+}
+
+/*
+ Grid System:
+ Define grid size. Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
+*/
+.grid_full {
+	background: #f2f2f2;
+}
+
+.grid_1 {
+	background: #f2f2f2;
+	float: left;
+	margin-right: 20px;
+	width: 700px;
+}
+
+.grid_2 {
+	background: #f2f2f2;
+	float: left;
+	width: 200px;
+}
+
+/* Padding */
+.padding_1 {
+  padding: 10px;
+}
+
+/* =Buttons
+----------------------------------------- */
+
+/* =Home
+-------------------------------------------- */
+/* =About
+-------------------------------------------- */
+/* =Contact
+-------------------------------------------- */
+
+/* =Media queries
+----------------------------------------------- */
+@media all and (orientation:portrait) {
+  /* Style adjustments for portrait mode goes here */
+}
+@media all and (orientation:landscape) {
+  /* Style adjustments for landscape mode goes here */
+}
+/* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
+   consider this: www.cloudfour.com/css-media-query-for-mobile-is-fools-gold/ */
+@media screen and (max-device-width: 480px) {
+  /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
+  /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
+}
+/* =Print
+----------------------------------------------- */
+@media print {
+	* {
+		background: transparent !important;
+		color: black !important;
+		text-shadow: none !important;
+		filter: none !important;
+		-ms-filter: none !important;
+	}
+	/* Black prints faster: sanbeiji.com/archives/953 */
+	a, a:visited {
+		color: #444 !important;
+		text-decoration: underline;
+	}
+	a[href]:after {
+		content: " (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content: " (" attr(title) ")";
+	}
+	.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+		content: "";
+	}
+	/* Don't show links for images, or javascript/internal links */
+	pre, blockquote {
+		border: 1px solid #999;
+		page-break-inside: avoid;
+	}
+	thead {
+		display: table-header-group;
+	}
+	/* css-discuss.incutio.com/wiki/Printing_Tables */
+	tr, img {
+		page-break-inside: avoid;
+	}
+	@page  {
+	  margin: 0.5cm;
+	}
+	p, h2, h3 {
+		orphans: 3;
+	 	widows: 3;
+	}
+	h2, h3 {
+		page-break-after: avoid;
+	}
+}

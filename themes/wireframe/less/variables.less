@@ -1,0 +1,23 @@
+/* =Fonts
+-------------------------------------------- */
+@lucida_grande: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
+@georgia: "Georgia", "Times New Roman", "Times", "serif";
+
+/* =Colours
+-------------------------------------------- */
+@link_color: #2361a1;
+
+/* =CSS3
+-------------------------------------------- */
+.border_radius (@radius: 10px) {
+	-moz-border-radius: @radius;
+	-webkit-border-radius: @radius;
+	border-radius: @radius;
+}
+
+.box_shadow (@x: 0, @y: 0, @blur: 1px, @alpha) {
+	@val: @x @y @blur rgba(0, 0, 0, @alpha);
+	box-shadow:         @val;
+	-webkit-box-shadow: @val;
+	-moz-box-shadow:    @val;
+}

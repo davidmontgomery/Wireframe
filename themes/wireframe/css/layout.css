@@ -1,54 +1,110 @@
-/*
-	Comments - sentence case.
-*/
-
-/* =General
+/* =Fonts
 -------------------------------------------- */
+/* =Colours
+-------------------------------------------- */
+/* =CSS3
+-------------------------------------------- */
+/* --------------------------------------------------------
+ * Mini reset
+ * -------------------------------------------------------- */
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+legend,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+fieldset, img {
+  border: 0;
+}
+/* --------------------------------------------------------
+ * General
+ * -------------------------------------------------------- */
 html {
   overflow-y: scroll;
 }
-
 body {
   background: #ccc;
   color: #333;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
-  /* font-family: "Georgia", "Times New Roman", "Times", "serif"; */
   line-height: 1;
-  font-size: 75%; /* 12/16 = 0.75 - http://pxtoem.com/ */
-}
+  font-size: 75%;
+  /* 12/16 = 0.75 - http://pxtoem.com/ */
 
-.accessibility {
-	display: none;
 }
-/* =Sticky footer
------------------------------------------ */
+.accessibility {
+  display: none;
+}
+/* --------------------------------------------------------
+ * Modules
+ * -------------------------------------------------------- */
+.box {
+  width: 175px;
+  background: #f2f2f2;
+  margin-bottom: 20px;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+.box.large {
+  width: 300px;
+}
+/* --------------------------------------------------------
+ * Sticky footer
+ * -------------------------------------------------------- */
 html, body {
   height: 100%;
 }
-
 #container {
   height: 100%;
   height: auto !important;
   min-height: 100%;
   position: relative;
 }
-
 #layout {
   padding-bottom: 150px;
-  /* Height of footer */
+  /* height of footer */
 
 }
-
 #footer {
   background: #666;
   height: 150px;
+  /* height of footer */
+
   margin-top: -150px;
-  /* Height of footer */
   position: relative;
 }
-
-/* =Footer
------------------------------------------------ */
+/* --------------------------------------------------------
+ * Footer
+ * -------------------------------------------------------- */
 #inner_footer {
   background: #333;
   height: 110px;
@@ -56,43 +112,31 @@ html, body {
   padding: 20px;
   width: 920px;
 }
-
-/* =Header
------------------------------------------ */
+/* --------------------------------------------------------
+ * Header
+ * -------------------------------------------------------- */
 #header {
   background: #7b7b7b;
   height: 185px;
   position: relative;
 }
-
 #header h1 {
   color: #000;
   font-size: 2.25em;
   font-weight: bold;
   margin: 0 0 5px 0;
 }
-
-#header h1 a {
-  color: green;
-}
-
 #header .tagline {
   color: #ccc;
   font-size: 1.167em;
   font-style: italic;
 }
-
-.branding {
+#header .branding {
   left: 160px;
   position: absolute;
   top: 52px;
 }
-
-.tagline {
-  color: #ccc;
-}
-
-.logo {
+#header .logo {
   background: url(../images/temp-logo.png) no-repeat 0 0;
   display: block;
   height: 59px;
@@ -101,32 +145,25 @@ html, body {
   top: 50px;
   left: 20px;
 }
-
-/* =Navigation
------------------------------------------ */
-
-/* Main nav */
+/* --------------------------------------------------------
+ * Navigation
+ * -------------------------------------------------------- */
 #nav {
   background: #7b7b7b;
   bottom: 0;
   position: absolute;
   right: 0;
-
 }
-
 #nav ul {
   float: right;
   margin: 0;
   margin-right: 10px;
-  
 }
-
 #nav li {
   float: left;
   list-style: none;
   margin-right: 2px;
 }
-
 #nav a {
   background: #c2c2c2;
   color: #333;
@@ -135,117 +172,80 @@ html, body {
   padding: 10px;
   text-decoration: none;
 }
-
-#nav a:hover {
-  background: #93C7E7;
-  color: #fff;
-}
-
 #nav a:hover,
 #nav a.current,
 #nav a.section,
-#nav a.section:hover,
-#nav.current:hover {
+#nav a.current:hover,
+#nav a.section:hover {
   background: #fff;
   color: #2361A1;
 }
-
 /* Subnav */
 .typography .subnav {
   margin: 0;
   padding: 0;
 }
-
 .typography .subnav li {
   list-style: none;
   padding: 0;
   margin: 0 0 5px 0;
 }
-
 .typography .subnav li.current a {
   color: #000;
 }
-
-/* =Breadcrumbs
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Breadcrumbs
+ * -------------------------------------------------------- */
 #breadcrumbs {
   color: #B7C0C5;
   font-size: 0.9em;
   margin: 0px 5px 10px 0;
   text-align: left;
 }
-
 #breadcrumbs p {
   margin: 0;
 }
-
-/* =Layout
------------------------------------------ */
+/* --------------------------------------------------------
+ * Layout
+ * -------------------------------------------------------- */
 #container {
-	background: #fff;
-	margin: 0 auto;
-	width: 960px;
+  background: #fff;
+  margin: 0 auto;
+  width: 960px;
 }
-
 .content {
-	padding: 20px 20px 100px 20px;
+  padding: 20px 20px 100px 20px;
 }
-
 /*
-	Grid System:
-	Define grid size. Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
+ Grid System:
+ Define grid size. Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
 */
 .grid_full {
-	background: #f2f2f2;
+  background: #f2f2f2;
 }
-
 .grid_1 {
-	background: #f2f2f2;
-	float: left;
-	margin-right: 20px;
-	width: 700px;
+  background: #f2f2f2;
+  float: left;
+  margin-right: 20px;
+  width: 700px;
 }
-
 .grid_2 {
-	background: #f2f2f2;
-	float: left;
-	width: 200px;
+  background: #f2f2f2;
+  float: left;
+  width: 200px;
 }
-
-/* Padding helpers */
+/* Padding */
 .padding_1 {
   padding: 10px;
 }
-
 /* =Buttons
 ----------------------------------------- */
-.button {
-    background: #E1E1E1;
-    border: 1px solid #B8B8B8;
-    border-radius: 4px;
-    color: #525252;
-    cursor: pointer;
-    font-weight: bold;
-    height: 25px;
-    line-height: 22px;
-    margin: 0;
-    padding: 3px 6px;
-    text-align: center;
-    text-shadow: 0 1px 0 white;
-}
-
-.button:hover {
-	background: #ccc;
-}
-
-
 /* =Home
 -------------------------------------------- */
 /* =About
 -------------------------------------------- */
 /* =Contact
 -------------------------------------------- */
-
 /* =Media queries
 ----------------------------------------------- */
 @media all and (orientation:portrait) {
