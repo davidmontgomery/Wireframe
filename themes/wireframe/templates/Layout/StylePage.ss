@@ -29,28 +29,6 @@
 		<h4>Heading level 6</h4>
 		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 		<p>This is a paragraph Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-		
-		<h2>Modules</h2>
-		<ul class="accordion">
-			<li>
-				<h4 class="clickable">Item One</h4>
-				<div class="content">
-					<p>Some content here.</p>
-				</div>
-			</li>
-			<li>
-				<h4 class="clickable">Item Two</h4>
-				<div class="content">
-					<p>Some content here.</p>
-				</div>
-			</li>
-			<li>
-				<h4 class="clickable">Item Three</h4>
-				<div class="content">
-					<p>Some content here.</p>
-				</div>
-			</li>
-		</ul><!-- /accordion -->
 	</div><!-- padding_1 -->
 </div><!-- /grid_1 -->
 <div class="grid_2">

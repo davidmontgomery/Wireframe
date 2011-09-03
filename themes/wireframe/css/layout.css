@@ -8,9 +8,6 @@
  * CSS3
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
- * Paths
- * -------------------------------------------------------- */
-/* --------------------------------------------------------
  * Mini reset
  * -------------------------------------------------------- */
 body,
@@ -66,6 +63,29 @@ body {
 .accessibility {
   display: none;
 }
+/*** General listing e.g. articles etc. Note the ul is for specificity (typography) ***/
+ul.listing {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+ul.listing h3 {
+  margin-bottom: 8px;
+}
+ul.listing li {
+  padding: 0;
+  margin: 0 0 25px 0;
+}
+ul.listing .header {
+  margin-bottom: 15px;
+}
+ul.listing .body {
+  margin-bottom: -5px;
+}
+ul.listing .date {
+  font-size: .917em;
+  color: #666;
+}
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
@@ -85,23 +105,23 @@ body {
   width: 300px;
 }
 /*** Accordion ***/
-.typography .accordion {
+ul.accordion {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.typography .accordion li {
+ul.accordion li {
   padding: 0;
   margin: 0;
 }
-.typography .accordion .clickable {
+ul.accordion .clickable {
   display: block;
   cursor: pointer;
 }
-.typography .accordion .content {
+ul.accordion .content {
   display: none;
 }
-/*** ToolTip ***/
+/*** Tooltip ***/
 /* --------------------------------------------------------
  * Sticky footer
  * -------------------------------------------------------- */
