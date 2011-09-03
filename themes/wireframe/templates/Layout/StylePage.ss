@@ -62,4 +62,4 @@
 	<% if Menu(2) %>
 		<% include SubNavigation %>
 	<% end_if %>
-</div><!-- /col_2 -->
+</div><!-- /grid_2 -->

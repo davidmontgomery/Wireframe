@@ -3,7 +3,7 @@
 	<section class='listing'>
 		<% control ArticlePaginate %>
 			<article>
-				<header> 
+				<header>
 					<h2><a href="$Link">$Title</a></h2>
 					<time datetime="$Date.Format(Y-m-d)">$Date.Nice</time>
 				</header>

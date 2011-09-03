@@ -3,10 +3,10 @@
 </div>
 <div class="grid_1">
 	<div class="padding_1">
-			<h1>$Title</h1>
-			$Content
-			$Form
-			$PageComments
+		<h1>$Title</h1>
+		$Content
+		$Form
+		$PageComments
 	</div>
 </div><!-- /grid_1 -->
 <div class="grid_2">
