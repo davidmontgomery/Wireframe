@@ -42,7 +42,8 @@ class Page_Controller extends ContentController {
 			CSS_PATH . '/variables.css',
 			CSS_PATH . '/layout.css',
 			CSS_PATH . '/form.css',
-			CSS_PATH . '/prettyPhoto.css'
+			CSS_PATH . '/prettyPhoto.css',
+			CSS_PATH . '/colorbox.css'
 		);
 		
 		// JS
@@ -51,6 +52,7 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/prettyPhoto.js',
 			JS_PATH . '/placeholder.js',
 			JS_PATH . '/accordion.js',
+			JS_PATH . '/jquery.colorbox.js',
 			JS_PATH . '/general.js'
 		);
 		

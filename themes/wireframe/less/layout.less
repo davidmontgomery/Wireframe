@@ -16,7 +16,7 @@ html {
 
 body {
 	background: #ccc;
-	color: #333; 
+	color: #333;
 	line-height: 1;
 	font-size: 75%; /* 12/16 = 0.75 - http://pxtoem.com/ */
 }
@@ -29,8 +29,8 @@ body {
  * Modules
  * -------------------------------------------------------- */
 
-/*** Sidebox ***/
-.sidebox {
+/*** Box ***/
+.box {
 	width: 175px;
 	background: #f2f2f2;
 	margin-bottom: 20px;
@@ -167,7 +167,7 @@ html, body {
 	}
 }
 
-/* Subnav */
+/*** Subnav ***/
 .typography .subnav {
   margin: 0;
   padding: 0;
@@ -211,10 +211,10 @@ html, body {
 	padding-right: 20px;
 }
 
-/*
- Grid System:
- Define grid size. Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
-*/
+/* --------------------------------------------------------
+ * Grid System:
+ * Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
+ * -------------------------------------------------------- */
 .grid_full {
 	background: #f2f2f2;
 }
@@ -232,23 +232,29 @@ html, body {
 	width: 200px;
 }
 
-/* Padding */
+/*** Padding ***/
 .padding_1 {
   padding: 10px;
 }
 
-/* =Buttons
------------------------------------------ */
+/* --------------------------------------------------------
+ * Buttons
+ * -------------------------------------------------------- */
 
-/* =Home
--------------------------------------------- */
-/* =About
--------------------------------------------- */
-/* =Contact
--------------------------------------------- */
 
-/* =Media queries
------------------------------------------------ */
+/* --------------------------------------------------------
+ * Home page
+ * -------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ * About page
+ * -------------------------------------------------------- */
+
+
+/* --------------------------------------------------------
+ * Media queries
+ * -------------------------------------------------------- */
 @media all and (orientation:portrait) {
   /* Style adjustments for portrait mode goes here */
 }
@@ -261,8 +267,10 @@ html, body {
   /* Uncomment if you don't want iOS and WinMobile to mobile-optimize the text for you: j.mp/textsizeadjust */
   /* html { -webkit-text-size-adjust:none; -ms-text-size-adjust:none; } */
 }
-/* =Print
------------------------------------------------ */
+
+/* --------------------------------------------------------
+ * Print
+ * -------------------------------------------------------- */
 @media print {
 	* {
 		background: transparent !important;

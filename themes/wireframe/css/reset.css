@@ -72,4 +72,6 @@ td { vertical-align: top; }
 .clearfix:before, .clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { zoom: 1; }
+
 .clear { padding: 0; margin: 0; height: 0; clear: both; overflow: hidden; }
+.hide { display: none; }

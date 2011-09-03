@@ -5,6 +5,14 @@
 		// Accordion
 		$('.accordion').accordion();
 		
+		// Colourbox
+		$(".modal").colorbox({
+			transition: "elastic", // elastic, fade, none
+			width: "500px",
+			inline: true,
+			href: "#modal1"
+		});
+		
 		// PrettyPhoto
 		$("a[rel^='prettyPhoto']").prettyPhoto({
 			animation_speed: 'fast', /* fast/slow/normal */

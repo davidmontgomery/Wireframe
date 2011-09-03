@@ -50,15 +50,10 @@
 					<p>Some content here.</p>
 				</div>
 			</li>
-		</ul>
+		</ul><!-- /accordion -->
 	</div><!-- padding_1 -->
 </div><!-- /grid_1 -->
 <div class="grid_2">
-	<div class="box">
-		<div class="padding_1">
-			<p>Here is and example of a box class.</p>
-		</div>
-	</div>
 	<% if Menu(2) %>
 		<% include SubNavigation %>
 	<% end_if %>
