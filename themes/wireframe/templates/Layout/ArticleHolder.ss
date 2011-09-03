@@ -25,7 +25,7 @@
 				<% include ArticlePagination %>
 			<% end_if %>
 		<% else %>
-			<p>There are no news articles at the moment.</p>
+			<p>There are no articles at the moment.</p>
 		<% end_if %>
 	</div><!-- /padding_1 -->
 </div><!-- /grid_1 -->

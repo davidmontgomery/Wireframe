@@ -1,15 +1,25 @@
-<article>
-	<header>
-		<h2>$Title</h2>
-		<time datetime="$Date.Format(Y-m-d)">$Date.Nice</time>
-	</header>
-	<% if Photo %>
-		<div class="content_img">
+<div class="grid_full">
+	<% include BreadCrumbs %>
+</div>
+<div class="grid_1">
+	<div class="padding_1">
+		
+		
+		<h1>$Title</h1>
+		<span class="date">$Date.Nice</span>
+		<% if Photo %>
 			$Photo.SetRatioSize(275,275)
-		</div><!-- /content_img -->
-	<% end_if %>
-	<div class="news_content">
+		<% end_if %>
 		$Content
-	</div><!-- /news_content -->
-	<a href="/news/">&laquo; Back to News</a>
-</article>
+		<p><a href="/news/">&laquo; Back to News</a></p>
+		
+		
+	</div><!-- /padding_1 -->
+</div><!-- /grid_1 -->
+<div class="grid_2">
+	<div class="padding_1">
+		<% if Menu(2) %>
+			<% include SubNavigation %>
+		<% end_if %>
+	</div>
+</div><!-- /col_2 -->

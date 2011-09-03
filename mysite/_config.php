@@ -134,7 +134,7 @@ i18n::set_locale('en_US');
 
 // Enable nested URLs for this site (e.g. page/sub-page/)
 SiteTree::enable_nested_urls();
-SiteTree::$breadcrumbs_delimiter = ' >> ';
+SiteTree::$breadcrumbs_delimiter = ' &rsaquo; ';
 
 // Image Quality
 GD::set_default_quality(100);
