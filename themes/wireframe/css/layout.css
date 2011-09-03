@@ -63,7 +63,8 @@ body {
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
-.box {
+/*** Sidebox ***/
+.sidebox {
   width: 175px;
   background: #f2f2f2;
   margin-bottom: 20px;
@@ -74,9 +75,27 @@ body {
   -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
   -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
-.box.large {
+.sidebox.large {
   width: 300px;
 }
+/*** Accordion ***/
+.typography .accordion {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.typography .accordion li {
+  padding: 0;
+  margin: 0;
+}
+.typography .accordion .clickable {
+  display: block;
+  cursor: pointer;
+}
+.typography .accordion .content {
+  display: none;
+}
+/*** ToolTip ***/
 /* --------------------------------------------------------
  * Sticky footer
  * -------------------------------------------------------- */

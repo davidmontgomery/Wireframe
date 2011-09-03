@@ -50,7 +50,8 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/jquery-min.js',
 			JS_PATH . '/prettyPhoto.js',
 			JS_PATH . '/placeholder.js',
-			JS_PATH . '/script.js'
+			JS_PATH . '/accordion.js',
+			JS_PATH . '/general.js'
 		);
 		
 		// Modernizr - to be put in the document head section

@@ -28,7 +28,9 @@ body {
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
-.box {
+
+/*** Sidebox ***/
+.sidebox {
 	width: 175px;
 	background: #f2f2f2;
 	margin-bottom: 20px;
@@ -38,6 +40,26 @@ body {
 		width: 300px;
 	}
 }
+
+/*** Accordion ***/
+.typography .accordion {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	li {
+		padding: 0;
+		margin: 0;
+	}
+	.clickable {
+		display: block;
+		cursor: pointer;
+	}
+	.content {
+		display: none;
+	}
+}
+
+/*** ToolTip ***/
 
 /* --------------------------------------------------------
  * Sticky footer
