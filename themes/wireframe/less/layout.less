@@ -62,10 +62,6 @@ ul.listing {
 }
 
 /* --------------------------------------------------------
- * General detail
- * -------------------------------------------------------- */
-
-/* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
 
@@ -108,21 +104,30 @@ ul.accordion {
 }
 
 /*** Buttons ***/
-a.button {
-	margin-right: 10px;
+.button {
+	cursor: pointer;
+	height: 27px;
+	line-height: 27px;
+	color: #2361a1;
+	margin-bottom: 10px;
 	display: inline-block;
 	background: #ccc;
 	.border_radius(5px);
 	.box_shadow(1px, 1px, 2px, 0.15);
-	padding: 8px 15px 9px 15px;
+	padding: 0 15px;
 	border: 1px solid #999;
 	&:hover {
 		color: #000;
-		text-decoration: none;
+		text-decoration: none !important;
 		background: #c2c2c2;
 	}
-	&.large {
-		padding: 10px 17px 11px 17px;
+	input {
+		color: #2361a1;
+		background: none;
+		border: none;
+		&:hover {
+			color: #000;
+		}
 	}
 }
 

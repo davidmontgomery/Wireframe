@@ -62,6 +62,9 @@ form#searchForm {
   top: 27px;
   right: 15px;
 }
+form#searchForm input {
+  padding: 3px;
+}
 /* --------------------------------------------------------
  * Form - validation
  * -------------------------------------------------------- */
