@@ -79,9 +79,16 @@ ul.listing {
 
 /*** Accordion ***/
 ul.accordion {
+	width: 450px;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	h4 {
+		background: #ccc;
+		padding: 10px;
+		margin-bottom: 2px;
+		.border_radius(3px);
+	}
 	li {
 		padding: 0;
 		margin: 0;
@@ -90,12 +97,30 @@ ul.accordion {
 		display: block;
 		cursor: pointer;
 	}
-	.content {
+	.body {
 		display: none;
+		height: 150px;
 	}
 }
 
-/*** Tooltip ***/
+/*** Buttons ***/
+a.button {
+	margin-right: 10px;
+	display: inline-block;
+	background: #ccc;
+	.border_radius(5px);
+	.box_shadow(1px, 1px, 2px, 0.15);
+	padding: 8px 15px 9px 15px;
+	border: 1px solid #999;
+	&:hover {
+		color: #000;
+		text-decoration: none;
+		background: #c2c2c2;
+	}
+	&.large {
+		padding: 10px 17px 11px 17px;
+	}
+}
 
 /* --------------------------------------------------------
  * Sticky footer
@@ -245,6 +270,9 @@ ul.subnav {
 	padding-right: 20px;
 }
 
+.section {
+	margin-bottom: 35px;
+}
 /* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
