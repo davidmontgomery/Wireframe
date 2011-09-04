@@ -113,6 +113,6 @@ form .field.error input, form .field.error textarea {
 ---------------------------------------- */
 form#searchForm {
 	position: absolute;
-	top: 10px;
+	top: 27px;
 	right: 15px;
 }

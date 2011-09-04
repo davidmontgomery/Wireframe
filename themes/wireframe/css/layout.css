@@ -203,7 +203,7 @@ html, body {
  * -------------------------------------------------------- */
 #header {
   background: #7b7b7b;
-  height: 185px;
+  height: 125px;
   position: relative;
 }
 #header h1 {
@@ -212,15 +212,19 @@ html, body {
   font-weight: bold;
   margin: 0 0 5px 0;
 }
+#header h1 a {
+  color: #000;
+  text-decoration: none;
+}
 #header .tagline {
   color: #ccc;
   font-size: 1.167em;
   font-style: italic;
 }
 #header .branding {
-  left: 160px;
+  left: 25px;
   position: absolute;
-  top: 52px;
+  top: 25px;
 }
 #header .logo {
   background: url(../images/temp-logo.png) no-repeat 0 0;
@@ -228,8 +232,8 @@ html, body {
   height: 59px;
   width: 125px;
   position: absolute;
-  top: 50px;
-  left: 20px;
+  top: 25px;
+  left: 30px;
 }
 /* --------------------------------------------------------
  * Navigation
