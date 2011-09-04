@@ -26,4 +26,4 @@
 			<% include SubNavigation %>
 		<% end_if %>
 	</div>
-</div><!-- /col_2 -->
+</div><!-- /col_2 --> 
