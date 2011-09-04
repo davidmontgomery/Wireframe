@@ -1,0 +1,78 @@
+/* --------------------------------------------------------
+ * Form - general
+ * -------------------------------------------------------- */
+form {
+	label {
+		display: block;
+		margin: 0 0 2px 0;
+	}
+	fieldset {
+		border: 0;
+	}
+	.field {
+		margin: 0 0 15px 0;
+		&.radio {
+			ul.optionset {
+				list-style: none;
+				margin-left: 0;
+				padding-left: 0;
+				li {
+					vertical-align: middle;
+					margin-left: 0;
+					padding-left: 0;
+					input {
+						display: inline-block;
+						margin-right: 5px;
+					}
+					label {
+						display: inline-block;
+					}
+				}
+			}
+		}
+		&.checkbox {
+			vertical-align: middle;
+			input {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+			}
+			label {
+				display: inline-block;
+				*display: inline;
+				*zoom: 1;
+				vertical-align: middle;
+			}
+		}
+		&.error {
+			label {
+				color: red;
+			}
+			input, textarea {
+				border: 1px solid red;
+			}
+		}
+	}
+	input.text, textarea, select {
+		padding: 4px;
+		border: 1px solid #a7a7a7;
+		color: #000;
+		width: 300px;
+	}
+}
+
+/* --------------------------------------------------------
+ * Form - search
+ * -------------------------------------------------------- */
+form#searchForm {
+	position: absolute;
+	top: 27px;
+	right: 15px;
+}
+
+/* --------------------------------------------------------
+ * Form - validation
+ * -------------------------------------------------------- */
+#errorBox li {
+	color:  red;
+}
