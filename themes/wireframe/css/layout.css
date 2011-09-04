@@ -236,16 +236,16 @@ html, body {
   color: #2361A1;
 }
 /*** Subnav ***/
-.typography .subnav {
+ul.subnav {
   margin: 0;
   padding: 0;
 }
-.typography .subnav li {
+ul.subnav li {
   list-style: none;
   padding: 0;
   margin: 0 0 5px 0;
 }
-.typography .subnav li.current a {
+ul.subnav li.current a {
   color: #000;
 }
 /* --------------------------------------------------------
