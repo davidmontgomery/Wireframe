@@ -3,7 +3,9 @@
 	$(document).ready(function() {
 		
 		// Accordion
-		$('.accordion').accordion();
+		$('.accordion').accordion({
+			speed: 500
+		});
 		
 		// Colourbox
 		$(".modal").colorbox({
@@ -12,6 +14,34 @@
 			inline: true,
 			href: "#modal1"
 		});
+		
+		// Modalbox
+		
+		
+		$('.addModal').click(function() {
+			$('body').append('<div class="modal_overlay"></div>');
+			
+			$('.modal_overlay').fadeIn(500);
+			
+				$('.modal_container').fadeIn(500);
+				$('.modal_container').append('<a class="modal_close">Close</a>');
+			
+			$('.modal_overlay, .modal_close').click(function() {
+				
+				$('.modal_container').fadeOut(500, function() {
+					$('.modal_overlay').fadeOut(500, function () {
+						$(this).remove();
+						$('.modal_close').remove()
+					});
+					
+				});
+			});
+			
+			
+		
+		
+		});
+		
 		
 		// PrettyPhoto
 		$("a[rel^='prettyPhoto']").prettyPhoto({
