@@ -43,7 +43,7 @@ class Page_Controller extends ContentController {
 			CSS_PATH . '/layout.css',
 			CSS_PATH . '/form.css',
 			CSS_PATH . '/prettyPhoto.css',
-			CSS_PATH . '/colorbox.css'
+			CSS_PATH . '/modalbox.css'
 		);
 		
 		// JS

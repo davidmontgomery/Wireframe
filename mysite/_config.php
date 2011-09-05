@@ -27,7 +27,7 @@ SSViewer::set_theme($projectName);
  **********************/
 global $databaseConfig;
 global $database;
-global $project;
+global $project;	
 
 define('CSS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/css');
 define('JS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/js');
@@ -100,13 +100,6 @@ LeftAndMain::setApplicationName('Wireframe');
 LeftAndMain::setLogo('themes/wireframe/images/cms-logo.png', 'margin-top: -3px;');
 LeftAndMain::set_loading_image('themes/wireframe/images/CMSLoading.gif');
 //LeftAndMain::require_css('themes/wireframe/css/cms.css');
-
-/**********************
-*
-* Security
-*
-**********************/
-Security::setDefaultAdmin('admin', 'password');
  
  
 /**********************
