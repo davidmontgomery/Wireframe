@@ -2,10 +2,19 @@
 
 class Page extends SiteTree {
 	public static $db = array(
+		'IntroSnippet' => 'HTMLText',
+		'DisplayHomepage' => 'Boolean'
 	);
 
 	public static $has_one = array(
 	);
+	
+	function getCMSFields() {
+		$fields = parent::getCMSFields();
+		$fields->addFieldToTab('Root.Content.Main', new CheckboxField ('DisplayHomepage', 'Display on Homepage'), 'Content');
+		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('IntroSnippet', 'Homepage Snippet'), 'Content');
+		return $fields;	
+	}
 }
 
 class Page_Controller extends ContentController {
@@ -76,19 +85,14 @@ class Page_Controller extends ContentController {
 	}
 	
 	// Functions
-	
-	
 	function GetLatestNews($num=3) {
 		$news = DataObject::get_one("ArticleHolder");
 		return DataObject::get("ArticlePage", "ParentID = $news->ID", "Date DESC", "", $num);
 	}
 	
+	function DisplayHomepage() {
+		return DataObject::get("Page", "DisplayHomepage = 1", "RAND()", null, "");
+	}
 	
-	
-	
-	
-	
-	
-	
-	
+
 }

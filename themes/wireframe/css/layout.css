@@ -148,6 +148,7 @@ ul.accordion .clickable {
 }
 ul.accordion .body {
   display: none;
+  height: 125px;
 }
 /*** Buttons ***/
 .button {

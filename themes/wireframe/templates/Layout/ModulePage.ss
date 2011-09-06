@@ -5,7 +5,6 @@
 	<div class="padding_1">
 		<h1>$Title</h1>
 		$Content
-		
 		<!-- Lightbox module -->
 		<div class="section">
 			<h2>Modal</h2>
@@ -23,6 +22,12 @@
 					<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 				</div>
 			</div>
+		</div><!-- /section -->
+		
+		<!-- Tooltip -->
+		<div class="section">
+			<h2>Tooltip</h2>
+			<p>Here is a <a class="tooltip" href="#">tooltip</a>.</p>
 		</div><!-- /section -->
 		
 		<!-- Button module -->
