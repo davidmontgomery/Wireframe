@@ -75,6 +75,15 @@ ul.listing {
 	&.large {
 		width: 300px;
 	}
+	&.promo {
+		width: 280px;
+		float: left;
+		margin-right: 40px;
+		height: 120px;
+		&.last {
+			margin-right: 0;
+		}
+	}
 }
 
 /*** Accordion ***/
@@ -298,6 +307,10 @@ ul.subnav {
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
  * -------------------------------------------------------- */
+.last {
+	
+}
+
 .grid_full {
 	background: #f2f2f2;
 }
@@ -313,6 +326,16 @@ ul.subnav {
 	background: #f2f2f2;
 	float: left;
 	width: 200px;
+}
+
+.grid_3 {
+	background: #f2f2f2;
+	float: left;
+	width: 280px;
+	margin-right: 40px;
+	&.last {
+		margin-right: 0;
+	}
 }
 
 /*** Padding ***/
