@@ -7,7 +7,7 @@
   height: 100%;
   background: transparent url(../images/bg-overlay-80.png) repeat 0 0;
   background: rgba(0, 0, 0, 0.6);
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -19,7 +19,7 @@
 .modal_body {
   padding: 0 15px 15px 15px;
   height: 250px;
-  overflow-y: scroll;
+  overflow-y: auto;
 }
 .modal_close {
   display: block;
@@ -36,7 +36,7 @@
   width: 500px;
   height: 300px;
   background: #fff;
-  position: fixed;
+  position: absolute;
   top: 50%;
   margin-top: -150px;
   left: 50%;

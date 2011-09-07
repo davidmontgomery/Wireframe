@@ -47,6 +47,7 @@ class Page_Controller extends ContentController {
 		// CSS
 		$css = array(
 			CSS_PATH . '/reset.css',
+			CSS_PATH . '/typography.css',
 			CSS_PATH . '/editor.css',
 			CSS_PATH . '/variables.css',
 			CSS_PATH . '/layout.css',
