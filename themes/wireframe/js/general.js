@@ -3,12 +3,15 @@
 	$(document).ready(function() {
 		
 		// JQuery Cycle
+		// $('#slideshow').cycle('pause');
+		
 		$('.slideshow').before('<div class="banner_nav clearfix">').cycle({
-			fx: 'fade',
-			speed: 2500,
+			fx: 'scrollLeft',
+			speed: 500,
 			sync: 1,
-			pager:  '.banner_nav',
-			timeout: 8000
+			pager: '.banner_nav',
+			timeout: 5000,
+			pause: 1
 		});
 		
 		// Accordion

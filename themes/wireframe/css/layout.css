@@ -100,14 +100,40 @@ ul.listing .date {
  * Modules
  * -------------------------------------------------------- */
 /*** Slideshow ***/
+.slideshow div {
+  display: none;
+}
+.slideshow div.first {
+  display: block;
+}
 .slideshow_wrap {
   position: relative;
   margin-bottom: 25px;
 }
 .slideshow {
+  background: #000;
   z-index: 0;
   width: 900px;
   height: 263px;
+}
+.slideshow div {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 900px;
+}
+.slideshow div img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+.slideshow div p {
+  position: relative;
+  margin: 50px 0 0 10px;
+  z-index: 2;
+  width: 350px;
 }
 .banner_nav {
   position: absolute;
