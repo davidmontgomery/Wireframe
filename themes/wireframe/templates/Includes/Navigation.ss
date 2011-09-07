@@ -5,6 +5,13 @@
 			<% control Menu(1) %>
 				<li class="$URLSegment">
 					<a href="$Link" class="$LinkingMode" accesskey="$Pos">$MenuTitle</a>
+					<% if Children %><!-- Module: mega menu-->
+						<% control Children %>
+							<ul class="mega_menu" style="display: none;">
+								<li><a href="$Link">$Title</a></li>
+							</ul>
+						<% end_control %>
+					<% end_if %>
 				</li>
 			<% end_control %>
 		</ul>

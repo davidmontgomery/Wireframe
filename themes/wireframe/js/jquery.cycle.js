@@ -1,15 +1,15 @@
 /*!
- * jQuery Cycle Plugin (with Transition Definitions)
+ * jQuery Cycle Plugin (core engine only)
  * Examples and documentation at: http://jquery.malsup.com/cycle/
  * Copyright (c) 2007-2010 M. Alsup
- * Version: 2.9995 (09-AUG-2011)
+ * Version: 2.99 (12-MAR-2011)
  * Dual licensed under the MIT and GPL licenses.
  * http://jquery.malsup.com/license.html
  * Requires: jQuery v1.3.2 or later
  */
 ;(function($) {
 
-var ver = '2.9995';
+var ver = '2.99';
 
 // if $.support is not defined (pre jQuery 1.3) add what I need
 if ($.support == undefined) {
@@ -72,15 +72,14 @@ $.fn.cycle = function(options, arg2) {
 		var $cont = $(this);
 		var $slides = opts.slideExpr ? $(opts.slideExpr, this) : $cont.children();
 		var els = $slides.get();
-
-		var opts2 = buildOptions($cont, $slides, els, opts, o);
-		if (opts2 === false)
-			return;
-
 		if (els.length < 2) {
 			log('terminating; too few slides: ' + els.length);
 			return;
 		}
+
+		var opts2 = buildOptions($cont, $slides, els, opts, o);
+		if (opts2 === false)
+			return;
 
 		var startTime = opts2.continuous ? 10 : getTimeout(els[opts2.currSlide], els[opts2.nextSlide], opts2, !opts2.backwards);
 
@@ -94,15 +93,6 @@ $.fn.cycle = function(options, arg2) {
 		}
 	});
 };
-
-function triggerPause(cont, byHover, onPager) {
-	var opts = $(cont).data('cycle.opts');
-	var paused = !!cont.cyclePause;
-	if (paused && opts.paused)
-		opts.paused(cont, opts, byHover, onPager);
-	else if (!paused && opts.resumed)
-		opts.resumed(cont, opts, byHover, onPager);
-}
 
 // process the args that were passed to the plugin fn
 function handleArguments(cont, options, arg2) {
@@ -121,7 +111,6 @@ function handleArguments(cont, options, arg2) {
 			if (cont.cycleTimeout)
 				clearTimeout(cont.cycleTimeout);
 			cont.cycleTimeout = 0;
-			opts.elements && $(opts.elements).stop();
 			$(cont).removeData('cycle.opts');
 			if (options == 'destroy')
 				destroy(opts);
@@ -129,16 +118,13 @@ function handleArguments(cont, options, arg2) {
 		case 'toggle':
 			cont.cyclePause = (cont.cyclePause === 1) ? 0 : 1;
 			checkInstantResume(cont.cyclePause, arg2, cont);
-			triggerPause(cont);
 			return false;
 		case 'pause':
 			cont.cyclePause = 1;
-			triggerPause(cont);
 			return false;
 		case 'resume':
 			cont.cyclePause = 0;
 			checkInstantResume(false, arg2, cont);
-			triggerPause(cont);
 			return false;
 		case 'prev':
 		case 'next':
@@ -221,9 +207,6 @@ function destroy(opts) {
 function buildOptions($cont, $slides, els, options, o) {
 	// support metadata plugin (v1.0 and v2.0)
 	var opts = $.extend({}, $.fn.cycle.defaults, options || {}, $.metadata ? $cont.metadata() : $.meta ? $cont.data() : {});
-	var meta = $.isFunction($cont.data) ? $cont.data(opts.metaAttr) : null;
-	if (meta)
-		opts = $.extend(opts, meta);
 	if (opts.autostop)
 		opts.countdown = opts.autostopCount || els.length;
 
@@ -256,7 +239,7 @@ function buildOptions($cont, $slides, els, options, o) {
 		$cont.height(opts.height);
 
 	if (opts.startingSlide)
-		opts.startingSlide = parseInt(opts.startingSlide,10);
+		opts.startingSlide = parseInt(opts.startingSlide);
 	else if (opts.backwards)
 		opts.startingSlide = els.length - 1;
 
@@ -289,53 +272,11 @@ function buildOptions($cont, $slides, els, options, o) {
 	removeFilter(els[first], opts);
 
 	// stretch slides
-	if (opts.fit) {
-		if (!opts.aspect) {
-	        if (opts.width)
-	            $slides.width(opts.width);
-	        if (opts.height && opts.height != 'auto')
-	            $slides.height(opts.height);
-		} else {
-			$slides.each(function(){
-				var $slide = $(this);
-				var ratio = (opts.aspect === true) ? $slide.width()/$slide.height() : opts.aspect;
-				if( opts.width && $slide.width() != opts.width ) {
-					$slide.width( opts.width );
-					$slide.height( opts.width / ratio );
-				}
+	if (opts.fit && opts.width)
+		$slides.width(opts.width);
+	if (opts.fit && opts.height && opts.height != 'auto')
+		$slides.height(opts.height);
 
-				if( opts.height && $slide.height() < opts.height ) {
-					$slide.height( opts.height );
-					$slide.width( opts.height * ratio );
-				}
-			});
-		}
-	}
-
-	if (opts.center && ((!opts.fit) || opts.aspect)) {
-		$slides.each(function(){
-			var $slide = $(this);
-			$slide.css({
-				"margin-left": opts.width ?
-					((opts.width - $slide.width()) / 2) + "px" :
-					0,
-				"margin-top": opts.height ?
-					((opts.height - $slide.height()) / 2) + "px" :
-					0
-			});
-		});
-	}
-
-	if (opts.center && !opts.fit && !opts.slideResize) {
-	  	$slides.each(function(){
-	    	var $slide = $(this);
-	    	$slide.css({
-	      		"margin-left": opts.width ? ((opts.width - $slide.width()) / 2) + "px" : 0,
-	      		"margin-top": opts.height ? ((opts.height - $slide.height()) / 2) + "px" : 0
-	    	});
-	  	});
-	}
-		
 	// stretch container
 	var reshape = opts.containerResize && !$cont.innerHeight();
 	if (reshape) { // do this only if container has no size http://tinyurl.com/da2oa9
@@ -351,19 +292,8 @@ function buildOptions($cont, $slides, els, options, o) {
 			$cont.css({width:maxw+'px',height:maxh+'px'});
 	}
 
-	var pauseFlag = false;  // https://github.com/malsup/cycle/issues/44
 	if (opts.pause)
-		$cont.hover(
-			function(){
-				pauseFlag = true;
-				this.cyclePause++;
-				triggerPause(cont, true);
-			},
-			function(){
-				pauseFlag && this.cyclePause--;
-				triggerPause(cont, true);
-			}
-		);
+		$cont.hover(function(){this.cyclePause++;},function(){this.cyclePause--;});
 
 	if (supportMultiTransitions(opts) === false)
 		return false;
@@ -415,10 +345,10 @@ function buildOptions($cont, $slides, els, options, o) {
 	$($slides[first]).css(opts.cssFirst);
 
 	if (opts.timeout) {
-		opts.timeout = parseInt(opts.timeout,10);
+		opts.timeout = parseInt(opts.timeout);
 		// ensure that timeout and speed settings are sane
 		if (opts.speed.constructor == String)
-			opts.speed = $.fx.speeds[opts.speed] || parseInt(opts.speed,10);
+			opts.speed = $.fx.speeds[opts.speed] || parseInt(opts.speed);
 		if (!opts.sync)
 			opts.speed = opts.speed / 2;
 		
@@ -458,12 +388,11 @@ function buildOptions($cont, $slides, els, options, o) {
 
 	// fire artificial events
 	var e0 = $slides[first];
-	if (!opts.skipInitializationCallbacks) {
-		if (opts.before.length)
-			opts.before[0].apply(e0, [e0, e0, opts, true]);
-		if (opts.after.length)
-			opts.after[0].apply(e0, [e0, e0, opts, true]);
-	}
+	if (opts.before.length)
+		opts.before[0].apply(e0, [e0, e0, opts, true]);
+	if (opts.after.length)
+		opts.after[0].apply(e0, [e0, e0, opts, true]);
+
 	if (opts.next)
 		$(opts.next).bind(opts.prevNextEvent,function(){return advance(opts,1)});
 	if (opts.prev)
@@ -632,11 +561,10 @@ function go(els, opts, manual, fwd) {
 
 		// support multiple transition types
 		if (opts.multiFx) {
-			if (fwd && (opts.lastFx == undefined || ++opts.lastFx >= opts.fxs.length))
+			if (opts.lastFx == undefined || ++opts.lastFx >= opts.fxs.length)
 				opts.lastFx = 0;
-			else if (!fwd && (opts.lastFx == undefined || --opts.lastFx < 0))
-				opts.lastFx = opts.fxs.length - 1;
 			fx = opts.fxs[opts.lastFx];
+			opts.currFx = fx;
 		}
 
 		// one-time fx overrides apply to:  $('div').cycle(3,'zoom');
@@ -804,7 +732,7 @@ $.fn.cycle.createPagerAnchor = function(i, el, $p, els, opts) {
 		debug('pagerAnchorBuilder('+i+', el) returned: ' + a);
 	}
 	else
-		a = '<a href="#">'+(i+1)+'</a>';
+		a = '<a href="#"><span>'+(i+1)+'</span></a>';
 		
 	if (!a)
 		return;
@@ -827,8 +755,7 @@ $.fn.cycle.createPagerAnchor = function(i, el, $p, els, opts) {
 
 	opts.pagerAnchors =  opts.pagerAnchors || [];
 	opts.pagerAnchors.push($a);
-	
-	var pagerFn = function(e) {
+	$a.bind(opts.pagerEvent, function(e) {
 		e.preventDefault();
 		opts.nextSlide = i;
 		var p = opts.$cont[0], timeout = p.cycleTimeout;
@@ -841,32 +768,13 @@ $.fn.cycle.createPagerAnchor = function(i, el, $p, els, opts) {
 			cb(opts.nextSlide, els[opts.nextSlide]);
 		go(els,opts,1,opts.currSlide < i); // trigger the trans
 //		return false; // <== allow bubble
-	}
-	
-	if ( /mouseenter|mouseover/i.test(opts.pagerEvent) ) {
-		$a.hover(pagerFn, function(){/* no-op */} );
-	}
-	else {
-		$a.bind(opts.pagerEvent, pagerFn);
-	}
+	});
 	
 	if ( ! /^click/.test(opts.pagerEvent) && !opts.allowPagerClickBubble)
 		$a.bind('click.cycle', function(){return false;}); // suppress click
 	
-	var cont = opts.$cont[0];
-	var pauseFlag = false; // https://github.com/malsup/cycle/issues/44
-	if (opts.pauseOnPagerHover) {
-		$a.hover(
-			function() { 
-				pauseFlag = true;
-				cont.cyclePause++; 
-				triggerPause(cont,true,true);
-			}, function() { 
-				pauseFlag && cont.cyclePause--; 
-				triggerPause(cont,true,true);
-			} 
-		);
-	}
+	if (opts.pauseOnPagerHover)
+		$a.hover(function() { opts.$cont[0].cyclePause++; }, function() { opts.$cont[0].cyclePause--; } );
 };
 
 // helper fn to calculate the number of slides between the current and the next
@@ -884,7 +792,7 @@ $.fn.cycle.hopsFromLast = function(opts, fwd) {
 function clearTypeFix($slides) {
 	debug('applying clearType background-color hack');
 	function hex(s) {
-		s = parseInt(s,10).toString(16);
+		s = parseInt(s).toString(16);
 		return s.length < 2 ? '0'+s : s;
 	};
 	function getBg(e) {
@@ -966,12 +874,10 @@ $.fn.cycle.defaults = {
 	allowPagerClickBubble: false, // allows or prevents click event on pager anchors from bubbling
 	animIn:		   null,  // properties that define how the slide animates in
 	animOut:	   null,  // properties that define how the slide animates out
-	aspect:		   false,  // preserve aspect ratio during fit resizing, cropping if necessary (must be used with fit option)
 	autostop:	   0,	  // true to end slideshow after X transitions (where X == slide count)
 	autostopCount: 0,	  // number of transitions (optionally used with autostop to define X)
 	backwards:     false, // true to start slideshow at last slide and move backwards through the stack
 	before:		   null,  // transition callback (scope set to element to be shown):	 function(currSlideElement, nextSlideElement, options, forwardFlag)
-	center: 	   null,  // set to true to have cycle add top/left margin to each slide (use with width and height options)
 	cleartype:	   !$.support.opacity,  // true if clearType corrections should be applied (for IE)
 	cleartypeNoBg: false, // set to true to disable extra cleartype fixing (leave false to force background color setting on slides)
 	containerResize: 1,	  // resize container to fit largest slide
@@ -987,19 +893,18 @@ $.fn.cycle.defaults = {
 	fit:		   0,	  // force slides to fit container
 	fx:			  'fade', // name of transition effect (or comma separated names, ex: 'fade,scrollUp,shuffle')
 	fxFn:		   null,  // function used to control the transition: function(currSlideElement, nextSlideElement, options, afterCalback, forwardFlag)
-	height:		  'auto', // container height (if the 'fit' option is true, the slides will be set to this height as well)
+	height:		  'auto', // container height
 	manualTrump:   true,  // causes manual transition to stop an active transition instead of being ignored
-	metaAttr:     'cycle',// data- attribute that holds the option data for the slideshow
-	next:		   null,  // element, jQuery object, or jQuery selector string for the element to use as event trigger for next slide
+	next:		   null,  // selector for element to use as event trigger for next slide
 	nowrap:		   0,	  // true to prevent slideshow from wrapping
 	onPagerEvent:  null,  // callback fn for pager events: function(zeroBasedSlideIndex, slideElement)
-	onPrevNextEvent: null,// callback fn for prev/next events: function(isNext, zeroBasedSlideIndex, slideElement)
-	pager:		   null,  // element, jQuery object, or jQuery selector string for the element to use as pager container
+	onPrevNextEvent: null,  // callback fn for prev/next events: function(isNext, zeroBasedSlideIndex, slideElement)
+	pager:		   null,  // selector for element to use as pager container
 	pagerAnchorBuilder: null, // callback fn for building anchor links:  function(index, DOMelement)
 	pagerEvent:	  'click.cycle', // name of event which drives the pager navigation
 	pause:		   0,	  // true to enable "pause on hover"
 	pauseOnPagerHover: 0, // true to pause when hovering over pager link
-	prev:		   null,  // element, jQuery object, or jQuery selector string for the element to use as event trigger for previous slide
+	prev:		   null,  // selector for element to use as event trigger for previous slide
 	prevNextEvent:'click.cycle',// event which drives the manual transition to the previous or next slide
 	random:		   0,	  // true for random, false for sequence (not applicable to shuffle fx)
 	randomizeEffects: 1,  // valid when multiple effects are used; true to make the effect sequence random
@@ -1007,7 +912,6 @@ $.fn.cycle.defaults = {
 	requeueTimeout: 250,  // ms delay for requeue
 	rev:		   0,	  // causes animations to transition in reverse (for effects that support it such as scrollHorz/scrollVert/shuffle)
 	shuffle:	   null,  // coords for shuffle animation, ex: { top:15, left: 200 }
-	skipInitializationCallbacks: false, // set to true to disable the first before/after callback that occurs prior to any transition
 	slideExpr:	   null,  // expression for selecting slides (if something other than all children is required)
 	slideResize:   1,     // force slide width/height to fixed size before every transition
 	speed:		   1000,  // speed of the transition (any valid fx speed value)
@@ -1017,23 +921,11 @@ $.fn.cycle.defaults = {
 	sync:		   1,	  // true if in/out transitions should occur simultaneously
 	timeout:	   4000,  // milliseconds between slide transitions (0 to disable auto advance)
 	timeoutFn:     null,  // callback for determining per-slide timeout value:  function(currSlideElement, nextSlideElement, options, forwardFlag)
-	updateActivePagerLink: null, // callback fn invoked to update the active pager link (adds/removes activePagerClass style)
-	width:         null   // container width (if the 'fit' option is true, the slides will be set to this width as well)
+	updateActivePagerLink: null // callback fn invoked to update the active pager link (adds/removes activePagerClass style)
 };
 
 })(jQuery);
 
-
-/*!
- * jQuery Cycle Plugin Transition Definitions
- * This script is a plugin for the jQuery Cycle Plugin
- * Examples and documentation at: http://malsup.com/jquery/cycle/
- * Copyright (c) 2007-2010 M. Alsup
- * Version:	 2.73
- * Dual licensed under the MIT and GPL licenses:
- * http://www.opensource.org/licenses/mit-license.php
- * http://www.gnu.org/licenses/gpl.html
- */
 (function($) {
 
 //
