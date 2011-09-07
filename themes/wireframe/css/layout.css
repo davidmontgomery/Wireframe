@@ -111,7 +111,7 @@ ul.listing .date {
   margin-bottom: 25px;
 }
 .slideshow {
-  background: #000;
+  background: #ccc;
   z-index: 0;
   width: 900px;
   height: 263px;
@@ -138,7 +138,7 @@ ul.listing .date {
 .banner_nav {
   position: absolute;
   bottom: 7px;
-  left: 353px;
+  left: 10px;
   z-index: 1;
 }
 /*** Box ***/
