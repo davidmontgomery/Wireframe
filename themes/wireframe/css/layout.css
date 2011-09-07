@@ -99,6 +99,22 @@ ul.listing .date {
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
+/*** Slideshow ***/
+.slideshow_wrap {
+  position: relative;
+  margin-bottom: 25px;
+}
+.slideshow {
+  z-index: 0;
+  width: 900px;
+  height: 263px;
+}
+.banner_nav {
+  position: absolute;
+  bottom: 7px;
+  left: 353px;
+  z-index: 1;
+}
 /*** Box ***/
 .box {
   width: 175px;
@@ -188,10 +204,11 @@ html, body {
   height: 100%;
 }
 #container {
-  height: 100%;
-  height: auto !important;
+  position: relative;
   min-height: 100%;
-  xposition: relative;
+}
+* html #container {
+  height: 100%;
 }
 .layout {
   padding-bottom: 150px;

@@ -57,13 +57,32 @@ ul.listing {
 
 /*** Pagination ***/
 .pagination {
-	border-top: 1px solid #ccc;
+	border-top: 1px solid #ccc;	
 	padding:  10px 0 10px 0;
 }
 
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
+
+/*** Slideshow ***/
+.slideshow_wrap {
+	position: relative;
+	margin-bottom: 25px;
+}
+
+.slideshow {
+	z-index: 0;
+	width: 900px;
+	height: 263px;
+}
+
+.banner_nav {
+	position: absolute;
+	bottom: 7px;
+	left:  353px;
+	z-index: 1;
+}
 
 /*** Box ***/
 .box {
@@ -147,12 +166,12 @@ html, body {
 	height: 100%;
 }
 
-.container {
+#container {
 	position: relative;
 	min-height: 100%;
 }
 
-* html .container {
+* html #container {
 	height: 100%;
 }
 

@@ -2,13 +2,22 @@
 		
 	$(document).ready(function() {
 		
+		// JQuery Cycle
+		$('.slideshow').before('<div class="banner_nav clearfix">').cycle({
+			fx: 'fade',
+			speed: 2500,
+			sync: 1,
+			pager:  '.banner_nav',
+			timeout: 8000
+		});
+		
 		// Accordion
 		$('.accordion').accordion({
 			speed: 500
 		});
 		
 		// Colourbox
-		$(".modal").colorbox({
+		$('.modal').colorbox({
 			transition: "elastic", // elastic, fade, none
 			width: "500px",
 			inline: true,

@@ -62,6 +62,7 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/placeholder.js',
 			JS_PATH . '/accordion.js',
 			JS_PATH . '/jquery.colorbox.js',
+			JS_PATH . '/jquery.cycle.js',
 			JS_PATH . '/general.js'
 		);
 		
