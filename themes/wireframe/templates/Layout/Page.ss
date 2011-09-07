@@ -8,7 +8,7 @@
 		$Form
 		$PageComments
 	</div>
-</div><!-- /grid_1 -->
+</div><%-- Grid_1 --%>
 <div class="grid_2">
 	<div class="padding_1">
 		<% if Menu(2) %>
