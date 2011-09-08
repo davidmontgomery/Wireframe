@@ -18,7 +18,7 @@
 		
 		// Fancybox
 		$('#various1').attr('href', '#inline1'); // need this for inline box to work with SS	
-		
+
 		$('#various1').fancybox({
 			'width' : 200,
 			'height' : 200,
