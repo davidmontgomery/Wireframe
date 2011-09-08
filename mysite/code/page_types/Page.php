@@ -80,10 +80,9 @@ class Page_Controller extends ContentController {
 		}
 		
 		// Combine: To test set to 'test' in _config
-		Requirements::set_combined_files_folder(COMBINE_PATH);
+		Requirements::set_combined_files_folder('assets');
 		Requirements::combine_files('combined.css', $css);
 		Requirements::combine_files('combined.js', $js);
-		Requirements::process_combined_files();
 	}
 	
 	// Functions

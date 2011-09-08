@@ -31,7 +31,7 @@ global $project;
 
 define('CSS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/css');
 define('JS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/js');
-define('COMBINE_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/combined');
+define('COMBINE_PATH', 'assets/combined');
 define('EMAIL_SUBJECT_LINE', $emailSubjectLine);
 define('SITE_NAME', $siteName);
 
@@ -44,7 +44,6 @@ define('SITE_NAME', $siteName);
  * Environment
  * 
  **********************/
-// Director::set_environment_type('test');
 // Director::set_environment_type('live');
 // if(Director::isTest() BasicAuth::protect_entire_site();
 // CMSMenu::remove_menu_item('ReportAdmin');
