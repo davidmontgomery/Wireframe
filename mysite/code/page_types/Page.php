@@ -52,8 +52,7 @@ class Page_Controller extends ContentController {
 			CSS_PATH . '/variables.css',
 			CSS_PATH . '/layout.css',
 			CSS_PATH . '/form.css',
-			CSS_PATH . '/prettyPhoto.css',
-			CSS_PATH . '/modalbox.css'
+			CSS_PATH . '/jquery.fancybox-1.3.4.css'
 		);
 		
 		// JS
@@ -62,8 +61,8 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/prettyPhoto.js',
 			JS_PATH . '/placeholder.js',
 			JS_PATH . '/accordion.js',
-			JS_PATH . '/jquery.colorbox.js',
 			JS_PATH . '/jquery.cycle.js',
+			JS_PATH . '/jquery.fancybox-1.3.4.pack.js',
 			JS_PATH . '/general.js'
 		);
 		
@@ -80,7 +79,7 @@ class Page_Controller extends ContentController {
 		}
 		
 		// Combine: To test set to 'test' in _config
-		Requirements::set_combined_files_folder('assets');
+		Requirements::set_combined_files_folder(COMBINE_PATH);
 		Requirements::combine_files('combined.css', $css);
 		Requirements::combine_files('combined.js', $js);
 	}
