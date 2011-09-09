@@ -50,9 +50,11 @@ class Page_Controller extends ContentController {
 			CSS_PATH . '/typography.css',
 			CSS_PATH . '/editor.css',
 			CSS_PATH . '/variables.css',
+			CSS_PATH . '/css3.css',
 			CSS_PATH . '/layout.css',
 			CSS_PATH . '/form.css',
-			CSS_PATH . '/jquery.fancybox-1.3.4.css'
+			CSS_PATH . '/jquery.fancybox-1.3.4.css',
+			CSS_PATH . '/print.css'
 		);
 		
 		// JS
@@ -94,5 +96,4 @@ class Page_Controller extends ContentController {
 		return DataObject::get("Page", "DisplayHomepage = 1", "RAND()", null, "");
 	}
 	
-
 }

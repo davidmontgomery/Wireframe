@@ -8,10 +8,8 @@
  * CSS3
  * -------------------------------------------------------- */
 /* --------------------------------------------------------
- * CSS3 helpers: - Heyday
+ * Font-face
  * -------------------------------------------------------- */
-/* =Font-face
------------------------------------------ */
 @font-face {
   font-family: 'My Font';
   src: url(../resources/my-font.eot);
@@ -19,80 +17,100 @@
   font-weight: normal;
   font-style: normal;
 }
-body {
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", "Trebuchet MS", "Helvetica", "Arial", "sans-serif";
+.typography {
+  color: #333333;
 }
-/* Links
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Links
+ * -------------------------------------------------------- */
 .typography a {
-  text-decoration: none;
+  text-decoration: underline;
   color: #2361a1;
 }
 .typography a:hover {
-  text-decoration: underline;
+  color: #000000;
+  text-decoration: none;
 }
-/* Lists
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Lists
+ * -------------------------------------------------------- */
 .typography ul {
-  margin: 0 0 18px 24px;
+  list-style-position: inside;
+  margin-bottom: 15px;
 }
 .typography ol {
-  margin: 0 0 18px 24px;
+  list-style-position: inside;
+  margin-bottom: 15px;
 }
-/* =Paragraphs
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Paragraphs
+ * -------------------------------------------------------- */
 .typography p {
+  color: #333;
   line-height: 18px;
-  color: #333;
-  margin: 0 0 10px 0;
+  margin-bottom: 15px;
 }
-/* Headings
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Headings
+ * -------------------------------------------------------- */
 .typography p + h2,
+.typography ul + h2,
+.typography ol + h2,
 .typography p + h3,
+.typography ul + h3,
+.typography ol + h3,
 .typography p + h4,
+.typography ul + h4,
+.typography ol + h4,
 .typography p + h5,
-.typography p + h6 {
+.typography ul + h5,
+.typography ol + h5,
+.typography p + h6,
+.typography ul + h6,
+.typography ol + h6 {
   margin-top: 30px;
+  /* Margin between top of heading and paragraph / ul / ol */
+
 }
-.typography h1 {
-  font-weight: normal;
-  font-size: 2em;
+.typography h1, h1 {
   color: #333;
-  margin: 0 0 20px 0;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
-.typography h2 {
+.typography h2, h2 {
   color: #333;
+  font-size: 24px;
   font-weight: normal;
-  font-size: 1.667em;
-  margin: 0 0 10px 0;
+  margin-bottom: 10px;
 }
-.typography h3 {
-  font-weight: normal;
+.typography h3, h3 {
   color: #333;
-  margin: 0 0 10px 0;
-  font-size: 1.5em;
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 .typography h4, h4 {
-  font-weight: normal;
-  font-size: 14px;
   color: #333;
-  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 .typography h5 {
-  font-weight: normal;
-  font-size: 14px;
   color: #333;
-  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
 .typography h6 {
-  font-weight: normal;
-  font-size: 13px;
   color: #333;
-  margin: 0 0 10px 0;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
 }
-/* Quotes
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Quotes
+ * -------------------------------------------------------- */
 .typography blockquote {
   margin: 10px;
   font-size: 1.4em;
@@ -106,9 +124,11 @@ body {
   padding: 0.5em;
   border: 1px #ccc solid;
 }
-/* Pre
--------------------------------------------- */.typography pre {
-  font-family: "Courier New", Courier;
+/* --------------------------------------------------------
+ * Pre
+ * -------------------------------------------------------- */
+.typography pre {
+  font-family: "Courier New", "Courier";
   display: block;
   font-size: 1.2em;
   margin: 2em 5em;
@@ -116,8 +136,9 @@ body {
   border: 1px #ccc solid;
   background: #eee;
 }
-/* Table
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Table
+ * -------------------------------------------------------- */
 .typography table {
   margin: 0 0 18px 0;
   color: #666;
@@ -127,8 +148,9 @@ body {
   border: 1px solid #999;
   padding: 5px;
 }
-/* Wysiwyg editor alignment classes
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Wysiwyg editor alignment classes
+ * -------------------------------------------------------- */
 .typography .left {
   text-align: left;
 }
@@ -138,8 +160,9 @@ body {
 .typography .right {
   text-align: right;
 }
-/* Images
--------------------------------------------- */
+/* --------------------------------------------------------
+ * Images
+ * -------------------------------------------------------- */
 .typography img {
   border: none;
 }

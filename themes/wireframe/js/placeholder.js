@@ -1,6 +1,6 @@
 (function($) {
-
 	$(document).ready(function() {
+		
 		var testPlaceholder = function() {
 			var i = document.createElement('input');
 			return 'placeholder' in i;
@@ -26,6 +26,6 @@
 				});
 			});
 		}
+		
 	})
-
 })(jQuery);
