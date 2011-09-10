@@ -1,6 +1,30 @@
 (function($) {
 	$(document).ready(function() {
 		
+		// Tooltip
+		$('.tooltip').hover(
+			function() {
+				var $el = $(this);
+				var $title = $el.attr('title');
+				$el.attr('title', '');
+				$el.after('<div class="tooltip_container"></div>');
+				$el.next().prepend('tooltip_container').text($title);
+				
+			},
+			function() {
+				var $el = $(this);
+				var $newTitle = $('.tooltip_container').text();
+				$el.attr('title', $newTitle);
+				$el.next().remove();
+			}
+		);
+		
+		// External link
+		$("a[href*='http://']:not([href*='" + location.hostname+"']),[href*='https://']:not([href*='" + location.hostname + "'])")
+		.addClass('external_link')
+		.attr('target','_blank')
+		.attr('title','Opens new window');
+		
 		// Cycle
 		$('.slideshow').before('<div class="banner_nav clearfix">').cycle({
 			fx: 'scrollLeft',

@@ -8,7 +8,7 @@
 		
 		<!-- Lightbox module -->
 		<div class="section">
-			<h3>Modal</h3>
+			<h3>Lightbox</h3>
 			<ul>
 				<li>
 					<a id="various1" title="Lorem ipsum dolor sit amet">Inline</a>
@@ -34,7 +34,7 @@
 		<!-- Tooltip -->
 		<div class="section">
 			<h3>Tooltip</h3>
-			<p>Here is a <a class="tooltip" href="#">tooltip</a>.</p>
+			<p>Here is a <a class="tooltip" title="Here is a title that goes here." href="#">tooltip</a>.</p>
 		</div><!-- /section -->
 		
 		<!-- Button module -->
