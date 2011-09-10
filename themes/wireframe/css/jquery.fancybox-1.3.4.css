@@ -80,8 +80,8 @@
 
 #fancybox-close {
 	position: absolute;
-	top: -15px;
-	right: -15px;
+	top: -2px;
+	right: -2px;
 	width: 30px;
 	height: 30px;
 	background: transparent url(/themes/wireframe/images/fancybox/fancybox.png) -40px 0px;

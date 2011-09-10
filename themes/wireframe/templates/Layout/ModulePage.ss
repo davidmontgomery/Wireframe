@@ -5,28 +5,41 @@
 	<div class="padding_1">
 		<h1>$Title</h1>
 		$Content
+		
 		<!-- Lightbox module -->
 		<div class="section">
-			<h2>Modal</h2>
-			<li><a id="various1" title="Lorem ipsum dolor sit amet">Inline</a></li>
-			<div style="display: none;">
-				<div id="inline1">
-					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor. Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
-				</div>
-			</div>
-			
-			<a href="#test">link</a>
+			<h3>Modal</h3>
+			<ul>
+				<li>
+					<a id="various1" title="Lorem ipsum dolor sit amet">Inline</a>
+					<div class="hide">
+						<div id="inline1">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam quis mi eu elit tempor facilisis id et neque. Nulla sit amet sem sapien. Vestibulum imperdiet porta ante ac ornare. Nulla et lorem eu nibh adipiscing ultricies nec at lacus. Cras laoreet ultricies sem, at blandit mi eleifend aliquam. Nunc enim ipsum, vehicula non pretium varius, cursus ac tortor. Vivamus fringilla congue laoreet. Quisque ultrices sodales orci, quis rhoncus justo auctor in. Phasellus dui eros, bibendum eu feugiat ornare, faucibus eu mi. Nunc aliquet tempus sem, id aliquam diam varius ac. Maecenas nisl nunc, molestie vitae eleifend vel, iaculis sed magna. Aenean tempus lacus vitae orci posuere porttitor eget non felis. Donec lectus elit, aliquam nec eleifend sit amet, vestibulum sed nunc.
+						</div>
+					</div>
+				</li>
+				<li>
+					<a id="example5" title="Image 1 Lorem ipsum dolor sit amet, consectetur adipiscing elit." href="$ThemeDir/images/temp/gallery-image1.jpg">Single photo</a>
+				</li>
+				<li>
+					<a title="Lorem ipsum dolor sit amet" href="$ThemeDir/images/temp/gallery-image1.jpg" rel="example_group">Gallery</a>
+					<div class="hide">
+						<a title="Image 2 ipsum dolor sit amet" href="$ThemeDir/images/temp/gallery-image2.jpg" rel="example_group"></a>
+						<a title="Image 3 ipsum dolor sit amet" href="$ThemeDir/images/temp/gallery-image3.jpg" rel="example_group"></a>
+					</div>
+				</li>
+			</ul>
 		</div><!-- /section -->
 		
 		<!-- Tooltip -->
 		<div class="section">
-			<h2>Tooltip</h2>
+			<h3>Tooltip</h3>
 			<p>Here is a <a class="tooltip" href="#">tooltip</a>.</p>
 		</div><!-- /section -->
 		
 		<!-- Button module -->
 		<div class="section">
-			<h2>Button</h2>
+			<h3>Button</h3>
 			<a class="button" href="#">Button</a><br />
 			<span class="button">
 				<input type="submit" value="Submit">
@@ -35,7 +48,7 @@
 		
 		<!-- Box module -->
 		<div class="section">
-			<h2>Box</h2>
+			<h3>Box</h3>
 			<div class="box">
 				<div class="padding_1">
 					<p>Here is and example of a box class.</p>
@@ -45,7 +58,7 @@
 		
 		<!-- Accordion module -->
 		<div class="section">
-			<h2>Accordion</h2>
+			<h3>Accordion</h3>
 			<ul class="accordion">
 				<li>
 					<h4 class="clickable">Item One</h4>
