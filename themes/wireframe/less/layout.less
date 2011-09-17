@@ -63,7 +63,13 @@ ul.listing {
  * -------------------------------------------------------- */
 
 /*** Tooltip ***/
+.tooltip {
+
+}
+
 .tooltip_container {
+	display: none;
+	position: absolute;
 	width: 100px;
 	padding: 3px;
 	background: #ccc;
@@ -156,7 +162,6 @@ ul.accordion {
 	}
 	.body {
 		display: none;
-		height: 125px;
 	}
 }
 
@@ -187,6 +192,25 @@ ul.accordion {
 		}
 	}
 }
+
+/*** Slide Caption ***/
+.tile {
+	background: pink;
+	width: 400px;
+	.caption {
+		position: relative;
+		.head {
+			background: red;
+			padding: 10px 10px 5px 10px;
+		}
+		.body {
+			background: green;
+			display: none;
+			padding: 0 10px 0 10px;
+		}
+	}
+}
+
 
 /* --------------------------------------------------------
  * Sticky footer

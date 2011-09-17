@@ -65,6 +65,7 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/accordion.js',
 			JS_PATH . '/jquery.cycle.js',
 			JS_PATH . '/jquery.fancybox-1.3.4.pack.js',
+			JS_PATH . '/hover-intent.js',
 			JS_PATH . '/general.js'
 		);
 		

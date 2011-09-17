@@ -69,6 +69,8 @@ ul.listing .date {
  * -------------------------------------------------------- */
 /*** Tooltip ***/
 .tooltip_container {
+  display: none;
+  position: absolute;
   width: 100px;
   padding: 3px;
   background: #ccc;
@@ -165,7 +167,6 @@ ul.accordion .clickable {
 }
 ul.accordion .body {
   display: none;
-  height: 125px;
 }
 /*** Buttons ***/
 .button {
@@ -197,6 +198,23 @@ ul.accordion .body {
 }
 .button input:hover {
   color: #000;
+}
+/*** Slide Caption ***/
+.tile {
+  background: pink;
+  width: 400px;
+}
+.tile .caption {
+  position: relative;
+}
+.tile .caption .head {
+  background: red;
+  padding: 10px 10px 5px 10px;
+}
+.tile .caption .body {
+  background: green;
+  display: none;
+  padding: 0 10px 0 10px;
 }
 /* --------------------------------------------------------
  * Sticky footer

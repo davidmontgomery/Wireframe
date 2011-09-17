@@ -18,6 +18,7 @@
 			if (!$element.closest('li').hasClass('active')) {
 				$('.body').slideUp(options.speed);
 				$element.next().slideDown(options.speed);
+				
 				$element.closest('li').addClass('active');
 			}
 		});

@@ -44,6 +44,7 @@ define('SITE_NAME', $siteName);
  * Environment
  * 
  **********************/
+Validator::set_javascript_validation_handler('none');
 // Director::set_environment_type('live');
 // if(Director::isTest() BasicAuth::protect_entire_site();
 // CMSMenu::remove_menu_item('ReportAdmin');

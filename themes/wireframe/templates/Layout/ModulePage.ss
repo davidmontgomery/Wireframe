@@ -5,6 +5,20 @@
 	<div class="padding_1">
 		<h1>$Title</h1>
 		$Content
+		<div class="section">
+			<h3>Slide Caption</h3>
+			<div class="tile">
+				<img src="$ThemeDir/images/temp/temp-image1.jpg" width="400" height="100" alt="Temp Image1">
+				<div class="caption">
+					<div class="head">
+						<span>Caption Title</span>
+					</div>
+					<div class="body">
+						<p>Some content here</p>
+					</div>
+				</div>
+			</div>
+		</div>
 		
 		<!-- Lightbox module -->
 		<div class="section">
@@ -34,7 +48,7 @@
 		<!-- Tooltip -->
 		<div class="section">
 			<h3>Tooltip</h3>
-			<p>Here is a <a class="tooltip" title="Here is a title that goes here." href="#">tooltip</a>.</p>
+			<p>Here is a <a class="tooltip" title="Here is a title that goes here." href="#">tooltip</a>.</p
 		</div><!-- /section -->
 		
 		<!-- Button module -->

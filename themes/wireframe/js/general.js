@@ -1,21 +1,81 @@
 (function($) {
 	$(document).ready(function() {
 		
+		var config = {
+			interval: 200,
+			over: tileOver,
+			timeout: 500,
+			out: tileOut
+		};
+		
+		$(".tile").hoverIntent(config);
+		
+		// Panel Slide
+		function tileOver() {
+			var $caption = $(this).find('.caption');
+			var $body = $(this).find('.body');
+			var height = $body.height();
+			
+			$body.css({
+				'height' : 0,
+				'display' : 'block'
+			}).animate({
+				'height' : '+' + height + 'px'
+			}, 500);
+			
+			$caption.animate({
+				'margin-top' : '-' + height + 'px'
+			}, 500);
+		}
+		
+		function tileOut() {
+				var $caption = $(this).find('.caption');
+				var $body = $(this).find('.body');
+				var height = $body.height();
+
+				$body.animate({
+					'height' : 0
+				}, 500, function () {
+					$body.css({
+						'display' : 'none',
+						'height' : height
+					});
+				});
+
+				$caption.animate({
+					'margin-top' : 0
+				}, 500);
+		}
+		
+		
+		
+
+		
 		// Tooltip
-		$('.tooltip').hover(
+		$('a.tooltip').hover(
 			function() {
 				var $el = $(this);
+				var $pos = $el.offset();
+				var $xPos = $pos.left;
+				var $yPos = $pos.top - 40;
+				
+				$('body').append('<div class="tooltip_container"></div>');
+					
 				var $title = $el.attr('title');
 				$el.attr('title', '');
-				$el.after('<div class="tooltip_container"></div>');
-				$el.next().prepend('tooltip_container').text($title);
-				
+			
+				$('body').find('.tooltip_container').html($title).fadeIn(250).css({
+					'left' : $xPos,
+					'top' : $yPos
+				});
 			},
 			function() {
 				var $el = $(this);
 				var $newTitle = $('.tooltip_container').text();
 				$el.attr('title', $newTitle);
-				$el.next().remove();
+				$('body').find('.tooltip_container').fadeOut(250, function() {
+					$(this).remove();
+				});
 			}
 		);
 		
