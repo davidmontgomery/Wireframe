@@ -4,8 +4,11 @@ class ContactPage extends Page {
 	static $db = array(
 		'Mailto' => 'Varchar(100)',
 		'SubmitText' => 'HTMLText'
+		
 	);
-    
+   
+	
+	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 

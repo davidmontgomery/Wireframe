@@ -201,18 +201,17 @@ ul.accordion .body {
 }
 /*** Slide Caption ***/
 .tile {
-  background: pink;
   width: 400px;
 }
 .tile .caption {
   position: relative;
 }
 .tile .caption .head {
-  background: red;
+  background: #666;
   padding: 10px 10px 5px 10px;
 }
 .tile .caption .body {
-  background: green;
+  background: #999;
   display: none;
   padding: 0 10px 0 10px;
 }

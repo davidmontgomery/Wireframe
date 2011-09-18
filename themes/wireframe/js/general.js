@@ -21,11 +21,11 @@
 				'display' : 'block'
 			}).animate({
 				'height' : '+' + height + 'px'
-			}, 500);
+			}, 250);
 			
 			$caption.animate({
 				'margin-top' : '-' + height + 'px'
-			}, 500);
+			}, 250);
 		}
 		
 		function tileOut() {
@@ -35,7 +35,7 @@
 
 				$body.animate({
 					'height' : 0
-				}, 500, function () {
+				}, 250, function () {
 					$body.css({
 						'display' : 'none',
 						'height' : height
@@ -44,7 +44,7 @@
 
 				$caption.animate({
 					'margin-top' : 0
-				}, 500);
+				}, 250);
 		}
 		
 		
