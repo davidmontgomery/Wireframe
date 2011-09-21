@@ -4,11 +4,12 @@
 <div class="grid_1">
 	<div class="padding_1">
 		<h1>$Title</h1>
+		
 		$Content
 		$Form
 		$PageComments
 	</div>
-</div><%-- Grid_1 --%>
+</div>
 <div class="grid_2">
 	<div class="padding_1">
 		<% if Menu(2) %>
@@ -16,3 +17,4 @@
 		<% end_if %>
 	</div>
 </div><!-- /col_2 -->
+

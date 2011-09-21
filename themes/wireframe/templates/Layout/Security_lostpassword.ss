@@ -4,7 +4,7 @@
 <div class="grid_1">
 	<div class="padding_1">
 		<h1>$Title</h1>
-		<p>[This is the custom Login Page]</p>
+		<p>[This is the custom Lost Password Page]</p>
 		$Content
 		$Form
 		$PageComments

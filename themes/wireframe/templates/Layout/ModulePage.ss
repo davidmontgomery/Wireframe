@@ -54,10 +54,10 @@
 		<!-- Button module -->
 		<div class="section">
 			<h3>Button</h3>
-			<a class="button" href="#">Button</a><br />
-			<span class="button">
+			<a class="button" href="#"><span>Button</span></a><br />
+			<div class="button">
 				<input type="submit" value="Submit">
-			</span>
+			</div>
 		</div><!-- /section -->
 		
 		<!-- Box module -->
