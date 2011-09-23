@@ -148,6 +148,7 @@ ul.accordion {
   list-style: none;
   padding: 0;
   margin: 0;
+  position: relative;
 }
 ul.accordion h4 {
   background: #ccc;
@@ -167,6 +168,10 @@ ul.accordion .clickable {
 }
 ul.accordion .body {
   display: none;
+}
+ul.accordion p {
+  padding: 0;
+  margin: 0;
 }
 /*** Buttons ***/
 .button {

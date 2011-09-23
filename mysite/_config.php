@@ -9,7 +9,7 @@ $project          = 'mysite'; // Sets mysite directory
 $projectName      = 'wireframe'; // Sets theme directory name
 $siteName         = 'My website'; // Sets website name for contact email
 $emailSubjectLine = 'Contact email subject line.'; // Sets contact email subject line
-$adminEmail       = 'hello@mysite.com'; // Sets administrators email address
+$adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email address
 
 
 /**********************
@@ -151,4 +151,3 @@ PageComment::enableModeration();
 
 // Force user to be logged in to post a comment
 PageCommentInterface::set_comments_require_login(true);
-

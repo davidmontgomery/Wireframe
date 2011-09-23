@@ -1,7 +1,7 @@
 (function($) {
 	$.fn.accordion = function(options) {
 		var defaults = {
-			speed: 10
+			speed: 1000
 		}
 		
 		var options = $.extend(defaults, options);

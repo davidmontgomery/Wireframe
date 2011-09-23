@@ -47,10 +47,6 @@
 				}, 250);
 		}
 		
-		
-		
-
-		
 		// Tooltip
 		$('a.tooltip').hover(
 			function() {
@@ -97,7 +93,7 @@
 		
 		// Accordion
 		$('.accordion').accordion({
-			speed: 500
+			speed : 500
 		});
 		
 		// Fancybox
