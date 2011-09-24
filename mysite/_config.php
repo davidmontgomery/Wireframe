@@ -93,6 +93,14 @@ require_once("conf/ConfigureFromEnv.php");
 
 /**********************
  * 
+ * Admin customisation
+ * 
+ **********************/
+//CMSMenu::remove_menu_item('ReportAdmin');
+
+
+/**********************
+ * 
  * CMS Rebranding
  * 
  **********************/
@@ -151,3 +159,4 @@ PageComment::enableModeration();
 
 // Force user to be logged in to post a comment
 PageCommentInterface::set_comments_require_login(true);
+

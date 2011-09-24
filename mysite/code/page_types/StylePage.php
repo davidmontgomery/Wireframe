@@ -10,4 +10,4 @@ class StylePage extends Page {
 
 class StylePage_Controller extends Page_Controller {
 
-}
+}	

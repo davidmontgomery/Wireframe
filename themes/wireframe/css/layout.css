@@ -228,6 +228,24 @@ a.button {
   display: none;
   padding: 0 10px 0 10px;
 }
+/*** Image Gallery ***/
+ul.gallery_list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+ul.gallery_list li {
+  margin-bottom: 20px;
+}
+ul.gallery_list .image_wrap {
+  float: left;
+  margin-right: 20px;
+}
+ul.gallery_list .details {
+  padding: 8px;
+  float: left;
+  width: 444px;
+}
 /* --------------------------------------------------------
  * Sticky footer
  * -------------------------------------------------------- */
