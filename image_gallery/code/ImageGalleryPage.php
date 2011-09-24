@@ -41,7 +41,9 @@ class ImageGalleryPage extends Page
 	protected $albumClass = "ImageGalleryAlbum";
 	public $UI;
   
-
+	public  $CoverImageWidth = '200';
+	public  $CoverImageHeight = '100';
+	
 	public function getItemClass()
 	{
 		return $this->itemClass;

@@ -4,7 +4,6 @@
 <div class="grid_1">
 	<div class="padding_1">
 		<h1>$Title</h1>
-		
 		$Content
 		$Form
 		$PageComments
@@ -17,4 +16,3 @@
 		<% end_if %>
 	</div>
 </div><!-- /col_2 -->
-
