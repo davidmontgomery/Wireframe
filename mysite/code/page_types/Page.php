@@ -87,10 +87,15 @@ class Page_Controller extends ContentController {
 		Requirements::combine_files('combined.js', $js);
 	}
 	
-	// Functions
-	function GetLatestNews($num=3) {
+	// Latest News
+	function getLatestNews($num=1) {
 		$news = DataObject::get_one("ArticleHolder");
 		return DataObject::get("ArticlePage", "ParentID = $news->ID", "Date DESC", "", $num);
+	}
+	
+		// Latest Testimonial
+	function getLatestTestimonials($num=1) {
+    return DataObject::get('Testimonial', null, null, null, $num);
 	}
 	
 	function DisplayHomepage() {

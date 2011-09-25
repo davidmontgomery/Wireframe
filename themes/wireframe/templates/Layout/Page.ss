@@ -14,5 +14,7 @@
 		<% if Menu(2) %>
 			<% include SubNavigation %>
 		<% end_if %>
+		
+		<% include LatestNews %>
 	</div>
 </div><!-- /col_2 -->
