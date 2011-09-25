@@ -8,15 +8,15 @@
 			<ul class="listing">
 				<% control Faqs %>
 					<li <% if Last %>class='last'<% end_if %> >
-						<p>$Question <br /><span class='name'>$Answer</span></p>
+						<p class="question">$Question</p>
+						<p class="answer">$Answer</p>
 					</li>
 				<% end_control %>
 			</ul><!-- testimonials -->
 		<% end_if %>
-		
-		
-	</div>
-</div>
+	</div><!-- /padding_1 -->
+</div><!-- /grid_1 -->
+
 <div class="grid_2">
 	<div class="padding_1">
 		[Snippet of content here.]

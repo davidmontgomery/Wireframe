@@ -1,6 +1,6 @@
 <div class="grid_full">
 	<% include BreadCrumbs %>
-</div>
+</div><!-- /grid_full -->
 
 <div class="grid_1">
 	<div class="padding_1">
