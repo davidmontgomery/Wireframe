@@ -1,5 +1,189 @@
 /**
  * This support file is used to style the WYSIWYG editor in the CMS
 */
+/* --------------------------------------------------------
+ * Fonts
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Colours
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * CSS3
+ * -------------------------------------------------------- */
+/* --------------------------------------------------------
+ * Font-face
+ * -------------------------------------------------------- */
+@font-face {
+  font-family: 'My Font';
+  src: url(../resources/my-font.eot);
+  src: local('☺'), url(../resources/my-font.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+.typography {
+  color: #333333;
+}
+/* --------------------------------------------------------
+ * Links
+ * -------------------------------------------------------- */
+.typography a {
+  color: #2361a1;
+}
+.typography a:hover {
+  color: #000000;
+  text-decoration: none;
+}
+/* --------------------------------------------------------
+ * Lists
+ * -------------------------------------------------------- */
+.typography ul {
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+.typography ol {
+  list-style-position: inside;
+  margin-bottom: 15px;
+}
+/* --------------------------------------------------------
+ * Paragraphs
+ * -------------------------------------------------------- */
+.typography p {
+  color: #333;
+  line-height: 18px;
+  margin-bottom: 15px;
+}
+/* --------------------------------------------------------
+ * Headings
+ * -------------------------------------------------------- */
+.typography p + h2,
+.typography ul + h2,
+.typography ol + h2,
+.typography p + h3,
+.typography ul + h3,
+.typography ol + h3,
+.typography p + h4,
+.typography ul + h4,
+.typography ol + h4,
+.typography p + h5,
+.typography ul + h5,
+.typography ol + h5,
+.typography p + h6,
+.typography ul + h6,
+.typography ol + h6 {
+  margin-top: 30px;
+  /* Margin between top of heading and paragraph / ul / ol */
 
-@import "typography.css";
+}
+.typography h1, h1 {
+  color: #333;
+  font-size: 26px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.typography h2, h2 {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.typography h3, h3 {
+  color: #333;
+  font-size: 20px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.typography h4, h4 {
+  color: #333;
+  font-size: 18px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.typography h4 a, h4 a {
+  text-decoration: none;
+}
+.typography h5 {
+  color: #333;
+  font-size: 16px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.typography h6 {
+  color: #333;
+  font-size: 14px;
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+/* --------------------------------------------------------
+ * Quotes
+ * -------------------------------------------------------- */
+.typography blockquote {
+  margin: 10px;
+  font-size: 1.4em;
+  color: #777;
+  font-style: italic;
+}
+.typography q {
+  display: block;
+  font-size: 0.8em;
+  margin: 1em 1em;
+  padding: 0.5em;
+  border: 1px #ccc solid;
+}
+/* --------------------------------------------------------
+ * Pre
+ * -------------------------------------------------------- */
+.typography pre {
+  font-family: "Courier New", "Courier";
+  display: block;
+  font-size: 1.2em;
+  margin: 2em 5em;
+  padding: 0.5em;
+  border: 1px #ccc solid;
+  background: #eee;
+}
+/* --------------------------------------------------------
+ * Table
+ * -------------------------------------------------------- */
+.typography table {
+  margin: 0 0 18px 0;
+  color: #666;
+  border-collapse: collapse;
+}
+.typography td {
+  border: 1px solid #999;
+  padding: 5px;
+}
+/* --------------------------------------------------------
+ * Wysiwyg editor alignment classes
+ * -------------------------------------------------------- */
+.typography .left {
+  text-align: left;
+}
+.typography .center {
+  text-align: center;
+}
+.typography .right {
+  text-align: right;
+}
+/* --------------------------------------------------------
+ * Images
+ * -------------------------------------------------------- */
+.typography img {
+  border: none;
+}
+.typography img.right {
+  float: right;
+  margin-left: 20px;
+}
+.typography img.left {
+  float: left;
+}
+.typography img.leftAlone {
+  float: left;
+  margin-right: 100%;
+}
+.typography img.center {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}

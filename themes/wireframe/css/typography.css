@@ -78,32 +78,34 @@
   margin-bottom: 10px;
 }
 .typography h2, h2 {
-  color: #333;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: normal;
   margin-bottom: 10px;
 }
 .typography h3, h3 {
   color: #333;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: normal;
   margin-bottom: 10px;
 }
 .typography h4, h4 {
   color: #333;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
 }
+.typography h4 a, h4 a {
+  text-decoration: none;
+}
 .typography h5 {
   color: #333;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: normal;
   margin-bottom: 10px;
 }
 .typography h6 {
   color: #333;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: normal;
   margin-bottom: 10px;
 }

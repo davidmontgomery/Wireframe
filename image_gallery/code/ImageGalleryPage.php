@@ -25,7 +25,7 @@ class ImageGalleryPage extends Page
 		'ThumbnailSize' => '128',
 		'Square' => '1',
 		'MediumSize' => '400',
-		'NormalSize' => '600',
+		'NormalSize' => '100',
 		'MediaPerPage' => '30',
 		'MediaPerLine' => '6',
 		'UploadLimit' => '20',
@@ -41,8 +41,9 @@ class ImageGalleryPage extends Page
 	protected $albumClass = "ImageGalleryAlbum";
 	public $UI;
   
-	public  $CoverImageWidth = '200';
-	public  $CoverImageHeight = '100';
+	public $CoverImageWidth = '500';
+	public $Square = '1';
+	
 	
 	public function getItemClass()
 	{
@@ -111,6 +112,7 @@ class ImageGalleryPage extends Page
 	
 	public function getCMSFields($cms) {
 		
+		
 		$configuration = _t('ImageGalleryPage.CONFIGURATION','Configuration');
 		$albums = _t('ImageGalleryPage.ALBUMS','Albums');
 		$photos = _t('ImageGalleryPage.PHOTOS','Photos');
@@ -141,6 +143,7 @@ class ImageGalleryPage extends Page
 		}		
 		$f->addFieldToTab("Root.Content.$configuration",new OptionsetField('GalleryUI',_t('ImageGalleryPage.POPUPSTYLE','Popup style'), $popup_map));
 		$f->addFieldToTab("Root.Content.$configuration", new NumericField('UploadLimit',_t('ImageGalleryPage.MAXFILES','Max files allowed in upload queue')));				
+		$f->removeByName("Configuration"); 
 		
 		if($this->RootFolderID) {
 

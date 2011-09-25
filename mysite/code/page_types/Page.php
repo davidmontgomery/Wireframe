@@ -47,9 +47,9 @@ class Page_Controller extends ContentController {
 		// CSS
 		$css = array(
 			CSS_PATH . '/reset.css',
-			CSS_PATH . '/editor.css',
 			CSS_PATH . '/variables.css',
 			CSS_PATH . '/css3.css',
+			CSS_PATH . '/editor.css',
 			CSS_PATH . '/layout.css',
 			CSS_PATH . '/form.css',
 			CSS_PATH . '/jquery.fancybox-1.3.4.css',
@@ -65,6 +65,7 @@ class Page_Controller extends ContentController {
 			JS_PATH . '/jquery.cycle.js',
 			JS_PATH . '/jquery.fancybox-1.3.4.pack.js',
 			JS_PATH . '/hover-intent.js',
+			JS_PATH . '/jquery.moreless.1.0.js',
 			JS_PATH . '/general.js'
 		);
 		

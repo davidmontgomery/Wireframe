@@ -1,9 +1,8 @@
 <div class="grid_full">
 	<div class="padding_1">
-		<h1>$Title</h1>
-		$Content
 		<% include Slideshow %>
-	</div>
+		$Content
+	</div><!-- /padding_1 -->
 	<% include LatestNewsPromo %>
 	<% include PagePromo %>
-</div>
+</div><!-- /grid_full -->

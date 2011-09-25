@@ -47,15 +47,22 @@ ul.listing h3 {
 }
 ul.listing li {
   padding: 0;
-  margin: 0 0 25px 0;
+  margin: 0 0 20px 0;
+  border-bottom: 1px solid #ccc;
+}
+ul.listing li.last {
+  border-bottom: none;
 }
 ul.listing .header {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 ul.listing .body {
   margin-bottom: -5px;
 }
 ul.listing .date {
+  display: block;
+  position: relative;
+  margin-top: -2px;
   font-size: .917em;
   color: #666;
 }
@@ -298,8 +305,8 @@ html, body {
 }
 #header h1 {
   color: #000;
-  font-size: 2.25em;
-  font-weight: bold;
+  font-size: 28px;
+  font-weight: normal;
   margin: 0 0 5px 0;
 }
 #header h1 a {

@@ -160,3 +160,5 @@ PageComment::enableModeration();
 // Force user to be logged in to post a comment
 PageCommentInterface::set_comments_require_login(true);
 
+
+Object::add_extension('ImageGalleryPage', 'MyImageGalleryPage');

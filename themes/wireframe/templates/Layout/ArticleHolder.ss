@@ -7,16 +7,16 @@
 		<% if Children %>
 			<ul class='listing article'>
 				<% control ArticlePaginate %>
-					<li>
+					<li <% if Last %>class="last"<% end_if %>>
 						<div class="header">
-							<h3><a href="$Link">$Title</a></h3>
+							<h4><a href="$Link">$Title</a></h4>
 							<span class="date">$Date.Nice</span>
 						</div>
 						<div class="body">
 							<p>$Content.LimitWordCount(35, ... )</p>
 						</div>
 						<div class="footer">
-							<p><a class='view_more' href="$Link">View more &raquo;</a></p>
+							<p><a class='view_more' href="$Link">Read more &raquo;</a></p>
 						</div>
 					</li>
 				<% end_control %>
