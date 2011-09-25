@@ -1,6 +1,8 @@
 <?php
 
 class HomePage extends Page {
+	static $icon = 'mysite/images/icons/mycustomicon';
+	
 	static $db = array(
 	);
 
