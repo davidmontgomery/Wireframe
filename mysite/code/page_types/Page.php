@@ -1,7 +1,7 @@
 <?php
 
 class Page extends SiteTree {
-	static $icon = 'themes/wireframe/images/tree-icons/page';
+	static $icon = 'themes/wireframe/images/icons/page';
 	
 	public static $db = array(
 		'IntroSnippet' => 'HTMLText',

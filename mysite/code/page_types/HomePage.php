@@ -1,7 +1,7 @@
 <?php
 
 class HomePage extends Page {
-	static $icon = 'themes/wireframe/images/tree-icons/home';
+	static $icon = 'themes/wireframe/images/icons/home';
 	
 	static $db = array(
 	);

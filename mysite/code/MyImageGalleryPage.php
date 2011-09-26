@@ -1,5 +1,6 @@
 <?php
-class MyImageGalleryPage extends DataObjectDecorator{
+class MyImageGalleryPage extends DataObjectDecorator {
+		static $icon = 'themes/wireframe/images/icons/page';
 	function extraStatics() {
 		
 	}
