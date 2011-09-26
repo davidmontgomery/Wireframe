@@ -1,6 +1,8 @@
 <?php
 
 class Page extends SiteTree {
+	static $icon = 'themes/wireframe/images/tree-icons/page';
+	
 	public static $db = array(
 		'IntroSnippet' => 'HTMLText',
 		'DisplayHomepage' => 'Boolean'
