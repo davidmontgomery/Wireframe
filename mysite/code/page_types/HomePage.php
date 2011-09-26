@@ -22,7 +22,8 @@ class HomePage extends Page {
 		'BannerImage', // Source class
 		'MyBannerImage',
 		array(
-			'Caption' => 'Caption'
+			'Caption' => 'Caption',
+			'Heading' => 'Heading'
 		), // Headings
 		'getCMSFields_forPopup'
 		);

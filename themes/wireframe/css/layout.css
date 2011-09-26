@@ -119,6 +119,12 @@ ul.listing .date {
   z-index: 2;
   width: 350px;
 }
+.slideshow div h3 {
+  position: relative;
+  margin: 50px 0 0 10px;
+  z-index: 2;
+  width: 350px;
+}
 .banner_nav {
   position: absolute;
   bottom: 7px;
@@ -463,6 +469,22 @@ ul.gallery li {
 }
 ul.gallery li.last {
   margin-right: 0;
+}
+/* --------------------------------------------------------
+ * Snippets
+ * -------------------------------------------------------- */
+/*** Blog ***/
+p.blog_date {
+  position: relative;
+  margin: -8px 0 8px 0;
+  font-style: italic;
+  color: #999;
+}
+.comment_name {
+  position: relative;
+  margin: -8px 0 8px 0;
+  font-style: italic;
+  color: #999;
 }
 /* --------------------------------------------------------
  * About page

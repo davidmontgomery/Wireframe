@@ -96,6 +96,7 @@
   font-size: 18px;
   font-weight: normal;
   margin-bottom: 10px;
+  padding-bottom: 1px;
 }
 .typography h4 a, h4 a {
   text-decoration: none;

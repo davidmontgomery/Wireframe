@@ -88,18 +88,37 @@ class Page_Controller extends ContentController {
 	}
 	
 	// Latest News
-	function getLatestNews($num=1) {
+	function LatestNews($num=1) {
 		$news = DataObject::get_one("ArticleHolder");
 		return DataObject::get("ArticlePage", "ParentID = $news->ID", "Date DESC", "", $num);
 	}
 	
+	function NewsByYear() {
+		return DataObject::get("ArticlePage", 'YEAR("DATE")', "Date DESC");
+	}
+	
 		// Latest Testimonial
-	function getLatestTestimonials($num=1) {
-    return DataObject::get('Testimonial', null, null, null, $num);
+	function LatestTestimonials($num=1) {
+		return DataObject::get('Testimonial', null, null, null, $num);
+	}
+	
+	// Latest Blog entry
+	public function LatestBlog($num=1) {
+		$articles = DataObject::get_one("BlogHolder");
+		return ($articles) ? DataObject::get("BlogEntry", "", "Date DESC", "", $num) : false;
+	}
+	
+	// Latest Blog Catagories
+	public function LatestCatagories($num=1) {
+		$articles = DataObject::get_one("BlogHolder");
+		return ($articles) ? DataObject::get("BlogEntry", "ParentID = $articles->ID", "Created DESC", "", $num) : false;
+	}
+	
+	public function LatestComments($num=1) {
+		return DataObject::get("PageComment",  "IsSpam = 0 AND NeedsModeration = 0", "Created DESC", "", $num);
 	}
 	
 	function DisplayHomepage() {
 		return DataObject::get("Page", "DisplayHomepage = 1", "RAND()", null, "");
 	}
-	
 }

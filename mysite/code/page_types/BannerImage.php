@@ -2,7 +2,8 @@
 
 class BannerImage extends DataObject {
 	static $db = array (
-		'Caption' => 'Varchar(50)'
+		'Heading' => 'Varchar(50)',
+		'Caption' => 'HTMLText'
 	);
 
 	static $has_one = array (
@@ -12,7 +13,8 @@ class BannerImage extends DataObject {
 
 	public function getCMSFields_forPopup() {
 		return new FieldSet(
-			new TextField('Caption', 'Caption'),
+			new TextField('Heading'),
+			new SimpleHTMLEditorField('Caption'),
 			new FileIFrameField('MyBannerImage')
 		);
 	}

@@ -3,6 +3,7 @@
 		<div class="slideshow">
 			<% control BannerImages %>
 				<div>
+					<h3>$Heading</h3>
 					<p>$Caption</p>
 					$MyBannerImage.CroppedImage(900, 263)
 				</div>
