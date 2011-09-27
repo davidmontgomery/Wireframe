@@ -1,17 +1,17 @@
 <?php
 
 class ContactPage extends Page {
+	static $icon = 'themes/wireframe/images/icons/contact';
+		
 	static $db = array(
 		'Mailto' => 'Varchar(100)',
 		'SubmitText' => 'HTMLText'
 		
 	);
-   
-	
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-
+		
 		$fields->addFieldToTab("Root.Content.OnSubmission", new TextField('Mailto', 'Email submissions to'));
 		$fields->addFieldToTab("Root.Content.OnSubmission", new HTMLEditorField('SubmitText', 'Text on Submission'));
 		return $fields;	

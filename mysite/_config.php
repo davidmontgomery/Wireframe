@@ -35,9 +35,18 @@ define('COMBINE_PATH', 'assets/combined');
 define('EMAIL_SUBJECT_LINE', $emailSubjectLine);
 define('SITE_NAME', $siteName);
 
+/**********************
+ * 
+ * CMS Tree icons
+ * 
+ **********************/
 
+Page::$icon = array('themes/wireframe/images/icons/page','file');
+ErrorPage::$icon = array('themes/wireframe/images/icons/error','file');
+BlogHolder::$icon = array('themes/wireframe/images/icons/blog','file');
+BlogEntry::$icon = array('themes/wireframe/images/icons/post','file');
 
-
+// ImageGalleryPage::$icon = array('themes/wireframe/images/icons/gallery','file');
 
 /**********************
  * 

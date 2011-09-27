@@ -59,4 +59,17 @@
 			<% end_if %>
 		</div><!-- /padding_1 -->
 	</div><!-- /grid_3 -->
+
+	<div class="grid_3 last">
+		<div class="padding_1">
+			<% if LatestCatagories(1) %>
+			<% control LatestCatagories(1) %>
+				<a href="$Link">$Tag</a>
+			<% end_control %>
+			<% end_if %>
+		</div><!-- /padding_1 -->
+	</div><!-- /grid_3 -->
+		
+		
+
 </div><!-- /grid_full -->

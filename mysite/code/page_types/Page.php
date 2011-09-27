@@ -1,7 +1,7 @@
 <?php
 
 class Page extends SiteTree {
-	static $icon = 'themes/wireframe/images/icons/page';
+
 	
 	public static $db = array(
 		'IntroSnippet' => 'HTMLText',
@@ -95,9 +95,14 @@ class Page_Controller extends ContentController {
 		return DataObject::get("ArticlePage", "ParentID = $news->ID", "Date DESC", "", $num);
 	}
 	
-	function NewsByYear() {
-		return DataObject::get("ArticlePage", 'YEAR("DATE")', "Date DESC");
-	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 		// Latest Testimonial
 	function LatestTestimonials($num=1) {

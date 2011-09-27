@@ -1,6 +1,8 @@
 <?php
 
 class ArticleHolder extends Page {
+	static $icon = 'themes/wireframe/images/icons/news';
+	
 	static $db = array(
 	);
 
