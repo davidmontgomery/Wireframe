@@ -5,19 +5,29 @@ class ContactPage extends Page {
 		
 	static $db = array(
 		'Mailto' => 'Varchar(100)',
-		'SubmitText' => 'HTMLText'
-		
+		'SubmitText' => 'HTMLText',
+		'Address'=>'Text',
+		'MapType' => "Enum('G_NORMAL_MAP, G_SATELLITE_MAP, G_HYBRID_MAP', 'G_NORMAL_MAP')",
+		'ShowGoogleMap' => 'Boolean',
+		'AddressBlock' => 'HTMLText'
+	);
+	
+	public static $defaults = array(
+		'AddressBlock' => '<p>My Business<br />7 Minerva St<br />Newtown<br />Wellington 6012<br />New Zealand</p>'
 	);
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
+		$fields->addFieldToTab('Root.Content.GoogleMap', new CheckboxField ('ShowGoogleMap', 'Show Google Map'));
+		$fields->addFieldToTab('Root.Content.GoogleMap',new DropdownField('MapType','Choose a map type', $this->dbObject('MapType')->enumValues()));
+		$fields->addFieldToTab('Root.Content.	', new HTMLEditorField('AddressBlock','Address', 10));
+		$fields->addFieldToTab('Root.Content.OnSubmission', new TextField('Mailto', 'Email submissions to'));
+		$fields->addFieldToTab('Root.Content.OnSubmission', new HTMLEditorField('SubmitText', 'Text on Submission'));
 		
-		$fields->addFieldToTab("Root.Content.OnSubmission", new TextField('Mailto', 'Email submissions to'));
-		$fields->addFieldToTab("Root.Content.OnSubmission", new HTMLEditorField('SubmitText', 'Text on Submission'));
-		return $fields;	
+		return $fields;
 	}
 }
- 
+
 class ContactPage_Controller extends Page_Controller {
 	function ContactForm() {
 		$Params = Director::urlParams();
@@ -26,22 +36,22 @@ class ContactPage_Controller extends Page_Controller {
 	}
     
 	function SendContactForm($data) {
-		//Set data
+		// Set data
 		$From = $data['Email'];
 		$To = $this->Mailto;
 		$Subject = EMAIL_SUBJECT_LINE;
 		$email = new Email($From, $To, $Subject);
 
-		//set template
+		// Set template
 		$email->setTemplate('ContactEmail');
 
-		//populate template
+		// Populate template
 		$email->populateTemplate($data);
 
-		//send mail
+		// Send mail
 		$email->send();
 
-		//return to submitted message
+		// Return to submitted message
 		Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
 	}
     
@@ -52,7 +62,7 @@ class ContactPage_Controller extends Page_Controller {
 	function init() {
 		parent::init();
 
-		//custom JQuery validation
+		// Custom JQuery validation
 		Validator::set_javascript_validation_handler('none');
 		Requirements::javascript(JS_PATH .  "/jquery.validate.js");
 		Requirements::javascript(JS_PATH . "/ContactPage.js");

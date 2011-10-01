@@ -12,6 +12,10 @@
 		<ul></ul>
 	</div>
 	
+	<div class="field dropdown">
+		<label for="$dataFieldByName(Title).id">Title:</label>
+		$dataFieldByName(Title)
+	</div>
 	<div class="field text">
 		<label for="$dataFieldByName(Name).id">Name:</label>
 		$dataFieldByName(Name)
@@ -24,7 +28,14 @@
 		<label for="$dataFieldByName(Message).id">Message:</label>
 		$dataFieldByName(Message)
 	</div>
-
+	<div class="field checkbox">
+		$dataFieldByName(TermsConditions)
+		<label for="$dataFieldByName(EmailUpdates).id">Send me email updates</label>
+	</div>
+	<div class="field radio">
+		<label for="$dataFieldByName(Sex).id">Sex:</label>
+		$dataFieldByName(Sex)
+	</div>
 	$dataFieldByName(SecurityID)
 	<% if Actions %>
 		<div class="Actions">

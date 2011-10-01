@@ -13,6 +13,7 @@
 
 <div class="grid_2">
 	<div class="padding_1">
+		$SideBar
 		<% include LatestComment %>
 		<% include LatestBlog %>
 	</div><!-- /padding_1 -->

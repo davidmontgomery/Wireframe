@@ -6,8 +6,8 @@
 <head>
 	<% base_tag %>
 	<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
-	<% if MetaDescription %><meta name="description" content="$MetaDescription"><% end_if %>
-	<% if MetaKeywords %><meta name="keywords" content="$MetaKeywords"><% end_if %>
+	<meta name="description" content="<% if MetaDescription %>$MetaDescription<% else %>$SiteConfig.GlobalDescription<% end_if %>">
+  <meta name="keywords" content="<% if MetaKeywords %>$MetaKeywords<% else %>$SiteConfig.GlobalKeywords<% end_if %>">
 </head>
 <body class="page_{$URLSegment} class_{$ClassName}">
 	<% include Accessibility %>
@@ -15,8 +15,8 @@
 		<div id="header">
 			$SearchForm
 			<% include Branding %>
-			<% include Navigation %>
 		</div><!-- /header -->
+		<% include Navigation %>
 		<div class="layout typography clearfix">
 			$Layout
 		</div><!-- /layout -->

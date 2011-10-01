@@ -343,9 +343,6 @@ html, body {
  * -------------------------------------------------------- */
 #nav {
   background: #7b7b7b;
-  bottom: 0;
-  position: absolute;
-  right: 0;
 }
 #nav ul {
   float: right;
@@ -374,6 +371,21 @@ html, body {
 #nav a.section:hover {
   background: #fff;
   color: #2361A1;
+}
+.sub_nav {
+  padding: 10px 0 0 25px;
+  position: relative;
+}
+.sub_nav ul {
+  list-style: none;
+}
+.sub_nav li {
+  float: left;
+}
+.sub_nav a {
+  color: #2361A1;
+  float: left;
+  margin-right: 15px;
 }
 /*** Subnav ***/
 ul.subnav {
@@ -438,6 +450,15 @@ ul.subnav li.current a {
   margin-right: 40px;
 }
 .grid_3.last {
+  margin-right: 0;
+}
+.grid_4 {
+  background: #f2f2f2;
+  float: left;
+  width: 440px;
+  margin-right: 40px;
+}
+.grid_4.last {
   margin-right: 0;
 }
 /*** Padding ***/

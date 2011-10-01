@@ -350,9 +350,7 @@ html, body {
  * -------------------------------------------------------- */
 #nav {
 	background: #7b7b7b;
-	bottom: 0;
-	position: absolute;
-	right: 0;
+
 	ul {
 		float: right;
 		margin: 0;
@@ -383,6 +381,21 @@ html, body {
 	}
 }
  
+.sub_nav {
+	padding: 10px 0 0 25px;
+	position: relative;
+	ul {
+		list-style: none;
+	}
+	li {
+		float: left;
+	}
+	a {
+		color: #2361A1;
+		float: left;
+		margin-right: 15px;
+	}
+}
 /*** Subnav ***/
 ul.subnav {
 	margin: 0;
@@ -450,6 +463,16 @@ ul.subnav {
 	background: #f2f2f2;
 	float: left;
 	width: 280px;
+	margin-right: 40px;
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.grid_4 {
+	background: #f2f2f2;
+	float: left;
+	width: 440px;
 	margin-right: 40px;
 	&.last {
 		margin-right: 0;

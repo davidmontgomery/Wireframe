@@ -14,7 +14,8 @@ class Page extends SiteTree {
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Content.Main', new CheckboxField ('DisplayHomepage', 'Display on Homepage'), 'Content');
-		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('IntroSnippet', 'Homepage Snippet'), 'Content');
+		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('IntroSnippet', 'Homepage Snippet', 5), 'Content');
+		
 		return $fields;	
 	}
 }
@@ -115,9 +116,17 @@ class Page_Controller extends ContentController {
 	// Latest comment
 	public function LatestComments($num=1) {
 		return DataObject::get("PageComment",  "IsSpam = 0 AND NeedsModeration = 0", "Created DESC", "", $num);
-	}
+	}	
 	
 	function DisplayHomepage() {
-		return DataObject::get("Page", "DisplayHomepage = 1", "RAND()", null, "");
+		return DataObject::get('Page', 'DisplayHomepage = 1', 'RAND()', null, '');
+	}
+	
+	function DisplayGoogleMap() {
+		return DataObject::get('Page', 'ShowGoogleMap = 1', '', null, '');
+	}
+	
+	function FormatAddress() {
+		return DataObject::get('Page', 'ShowGoogleMap = 1', '', null, '');
 	}
 }
