@@ -18,16 +18,18 @@ $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email 
  * 
  **********************/
 SSViewer::set_theme($projectName);
-
+BlogTree::$default_entries_limit = 1;
 
 /**********************
  * 
  * Constants
  * 
  **********************/
+
+
 global $databaseConfig;
 global $database;
-global $project;	
+global $project;
 
 define('CSS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/css');
 define('JS_PATH', THEMES_DIR . '/' . SSViewer::current_theme() . '/js');
@@ -35,12 +37,12 @@ define('COMBINE_PATH', 'assets/combined');
 define('EMAIL_SUBJECT_LINE', $emailSubjectLine);
 define('SITE_NAME', $siteName);
 
+
 /**********************
  * 
  * CMS Tree icons
  * 
  **********************/
-
 Page::$icon = array('themes/wireframe/images/icons/page','file');
 ErrorPage::$icon = array('themes/wireframe/images/icons/error','file');
 BlogHolder::$icon = array('themes/wireframe/images/icons/blog','file');
@@ -58,8 +60,14 @@ Validator::set_javascript_validation_handler('none');
 // if(Director::isTest() BasicAuth::protect_entire_site();
 // CMSMenu::remove_menu_item('ReportAdmin');
 
-// custom site config
+/**********************
+ * 
+ * Extensions
+ * 
+ **********************/
 DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
+DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
+
 
 Director::set_dev_servers(array(
 	$projectName
@@ -168,6 +176,3 @@ HtmlEditorConfig::get('cms')->setButtonsForLine(3);
 
 // Force user to be logged in to post a comment
 PageCommentInterface::set_comments_require_login(false);
-
-
-Object::add_extension('ImageGalleryPage', 'MyImageGalleryPage');

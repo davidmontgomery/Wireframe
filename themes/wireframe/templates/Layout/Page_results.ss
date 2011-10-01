@@ -1,28 +1,35 @@
-<div class="content">
-    <% if Results %>
-        <section class='listing'>
-            <% control Results %>
-                <article>
-                    <header>
-                        <% if MenuTitle %>
-                            <h2><a href="$Link">$MenuTitle</a></h2>
-                        <% else %>
-                            <h2><a href="$Link">$Title</a></h2>
-                        <% end_if %>
-                    </header>
-                    
-                    <% if Content %>
-                        $Content.FirstParagraph(html) 
-                    <% end_if %>
-                
-                    <a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
-                </article>
-            <% end_control %>
-        </section>
-    <% else %>
-        <p>No results found. Please try another search term.</p>
-    <% end_if %>
+<div class="grid_full">
+	<% include BreadCrumbs %>
+</div><!-- /grid_full -->
 
+<div class="grid_1">
+	<div class="padding_1">
+		<h1>$Title</h1>
+		
+		<% if Results %>
+			<section class='listing'>
+				<% control Results %>
+					<article>
+						<header>
+							<% if MenuTitle %>
+								<h2><a href="$Link">$MenuTitle</a></h2>
+							<% else %>
+								<h2><a href="$Link">$Title</a></h2>
+							<% end_if %>
+						</header>
+						
+						<% if Content %>
+							$Content.FirstParagraph(html)
+						<% end_if %>
+						
+						<a class="readMoreLink" href="$Link" title="Read more about &quot;{$Title}&quot;">Read more about &quot;{$Title}&quot;...</a>
+					</article>
+				<% end_control %>
+			</section>
+		<% else %>
+			<p>No results found. Please try another search term.</p>
+		<% end_if %>
+		
     <% if Results.MoreThanOnePage %>
         <section class="pagination">
             <% if Results.NextLink %>
@@ -42,4 +49,13 @@
             <% end_control %>
         </section><!-- .pagination -->
     <% end_if %>
-</div><!-- .content -->
+	</div><!-- /padding_1 -->
+</div><!-- /grid_1 -->
+
+<div class="grid_2">
+	<div class="padding_1">
+		$SideBar
+		<% include LatestComment %>
+		<% include LatestBlog %>
+	</div><!-- /padding_1 -->
+</div><!-- /col_2 -->

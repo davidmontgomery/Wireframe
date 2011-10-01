@@ -10,7 +10,6 @@
 		<% else_if SelectedDate %>
 			<h3><% _t('VIEWINGPOSTEDIN', 'Viewing entries posted in') %> $SelectedDate.Month $SelectedDate.Year</h3>
 		<% end_if %>
-		
 		<% if BlogEntries %>
 			<% control BlogEntries %>
 				<% include BlogSummary %>

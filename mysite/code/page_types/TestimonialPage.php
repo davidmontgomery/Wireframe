@@ -1,6 +1,8 @@
 <?php
 
 class TestimonialPage extends Page {
+	static $icon = 'themes/wireframe/images/icons/testimonial';
+	
 	static $db = array(
 	);
 	

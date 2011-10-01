@@ -1,3 +1,3 @@
 <% if DisplayGoogleMap %>
-	<div id="map" style="width: 420px; height: 300px"></div>
+	<div id="map"></div>
 <% end_if %>

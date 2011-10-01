@@ -33,6 +33,6 @@
 
 <div class="grid_2">
 	<div class="padding_1">
-		[Snippet]
+		[Archive here]
 	</div><!-- /padding_1 -->
 </div><!-- /col_2 -->

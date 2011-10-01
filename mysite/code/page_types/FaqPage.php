@@ -1,6 +1,8 @@
 <?php
 
 class FaqPage extends Page {
+	static $icon = 'themes/wireframe/images/icons/faq';
+	
 	static $db = array(
 	);
 	

@@ -99,7 +99,7 @@
 		// Fancybox
 		$('#various1').attr('href', '#inline1'); // need this for inline box to work with SS
 		
-		$('#various1, #example5, a[rel=example_group]').fancybox({
+		$('#various1, #example5, a[rel=fancybox]').fancybox({
 			'padding' : 20,
 			'margin' : 40,
 			'opacity' : false,

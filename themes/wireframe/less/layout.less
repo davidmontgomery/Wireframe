@@ -348,6 +348,23 @@ html, body {
 /* --------------------------------------------------------
  * Navigation
  * -------------------------------------------------------- */
+.footer_nav {
+	list-style: none;
+	margin-top: 20px;
+	li {
+		float: left;
+		margin-right: 10px;
+		font-size: 11px	;
+	}
+	a {
+		color: #ccc;
+		&:hover {
+			text-decoration: none;
+		}
+	}
+}
+
+
 #nav {
 	background: #7b7b7b;
 
@@ -438,6 +455,7 @@ ul.subnav {
 	padding-right: 20px;
 }
 
+
 /* --------------------------------------------------------
  * Grid System:
  * Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
@@ -510,9 +528,16 @@ ul.gallery {
 }
 
 /* --------------------------------------------------------
- * Snippets
+ * Widgets
  * -------------------------------------------------------- */
-/*** Blog ***/
+.widget_holder {
+	margin-bottom: 20px;
+}
+
+
+/* --------------------------------------------------------
+ * Blog module
+ * -------------------------------------------------------- */
 p.blog_date {
 	position: relative;
 	margin: -8px 0 8px 0;
@@ -520,6 +545,22 @@ p.blog_date {
 	color: #999;
 }
 
+.blog_summary {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0px;
+	margin-bottom: 17px;
+}
+
+.blog_management, .blog_archive {
+	list-style: none;
+}
+
+.blog_cloud a {
+		font-size: 13px;
+}
+/* --------------------------------------------------------
+ * Snippets
+ * -------------------------------------------------------- */
 .comment_name {
 	position: relative;
 	margin: -8px 0 8px 0;
@@ -528,8 +569,23 @@ p.blog_date {
 } 
 
 /* --------------------------------------------------------
- * About page
+ * Testimonials
  * -------------------------------------------------------- */
+.testimonial_name {
+	font-weight: bold;
+	font-style: italic;
+	position: relative;
+	margin-top: -8px;
+}
+
+/* --------------------------------------------------------
+ * Contact Page
+ * -------------------------------------------------------- */
+#map {
+	width: 440px;
+	height: 330px;
+	margin-bottom: 25px;
+}
 
 
 /* --------------------------------------------------------

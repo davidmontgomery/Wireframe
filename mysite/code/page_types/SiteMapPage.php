@@ -1,6 +1,8 @@
 <?php
 
 class SiteMapPage extends Page {
+	static $icon = 'themes/wireframe/images/icons/sitemap';
+	
 	public static $db = array(
 		
 	);

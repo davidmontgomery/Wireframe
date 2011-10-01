@@ -2,10 +2,9 @@
 
 class Page extends SiteTree {
 
-	
 	public static $db = array(
 		'IntroSnippet' => 'HTMLText',
-		'DisplayHomepage' => 'Boolean'
+		'ShowInFooterMenu' => 'Boolean'
 	);
 
 	public static $has_one = array(
@@ -13,10 +12,8 @@ class Page extends SiteTree {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		$fields->addFieldToTab('Root.Content.Main', new CheckboxField ('DisplayHomepage', 'Display on Homepage'), 'Content');
-		$fields->addFieldToTab("Root.Content.Main", new HTMLEditorField('IntroSnippet', 'Homepage Snippet', 5), 'Content');
-		
-		return $fields;	
+		$fields->addFieldToTab("Root.Behaviour", new CheckboxField("ShowInFooterMenu", "Show in footer menu?"));
+		return $fields;
 	}
 }
 
@@ -101,13 +98,13 @@ class Page_Controller extends ContentController {
 		return DataObject::get('Testimonial', null, null, null, $num);
 	}
 	
-	// Latest blog entry
+	// Latest Blog entry
 	public function LatestBlog($num=1) {
 		$articles = DataObject::get_one('BlogHolder');
 		return ($articles) ? DataObject::get('BlogEntry', '', 'Date DESC', '', $num) : false;
 	}
 	
-	// Latest blog catagories
+	// Latest Blog catagories
 	public function LatestCatagories($num=1) {
 		$articles = DataObject::get_one("BlogHolder");
 		return ($articles) ? DataObject::get("BlogEntry", "ParentID = $articles->ID", "Created DESC", "", $num) : false;
@@ -122,11 +119,13 @@ class Page_Controller extends ContentController {
 		return DataObject::get('Page', 'DisplayHomepage = 1', 'RAND()', null, '');
 	}
 	
+	// Display Google map
 	function DisplayGoogleMap() {
 		return DataObject::get('Page', 'ShowGoogleMap = 1', '', null, '');
 	}
 	
-	function FormatAddress() {
-		return DataObject::get('Page', 'ShowGoogleMap = 1', '', null, '');
+	// Display in footer menu
+	function ShowInFooterMenu() {
+		return DataObject::get('Page', 'ShowInFooterMenu = 1');
 	}
 }

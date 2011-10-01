@@ -5,6 +5,14 @@
 			<li>Ph: $SiteConfig.Phone</li>
 			<li>Address: $SiteConfig.Address</li>
 			<li>Email: $SiteConfig.Email</li>
-		</ul>
-	</div>
-</div>
+		</ul><!-- /footer_list -->
+		
+		<% if ShowInFooterMenu %>
+			<ul class="footer_nav">
+				<% control ShowInFooterMenu %>
+					<li><a href="$Link">$MenuTitle</a></li>
+				<% end_control %>	
+			</ul>
+		<% end_if %>
+	</div><!-- /inner_footer -->
+</div><!-- /footer -->

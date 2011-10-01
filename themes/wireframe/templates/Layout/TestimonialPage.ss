@@ -9,8 +9,8 @@
 			<ul class="listing">
 				<% control Testimonials %>
 					<li <% if Last %>class='last'<% end_if %> >
-						<p>$Testimonial<p>
-						<p class="name">$Name</p>
+						<p>$Testimonial</p>
+						<p class="testimonial_name">$Name</p>
 					</li>
 				<% end_control %>
 			</ul><!-- testimonials -->
