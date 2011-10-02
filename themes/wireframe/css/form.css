@@ -59,7 +59,7 @@ form input.text, form textarea, form select {
  * -------------------------------------------------------- */
 form#searchForm {
   position: absolute;
-  top: 27px;
+  top: 40px;
   right: 15px;
 }
 form#searchForm input {

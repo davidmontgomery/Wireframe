@@ -11,8 +11,8 @@
 			<ul class="footer_nav">
 				<% control ShowInFooterMenu %>
 					<li><a href="$Link">$MenuTitle</a></li>
-				<% end_control %>	
-			</ul>
+				<% end_control %>
+			</ul><!-- /footer_nav -->
 		<% end_if %>
 	</div><!-- /inner_footer -->
 </div><!-- /footer -->

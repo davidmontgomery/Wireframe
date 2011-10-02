@@ -28,7 +28,7 @@ class HomePage extends Page {
 		'getCMSFields_forPopup'
 		);
 		
-		$fields->addFieldToTab('Root.Content.BannerImages', $manager);
+		$fields->addFieldToTab('Root.Content.SliderImages', $manager);
 		return $fields;
 	}
 }
