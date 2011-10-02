@@ -509,6 +509,9 @@ ul.gallery li.last {
 /* --------------------------------------------------------
  * Widgets
  * -------------------------------------------------------- */
+.widget {
+  margin-bottom: 20px;
+}
 .widget_holder {
   margin-bottom: 20px;
 }

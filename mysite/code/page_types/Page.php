@@ -1,14 +1,13 @@
 <?php
 
 class Page extends SiteTree {
-
 	public static $db = array(
 		'IntroSnippet' => 'HTMLText',
 		'ShowInFooterMenu' => 'Boolean'
 	);
-
-	public static $has_one = array(
-	);
+	
+	// Use MyImageGalleryPage instead
+	static $hide_ancestor = "ImageGalleryPage";
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();

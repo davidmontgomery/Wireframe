@@ -67,6 +67,8 @@ Validator::set_javascript_validation_handler('none');
  **********************/
 DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
 DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
+//BlogEntry::allow_wysiwyg_editing(); NOT working
+
 
 
 Director::set_dev_servers(array(
