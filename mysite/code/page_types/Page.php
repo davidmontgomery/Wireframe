@@ -25,7 +25,7 @@ class Page extends SiteTree {
 	}
 	
 	// Recursive banner images
-	function getBannerImage() {
+	function RecursiveBannerImage() {
 		$page = $this;
 		$banner = $this->BannerImage();
 		while(!$banner->ID && $page->ParentID != 0) {
