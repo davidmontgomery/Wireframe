@@ -11,7 +11,6 @@ $siteName         = 'My website'; // Sets website name for contact email
 $emailSubjectLine = 'Contact email subject line.'; // Sets contact email subject line
 $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email address
 
-
 /**********************
  * 
  * Theme
@@ -25,7 +24,6 @@ BlogTree::$default_entries_limit = 1;
  * Constants
  * 
  **********************/
-
 
 global $databaseConfig;
 global $database;
