@@ -541,10 +541,24 @@ p.blog_date {
   font-style: italic;
   color: #999;
 }
+/* BlogEntry.ss */
+.blog_entry {
+  width: 480px;
+}
+.blog_entry img {
+  margin-bottom: 25px;
+}
+/* BlogSummaey.ss */
 .blog_summary {
   border-bottom: 1px solid #ccc;
   padding-bottom: 0px;
   margin-bottom: 17px;
+}
+.blog_summary img {
+  border: 1px solid #ccc;
+  float: left;
+  padding: 4px;
+  margin: 0 15px 15px 0;
 }
 .blog_cloud a {
   font-size: 13px;
@@ -575,6 +589,9 @@ p.blog_date {
   height: 330px;
   margin-bottom: 25px;
 }
+/* --------------------------------------------------------
+ * Sitemap Page
+ * -------------------------------------------------------- */
 /* --------------------------------------------------------
  * Media queries
  * -------------------------------------------------------- */
