@@ -16,9 +16,11 @@
 									<li>
 										<a href="$Link">$MenuTitle</a>
 										<% if Children %>
-											<% control Children %>
-												<li><a href="$Link">$MenuTitle</a></li>
-											<% end_control %>
+											<ul>
+												<% control Children %>
+													<li><a href="$Link">$MenuTitle</a></li>
+												<% end_control %>
+											</ul>
 										<% end_if %>
 									</li>
 								<% end_control %>
