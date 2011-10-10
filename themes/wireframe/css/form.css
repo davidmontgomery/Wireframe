@@ -52,6 +52,14 @@ form input.text, form textarea, form select {
   padding: 4px;
   border: 1px solid #a7a7a7;
   color: #000;
+}
+/* --------------------------------------------------------
+ * Form - search
+ * -------------------------------------------------------- */
+form#ContactForm_ContactForm input.text {
+  width: 250px;
+}
+form#ContactForm_ContactForm textarea {
   width: 300px;
 }
 /* --------------------------------------------------------
@@ -64,6 +72,12 @@ form#searchForm {
 }
 form#searchForm input {
   padding: 3px;
+}
+/* --------------------------------------------------------
+ * Form - email subscribe
+ * -------------------------------------------------------- */
+form#email_subscribe input.text {
+  width: 185px;
 }
 /* --------------------------------------------------------
  * Form - validation

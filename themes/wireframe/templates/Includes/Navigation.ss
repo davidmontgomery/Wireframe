@@ -14,9 +14,9 @@
 		<ul>
 			<% control Menu(2) %>
 				<% if Children %>
-					<li class="$LinkingMode"><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span><em>$MenuTitle.XML</em></span></a>
+					<li class="$LinkingMode"><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span>$MenuTitle.XML</span></a>
 				<% else %>
-					<li><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span><em>$MenuTitle.XML</em></span></a>
+					<li><a href="$Link" title="Go to the $Title.XML page" class="$LinkingMode levela"><span>$MenuTitle.XML</span></a>
 				<% end_if %>
 			<% end_control %>
 		</ul>

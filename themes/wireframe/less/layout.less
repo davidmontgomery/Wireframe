@@ -11,7 +11,8 @@ fieldset, img { border: 0; }
  * General
  * -------------------------------------------------------- */
 body {
-	font-size: 13px;
+	font-family: 'Lucida Grande', 'Helvetica', 'Arial', 'Verdana', 'sans-serif';
+	font-size: 12px;
 	background: #ccc;
 	color: @body_color;
 	line-height: 1;
@@ -25,44 +26,44 @@ a.external_link {
 /* --------------------------------------------------------
  * General listing
  * -------------------------------------------------------- */
-li {
-	margin-bottom: 5px;
-}
-
 ul.listing {
 	list-style: none;
 	padding: 0;
 	margin: 0;
-	h3 {
-		margin-bottom: 8px;
-	}
 	li {
 		padding: 0;
-		margin: 0 0 20px 0;
+		margin-bottom: 18px;
 		border-bottom: 1px solid #ccc;
 		&.last {
-			border-bottom: none;
+		
 		}
 	}
 	.header {
-		margin-bottom: 10px;
+	
 	}
 	.body {
-		margin-bottom: -5px;
+		
 	}
 	.date {
 		display: block;
 		position: relative;
-		margin-top: -2px;
-		font-size: .917em;
+		font-size: 11px;
 		color: #666;
+		margin-top: 6px;
+		margin-bottom: 12px;
+	}
+	h2 {
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	h2 a {
+		text-decoration: none;
 	}
 }
 
 /*** Pagination ***/
 .pagination {
-	border-top: 1px solid #ccc;	
-	padding:  10px 0 10px 0;
+
 }
 
 /* --------------------------------------------------------
@@ -90,13 +91,13 @@ ul.listing {
 
 .slideshow_wrap {
 	position: relative;
-	margin-bottom: 25px;
+	margin-bottom: 20px;
 }
 
 .slideshow {
 	background: #ccc;
 	z-index: 0;
-	width: 900px;
+	width: 920px;
 	height: 263px;
 	div {
 		position: relative;
@@ -305,6 +306,11 @@ html, body {
 	margin: 0 auto;
 	padding: 20px;
 	width: 920px;
+	p {
+		font-size: 11px;
+		line-height: 18px;
+		margin-bottom: 18px;
+	}
 }
 
 /* --------------------------------------------------------
@@ -316,7 +322,7 @@ html, body {
 	position: relative;
 	h1 {
 		color: #000;
-		font-size: 28px;
+		font-size: 24px;
 		font-weight: normal;
 		margin: 0 0 5px 0;
 		a {
@@ -326,7 +332,7 @@ html, body {
 	}
 	.tagline {
 		color: #ccc;
-		font-size: 1.167em;
+		font-size: 14px;
 		font-style: italic;
 	}
 	.branding {
@@ -368,7 +374,6 @@ html, body {
 
 .footer_nav {
 	list-style: none;
-	margin-top: 20px;
 	li {
 		float: left;
 		margin-right: 10px;
@@ -417,8 +422,10 @@ html, body {
 }
  
 .sub_nav {
-	padding: 10px 0 0 25px;
+	background: #f2f2f2;
+	padding-left: 25px;
 	position: relative;
+
 	ul {
 		list-style: none;
 	}
@@ -426,22 +433,12 @@ html, body {
 		float: left;
 	}
 	a {
+		padding-top: 9px;
+		padding-bottom: 9px;
 		color: #2361A1;
 		float: left;
 		margin-right: 15px;
-	}
-}
-/*** Subnav ***/
-ul.subnav {
-	margin: 0;
-	padding: 0;
-	li {
-		list-style: none;
-		padding: 0;
-		margin: 0 0 5px 0;
-		&.current a {
-			color: #000;
-		}
+		font-style: normal;
 	}
 }
 
@@ -479,37 +476,47 @@ ul.subnav {
  * Don`t define padding on grids. Each grid to have an inner div where padding can be applied.
  * -------------------------------------------------------- */
 .grid_full {
-	background: #f2f2f2;
+	float: left;
+	width: 920px;
 }
 
 .grid_1 {
-	background: #f2f2f2;
 	float: left;
 	margin-right: 20px;
-	width: 700px;
+	width: 685px;
+	&.last {
+		margin-right: 0;
+	}
+}
+
+.decorate {
+	color: #fff;
+	margin-bottom: 20px;
+	background: pink;
 }
 
 .grid_2 {
-	background: #f2f2f2;
 	float: left;
-	width: 200px;
+	width: 450px;
+	margin-right: 20px;
+	&.last {
+		margin-right: 0;
+	}
 }
 
 .grid_3 {
-	background: #f2f2f2;
 	float: left;
-	width: 280px;
-	margin-right: 40px;
+	width: 293px;
+	margin-right: 20px;
 	&.last {
 		margin-right: 0;
 	}
 }
 
 .grid_4 {
-	background: #f2f2f2;
 	float: left;
-	width: 440px;
-	margin-right: 40px;
+	width: 215px;
+	margin-right: 20px;
 	&.last {
 		margin-right: 0;
 	}
@@ -562,9 +569,10 @@ ul.gallery {
  * -------------------------------------------------------- */
 p.blog_date {
 	position: relative;
-	margin: -8px 0 8px 0;
+	margin-bottom: 0;
 	font-style: italic;
 	color: #999;
+	font-size: 11px;
 }
 
 /* BlogEntry.ss */
@@ -636,7 +644,6 @@ ul.sitemap {
 		margin: 10px 0 15px 0;
 	}
 }
-
 
 /* --------------------------------------------------------
  * Media queries

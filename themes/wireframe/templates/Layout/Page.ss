@@ -3,20 +3,12 @@
 </div><!-- /grid_full -->
 
 <div class="grid_1">
-	<div class="padding_1">
-		<h1>$Title</h1>
-		$Content
-		$Form
-		$PageComments
-	</div><!-- /padding_1 -->
+	<h1>$Title</h1>
+	$Content
+	$Form
+	$PageComments
 </div><!-- /grid_1 -->
 
-<div class="grid_2">
-	<div class="padding_1">
-		$SideBar
-		<% include CampaignSignup %>
-		<% include TwitterWidget %>
-		<% include LatestComment %>
-		<% include LatestBlog %>
-	</div><!-- /padding_1 -->
-</div><!-- /col_2 -->
+<div class="grid_4 last">
+	<% include CampaignSignup %>
+</div><!-- /grid_4 -->
