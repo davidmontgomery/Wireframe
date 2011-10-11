@@ -35,6 +35,14 @@ a.external_link {
 /* --------------------------------------------------------
  * General listing
  * -------------------------------------------------------- */
+.date {
+  display: block;
+  position: relative;
+  font-size: 11px;
+  color: #666;
+  margin-top: 6px;
+  margin-bottom: 12px;
+}
 ul.listing {
   list-style: none;
   padding: 0;
@@ -44,14 +52,6 @@ ul.listing li {
   padding: 0;
   margin-bottom: 18px;
   border-bottom: 1px solid #ccc;
-}
-ul.listing .date {
-  display: block;
-  position: relative;
-  font-size: 11px;
-  color: #666;
-  margin-top: 6px;
-  margin-bottom: 12px;
 }
 ul.listing h2 {
   margin-top: 0;
@@ -400,7 +400,7 @@ html, body {
 }
 .sub_nav {
   background: #f2f2f2;
-  padding-left: 25px;
+  padding-left: 21px;
   position: relative;
 }
 .sub_nav ul {

@@ -1,29 +1,20 @@
 <div class="grid_full">
 	<% include BreadCrumbs %>
-</div>
+</div><!-- /grid_full -->
+
 <div class="grid_1">
-	<div class="padding_1">
-		<div class="detail">
-			<div class="header">
-				<h1>$Title</h1>
-				<span class="date detail">$Date.Nice</span>
-			</div>
-			<div class="body">
-				<% if Photo %>
-					$Photo.SetRatioSize(275,275)
-				<% end_if %>
-				$Content
-			</div>
-			<div class="footer">
-				<p><a href="/news/">&laquo; Back to News</a></p>
-			</div>
-		</div><!-- /detail -->
-	</div><!-- /padding_1 -->
+	<h1>Article</h1>
+	<h2>$Title</h2>
+	<span class="date">$Date.Nice</span>
+	<% if Photo %>
+		$Photo.SetRatioSize(275,275)
+	<% end_if %>
+	$Content
+	<p><a href="/article/">&laquo; Back to News</a></p>
 </div><!-- /grid_1 -->
-<div class="grid_2">
-	<div class="padding_1">
-		<% if Menu(2) %>
-			<% include SubNavigation %>
-		<% end_if %>
-	</div>
-</div><!-- /col_2 --> 
+
+<div class="grid_4 last">
+	<% if Menu(2) %>
+		<% include SubNavigation %>
+	<% end_if %>
+</div><!-- /grid_4 --> 
