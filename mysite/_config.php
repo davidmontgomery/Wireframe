@@ -17,7 +17,7 @@ $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email 
  * 
  **********************/
 SSViewer::set_theme($projectName);
-BlogTree::$default_entries_limit = 1;
+BlogTree::$default_entries_limit = 3;
 
 /**********************
  * 

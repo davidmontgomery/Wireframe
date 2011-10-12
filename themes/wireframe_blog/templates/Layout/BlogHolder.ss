@@ -4,19 +4,28 @@
 
 <div class="grid_1">
 	<h1>$Title</h1>
+	
+	<!-- Selected Tag -->
 	<% if SelectedTag %>
-		<h3><% _t('VIEWINGTAGGED', 'Viewing entries tagged with') %> '$SelectedTag'</h3>
+		<h3>$SelectedTag</h3>
 	<% else_if SelectedDate %>
-		<h3><% _t('VIEWINGPOSTEDIN', 'Viewing entries posted in') %> $SelectedDate.Month $SelectedDate.Year</h3>
+		<h3>Viewing entries posted in $SelectedDate.Month $SelectedDate.Year</h3>
 	<% end_if %>
 	
+	<!-- Blog Entries -->
 	<% if BlogEntries %>
-		<% control BlogEntries %>
-			<% include BlogSummary %>
-		<% end_control %>
+		<ul class="listing">
+			<% control BlogEntries %>
+			<li <% if Last %>class="last"<% end_if %>>
+				<% include BlogSummary %>
+			</li>
+			<% end_control %>
+		</ul><!-- /listing -->
 	<% else %>
-		<h3><% _t('NOENTRIES', 'There are no blog entries') %></h3>
+		<h3>There are no blog entries at this time.</h3>
 	<% end_if %>
+	
+	<!-- Pagination -->
 	<% include BlogPagination %>
 </div><!-- /grid_1 -->
 
