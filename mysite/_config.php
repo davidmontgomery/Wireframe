@@ -11,6 +11,7 @@ $siteName         = 'My website'; // Sets website name for contact email
 $emailSubjectLine = 'Contact email subject line.'; // Sets contact email subject line
 $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email address
 
+
 /**********************
  * 
  * Theme
@@ -19,12 +20,12 @@ $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email 
 SSViewer::set_theme($projectName);
 BlogTree::$default_entries_limit = 3;
 
+
 /**********************
  * 
  * Constants
  * 
  **********************/
-
 global $databaseConfig;
 global $database;
 global $project;
@@ -58,6 +59,7 @@ Validator::set_javascript_validation_handler('none');
 // if(Director::isTest() BasicAuth::protect_entire_site();
 // CMSMenu::remove_menu_item('ReportAdmin');
 
+
 /**********************
  * 
  * Extensions
@@ -66,7 +68,6 @@ Validator::set_javascript_validation_handler('none');
 DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
 DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
 //BlogEntry::allow_wysiwyg_editing(); NOT working
-
 
 
 Director::set_dev_servers(array(
@@ -84,15 +85,11 @@ if (Director::isLive()) {
 		'database' => $projectName
 	);
 	
-	SS_Cache::set_cache_lifetime('any', 3600, 100);
-	
 } else if (Director::isDev()) {
 	// Site is in Dev and Test mode
-	SS_Cache::set_cache_lifetime('any', -1, 100); // No partial caching
 	SSViewer::flush_template_cache(); // Prevents needing ?flush=1 on the end of a URL
 } else {
 	// Site is Test
-	SS_Cache::set_cache_lifetime('any', 3600, 100);
 }
 
 // Local database settings
@@ -105,7 +102,7 @@ require_once("conf/ConfigureFromEnv.php");
  * Misc
  * 
  **********************/
-//File::$allowed_extensions[] = 'psd';
+File::$allowed_extensions[] = 'pdf';
 
 
 /**********************
@@ -140,7 +137,7 @@ Email::setAdminEmail($adminEmail);
  *
  * Template / URLs
  *
- **********************/ 
+ **********************/
 // Set search form
 FulltextSearchable::enable();
 
@@ -158,7 +155,24 @@ SiteTree::$breadcrumbs_delimiter = ' &rsaquo; ';
 GD::set_default_quality(100);
 
 // Tiny_mce config: wiki.moxiecode.com Need to implement modal
-HtmlEditorConfig::get('cms')->setButtonsForLine(1, 'formatselect', 'styleselect', 'bold', 'italic', 'sub', 'sup', 'bullist', 'numlist', 'separator', 'link', 'unlink', 'anchor', 'separator', 'pasteword', 'code', 'separator');
+HtmlEditorConfig::get('cms')->setButtonsForLine(1,
+	'formatselect',
+	'styleselect',
+	'bold',
+	'italic',
+	'sub',
+	'sup',
+	'bullist',
+	'numlist',
+	'separator',
+	'link',
+	'unlink',
+	'anchor',
+	'separator',
+	'pasteword',
+	'code',
+	'separator'
+	);
 HtmlEditorConfig::get('cms')->setButtonsForLine(2);
 HtmlEditorConfig::get('cms')->setButtonsForLine(3);
 
@@ -168,7 +182,7 @@ HtmlEditorConfig::get('cms')->setButtonsForLine(3);
  * Comments
  *
  **********************/
-//Enable comment spam protection
+// Enable comment spam protection
 //MathSpamProtection::setEnabled();
 
 // Enable comment moderation

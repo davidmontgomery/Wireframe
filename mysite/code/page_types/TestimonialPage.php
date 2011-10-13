@@ -18,8 +18,9 @@ class TestimonialPage extends Page {
 		'Testimonials', // Source name
 		'Testimonial', // Source class
 		array(
-			'Testimonial' => 'Testimonial',
-			'Name' => 'Name'
+			'Name' => 'Name',
+			'Position' => 'Position',
+			'Testimonial' => 'Testimonial'
 		), // Headings
 		'getCMSFields_forPopup'
 	);

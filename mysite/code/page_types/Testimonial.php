@@ -3,7 +3,8 @@
 class Testimonial extends DataObject {
 	static $db = array(
 		'Testimonial' => 'HTMLText',
-		'Name' => 'Text'
+		'Name' => 'Text',
+		'Position' => 'Varchar(25)'
 	);
 	
 	static $has_one = array(
@@ -13,7 +14,8 @@ class Testimonial extends DataObject {
 	function getCMSFields() {
 		$fields = new FieldSet(
 			new TextField('Name', 'Name'),
-			new SimpleHTMLEditorField('Testimonial', 'Testimonial')
+			new TextField('Position', 'Position'),
+			new TextareaField('Testimonial', 'Testimonial')
 		);
 		
 		return $fields;
