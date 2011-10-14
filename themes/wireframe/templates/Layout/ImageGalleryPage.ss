@@ -1,16 +1,12 @@
 <div class="grid_full">
 	<% include BreadCrumbs %>
-</div>
+</div><!-- /grid_full -->
 
 <div class="grid_1">
-	<div class="padding_1">
-		<h1>$Title</h1>
-		<% include AlbumList %>
-	</div>
-</div>
+	<h1>$Title</h1>
+	<% include AlbumList %>
+</div><!-- /grid_1 -->
 
-<div class="grid_2">
-	<div class="padding_1">
-		<p>Other content here.</p>
-	</div>
-</div><!-- /col_2 -->
+<div class="grid_4 last">
+	<p>[Side content here]</p>
+</div><!-- /grid_4 -->

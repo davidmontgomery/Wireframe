@@ -1,5 +1,5 @@
 <% if Level(2) %>
-	<div id="Breadcrumbs">
+	<div class="breadcrumbs">
 		<p>$Breadcrumbs</p>
-	</div>
+	</div><!-- /breadcrumbs -->
 <% end_if %>
