@@ -8,5 +8,11 @@
 </div><!-- /grid_1 -->
 
 <div class="grid_4 last">
-	<p>[Side content here]</p>
+	<div class="widget">
+		<% include LatestComment %>
+	</div><!-- /widget -->
+	
+	<div class="widget">
+		<% include LatestBlog %>
+	</div><!-- /widget -->
 </div><!-- /grid_4 -->

@@ -1,15 +1,14 @@
 <% if Albums %>
-	<ul class="gallery_list">
+	<ul class="listing gallery">
 		<% control Albums %>
 			<li class="clearfix">
-				<h5><a href="$Link" title="$Title">$AlbumName</a></h5>
+				<h2><a href="$Link" title="$Title">$AlbumName</a></h2>
 				<% if CoverImage %>
 					<div class="image_wrap">
 						<a href="$Link">
 							<% control FormattedCoverImage %>
 								<img src="$URL" alt="" />
 							<% end_control %>
-							<!-- $CoverImage.SetWidth(50) -->
 						</a>
 					</div>
 				<% end_if %>
@@ -17,7 +16,7 @@
 				<div class="details">
 					<div class="description">
 						<p>$Description.LimitWordCount(60)</p>
-						<p><a href="$Link">View album</a></p>
+						<p><a href="$Link">View album &raquo;</a></p>
 					</div>
 				</div>
 			</li>

@@ -232,22 +232,27 @@ a.button {
   padding: 0 10px 0 10px;
 }
 /*** Image Gallery ***/
-ul.gallery_list {
+ul.listing.gallery {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-ul.gallery_list li {
+ul.listing.gallery li {
   margin-bottom: 20px;
 }
-ul.gallery_list .image_wrap {
+ul.listing.gallery .image_wrap {
   float: left;
   margin-right: 20px;
 }
-ul.gallery_list .details {
-  padding: 8px;
+ul.listing.gallery .details {
   float: left;
-  width: 444px;
+  width: 430px;
+}
+ul.listing.gallery h2 a {
+  text-decoration: none;
+}
+ul.listing.gallery h2 {
+  margin-bottom: 12px;
 }
 /* --------------------------------------------------------
  * Sticky footer
