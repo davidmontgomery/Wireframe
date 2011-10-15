@@ -251,6 +251,11 @@ ul.listing.gallery {
 	margin: 0;
 	list-style: none;
 	li {
+		width: 444px;
+		display: inline-block;
+		vertical-align: top;
+		zoom: 1; /* IE6 & 7 */
+		*display: inline; /* IE6 & 7 */
 		margin-bottom: 20px;
 	}
 	.image_wrap {
@@ -259,7 +264,7 @@ ul.listing.gallery {
 	}
 	.details {
 		float: left;
-		width: 430px;
+		width: 286px;
 	}
 	h2 a {
 		text-decoration: none;
@@ -472,9 +477,9 @@ html, body {
 }
 
 .layout {
-	padding-top: 20px;
-	padding-left: 20px;
-	padding-right: 20px;
+	padding-top: 18px;
+	padding-left: 18px;
+	padding-right: 18px;
 }
 
 
@@ -484,13 +489,13 @@ html, body {
  * -------------------------------------------------------- */
 .grid_full {
 	float: left;
-	width: 920px;
+	width: 924px;
 }
 
 .grid_1 {
 	float: left;
-	margin-right: 20px;
-	width: 685px;
+	margin-right: 36px;
+	width: 684px;
 	&.last {
 		margin-right: 0;
 	}
@@ -504,8 +509,8 @@ html, body {
 
 .grid_2 {
 	float: left;
-	width: 450px;
-	margin-right: 20px;
+	width: 444px;
+	margin-right: 36px;
 	&.last {
 		margin-right: 0;
 	}
@@ -513,8 +518,8 @@ html, body {
 
 .grid_3 {
 	float: left;
-	width: 293px;
-	margin-right: 20px;
+	width: 284px;
+	margin-right: 36px;
 	&.last {
 		margin-right: 0;
 	}
@@ -522,8 +527,8 @@ html, body {
 
 .grid_4 {
 	float: left;
-	width: 215px;
-	margin-right: 20px;
+	width: 204px;
+	margin-right: 36px;
 	&.last {
 		margin-right: 0;
 	}
@@ -549,7 +554,7 @@ ul.gallery {
 	margin-left: 1px;
 	li {
 		padding: 0;
-		margin: 0 20px 20px 0;
+		margin: 0 36px 20px 0;
 		display: inline-block;
 		vertical-align: top;
 		zoom: 1; /* IE6 & 7 */

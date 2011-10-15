@@ -2,17 +2,8 @@
 	<% include BreadCrumbs %>
 </div><!-- /grid_full -->
 
-<div class="grid_1">
+<div class="grid_full">
 	<h1>$Title</h1>
 	<% include AlbumList %>
 </div><!-- /grid_1 -->
 
-<div class="grid_4 last">
-	<div class="widget">
-		<% include LatestComment %>
-	</div><!-- /widget -->
-	
-	<div class="widget">
-		<% include LatestBlog %>
-	</div><!-- /widget -->
-</div><!-- /grid_4 -->
