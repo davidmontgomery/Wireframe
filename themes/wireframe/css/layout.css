@@ -506,6 +506,7 @@ ul.gallery {
   list-style: none;
   padding: 0;
   margin: 0;
+  margin-left: 1px;
 }
 ul.gallery li {
   padding: 0;
