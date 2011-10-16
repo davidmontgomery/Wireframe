@@ -32,6 +32,9 @@ a.external_link {
   background: url(/themes/wireframe/images/icon-external.png) no-repeat 100% 1px;
   padding-right: 12px;
 }
+.more {
+  margin-top: -12px;
+}
 /* --------------------------------------------------------
  * General listing
  * -------------------------------------------------------- */
@@ -48,10 +51,18 @@ ul.listing {
   padding: 0;
   margin: 0;
 }
+ul.listing img {
+  float: left;
+}
 ul.listing li {
   padding: 0;
   margin-bottom: 18px;
   border-bottom: 1px solid #ccc;
+  float: left;
+}
+ul.listing .listing_content.photo {
+  float: left;
+  width: 528px;
 }
 ul.listing h2 {
   margin-top: 0;
@@ -61,6 +72,17 @@ ul.listing h2 a {
   text-decoration: none;
 }
 /*** Testimonials ***/
+/*** Articles ***/
+ul.listing.articles img {
+  margin-right: 18px;
+}
+ul.listing.articles li {
+  padding-bottom: 18px;
+}
+.detail img {
+  float: left;
+  margin: 0 18px 18px 0;
+}
 /* --------------------------------------------------------
  * Modules
  * -------------------------------------------------------- */
@@ -87,7 +109,7 @@ ul.listing h2 a {
 .slideshow {
   background: #ccc;
   z-index: 0;
-  width: 920px;
+  width: 924px;
   height: 263px;
 }
 .slideshow div {
@@ -232,12 +254,13 @@ a.button {
   padding: 0 10px 0 10px;
 }
 /*** Image Gallery ***/
-ul.listing.gallery {
+ul.listing.gallery_albums {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-ul.listing.gallery li {
+ul.listing.gallery_albums li {
+  height: 144px;
   width: 444px;
   display: inline-block;
   vertical-align: top;
@@ -248,19 +271,23 @@ ul.listing.gallery li {
   /* IE6 & 7 */
 
   margin-bottom: 20px;
+  margin-right: 36px;
 }
-ul.listing.gallery .image_wrap {
+ul.listing.gallery_albums li.last {
+  margin-right: 0;
+}
+ul.listing.gallery_albums .image_wrap {
   float: left;
-  margin-right: 20px;
+  margin-right: 18px;
 }
-ul.listing.gallery .details {
+ul.listing.gallery_albums .details {
   float: left;
-  width: 286px;
+  width: 288px;
 }
-ul.listing.gallery h2 a {
+ul.listing.gallery_albums h2 a {
   text-decoration: none;
 }
-ul.listing.gallery h2 {
+ul.listing.gallery_albums h2 {
   margin-bottom: 12px;
 }
 /* --------------------------------------------------------
@@ -322,7 +349,7 @@ html, body {
   color: #000;
   font-size: 24px;
   font-weight: normal;
-  margin: 0 0 5px 0;
+  margin: 0 0 6px 0;
 }
 #header h1 a {
   color: #000;
@@ -496,7 +523,7 @@ html, body {
 .grid_4 {
   float: left;
   width: 204px;
-  margin-right: 36px;
+  margin: 18px 36px 0 0;
 }
 .grid_4.last {
   margin-right: 0;
@@ -519,7 +546,7 @@ ul.gallery {
 }
 ul.gallery li {
   padding: 0;
-  margin: 0 36px 20px 0;
+  margin: 0 18px 18px 0;
   display: inline-block;
   vertical-align: top;
   zoom: 1;

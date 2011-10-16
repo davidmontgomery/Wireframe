@@ -1,8 +1,6 @@
-<div class="grid_full">
-	<% include BreadCrumbs %>
-</div><!-- /grid_full -->
-
 <div class="grid_1">
+	<% include BreadCrumbs %>
+	
 	<h1>$Title</h1>
 	$Content
 	$Form

@@ -1,5 +1,5 @@
 <% if Albums %>
-	<ul class="listing gallery">
+	<ul class="listing gallery_albums">
 		<% control Albums %><li class="<% if MultipleOf(2) %>last<% end_if %> clearfix">
 				<h2><a href="$Link" title="$Title">$AlbumName</a></h2>
 				<% if CoverImage %>
@@ -13,10 +13,8 @@
 				<% end_if %>
 			
 				<div class="details">
-					<div class="description">
-						<p>$Description.LimitWordCount(60)</p>
-						<p><a href="$Link">View album &raquo;</a></p>
-					</div>
+					<p>$Description.LimitWordCount(25)</p>
+					<p class="more"><a href="$Link">View album &raquo;</a></p>
 				</div>
 			</li><% end_control %>
 	</ul>

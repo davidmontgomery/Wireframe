@@ -9,8 +9,8 @@ class MyImageGalleryPage extends ImageGalleryPage {
 	}
 	
 	public $CoverImageWidth = '138';
-	public $CoverImageHeight = '100';
-	public $ThumbnailSize = '136';
+	public $CoverImageHeight = '92';
+	public $ThumbnailSize = '116';
 	public $Square =  '1';
 	public $MediumSize = '400';
 	public $NormalSize = '600';

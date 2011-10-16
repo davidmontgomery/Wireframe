@@ -5,7 +5,7 @@
 				<div>
 					<h2>$Heading</h2>
 					<p>$Caption</p>
-					$MyBannerImage.CroppedImage(920, 263)
+					$MyBannerImage.CroppedImage(924, 263)
 				</div>
 			<% end_control %>
 		</div><!-- /slideshow -->

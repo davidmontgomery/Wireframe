@@ -22,10 +22,11 @@ class TestimonialPage extends Page {
 			'Position' => 'Position',
 			'Testimonial' => 'Testimonial'
 		), // Headings
-		'getCMSFields_forPopup'
-	);
-
-		$fields->addFieldToTab('Root.Content.Testimonials', $manager);
+			'getCMSFields_forPopup'
+		);
+		
+		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
+		$fields->addFieldToTab('Root.Content.Main', $manager);
 		return $fields;
 	}
 }

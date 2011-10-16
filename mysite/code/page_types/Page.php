@@ -113,7 +113,7 @@ class Page_Controller extends ContentController {
 	
 	// Latest Testimonial
 	function LatestTestimonials($num=1) {
-		return DataObject::get('Testimonial', null, null, null, $num);
+		return DataObject::get('Testimonial', '', 'Date DESC', '', $num);
 	}
 	
 	// Latest Blog entry

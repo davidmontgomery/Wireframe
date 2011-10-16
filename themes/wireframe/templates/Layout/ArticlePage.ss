@@ -1,19 +1,20 @@
-<div class="grid_full">
-	<% include BreadCrumbs %>
-</div><!-- /grid_full -->
-
 <div class="grid_1">
-	<h1>Article</h1>
+	<% include BreadCrumbs %>
 	
-	<h2>$Title</h2>
-	<span class="date">$Date.Nice</span>
+	<div class="detail">
+		<h1>Article</h1>
 	
-	<% if Photo %>
-		$Photo.SetRatioSize(275,275)
-	<% end_if %>
+		<h2>$Title</h2>
+		<span class="date">$Date.Nice</span>
 	
-	$Content
-	<p><a href="/article/">&laquo; Back to News</a></p>
+		<% if Photo %>
+			$Photo.SetRatioSize(275,275)
+		<% end_if %>
+	
+		$Content
+		<div class="clear"><!-- --></div>
+		<p><a href="/article/">&laquo; Back to News</a></p>
+	</div><!-- /detail -->
 </div><!-- /grid_1 -->
 
 <div class="grid_4 last">

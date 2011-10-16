@@ -8,7 +8,7 @@
 		<ul class="listing faqs">
 			<% control Faqs %>
 			<li <% if Last %>class="last"<% end_if %> >
-				<h3><span>Q.</span> $Question</h3>
+				<p class="question"><span>Q.</span> $Question <a href="#">show</a></p>
 				<div>
 					<p>A. $Answer</p>
 				</div>

@@ -5,12 +5,20 @@
 <div class="grid_1">
 	<h1>$Title</h1>
 	<% if Children %>
-		<ul class="listing"><!-- Note: Add listing for extra style if required -->
+		<ul class="listing articles"><!-- Note: Add listing for extra style if required -->
 			<% control ArticlePaginate %>
-			<li <% if Last %>class="last"<% end_if %>>
+			<li class="clearfix <% if Last %>last<% end_if %>">
 				<h2><a href="$Link">$Title</a></h2>
 				<span class="date">$Date.Nice</span>
-				<p>$Content.LimitWordCount(35, ... ) <a href="$Link">Read more &raquo;</a></p>
+				<% if Photo %>
+					<a href="$link">
+						$Photo.CroppedImage(138, 92)
+					</a>
+				<% end_if %>
+				
+				<div class="listing_content <% if Photo %>photo<% end_if %>">
+					<p>$Content.LimitWordCount(35, ... ) <a href="$Link">Read more &raquo;</a></p>
+				</div>
 			</li>
 			<% end_control %>
 		</ul><!-- /listing -->

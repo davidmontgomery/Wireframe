@@ -23,6 +23,9 @@ a.external_link {
 	padding-right: 12px;
 }
 
+.more {
+	margin-top: -12px;
+}
 /* --------------------------------------------------------
  * General listing
  * -------------------------------------------------------- */
@@ -39,10 +42,15 @@ ul.listing {
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	img {
+		float: left;
+
+	}
 	li {
 		padding: 0;
 		margin-bottom: 18px;
 		border-bottom: 1px solid #ccc;
+		float: left;
 		&.last {
 		
 		}
@@ -52,6 +60,10 @@ ul.listing {
 	}
 	.body {
 		
+	}
+	.listing_content.photo {
+		float: left;
+		width: 528px;
 	}
 	h2 {
 		margin-top: 0;
@@ -64,8 +76,26 @@ ul.listing {
 
 /*** Testimonials ***/
 ul.listing.testimonials {
+
 	p {
 		
+	}
+}
+
+/*** Articles ***/
+ul.listing.articles {
+	img {
+		margin-right: 18px;
+	}
+	li {
+		padding-bottom: 18px;
+	}
+}
+
+.detail {
+	img {
+		float: left;
+		margin: 0 18px 18px 0;
 	}
 }
 /* --------------------------------------------------------
@@ -99,7 +129,7 @@ ul.listing.testimonials {
 .slideshow {
 	background: #ccc;
 	z-index: 0;
-	width: 920px;
+	width: 924px;
 	height: 263px;
 	div {
 		position: relative;
@@ -246,25 +276,30 @@ a.button {
 }
 
 /*** Image Gallery ***/
-ul.listing.gallery {
+ul.listing.gallery_albums {
 	padding: 0;
 	margin: 0;
 	list-style: none;
 	li {
+		height: 144px;
 		width: 444px;
 		display: inline-block;
 		vertical-align: top;
 		zoom: 1; /* IE6 & 7 */
 		*display: inline; /* IE6 & 7 */
 		margin-bottom: 20px;
+		margin-right: 36px;
+		&.last {
+			margin-right: 0;
+		}
 	}
 	.image_wrap {
 		float: left;
-		margin-right: 20px;
+		margin-right: 18px;
 	}
 	.details {
 		float: left;
-		width: 286px;
+		width: 288px;
 	}
 	h2 a {
 		text-decoration: none;
@@ -336,7 +371,7 @@ html, body {
 		color: #000;
 		font-size: 24px;
 		font-weight: normal;
-		margin: 0 0 5px 0;
+		margin: 0 0 6px 0;
 		a {
 			color: #000;
 			text-decoration: none;
@@ -528,7 +563,7 @@ html, body {
 .grid_4 {
 	float: left;
 	width: 204px;
-	margin-right: 36px;
+	margin: 18px 36px 0 0;
 	&.last {
 		margin-right: 0;
 	}
@@ -554,7 +589,7 @@ ul.gallery {
 	margin-left: 1px;
 	li {
 		padding: 0;
-		margin: 0 36px 20px 0;
+		margin: 0 18px 18px 0;
 		display: inline-block;
 		vertical-align: top;
 		zoom: 1; /* IE6 & 7 */

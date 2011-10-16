@@ -2,7 +2,7 @@
 	$(document).ready(function() {
 		
 		// Show / hide
-		$(".faqs h3").click(function(e) {
+		$(".faqs p.question").click(function(e) {
 				var show = $(this).next('div');
 				e.preventDefault();
 				if (show.is(":visible")) {
