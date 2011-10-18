@@ -9,15 +9,15 @@ class FormTemplate extends Form {
 			new TextareaField('Message'),
 			new CheckboxField('TermsConditions'),
 			new CheckboxSetField(
-				$name = "Topics",
-				$title = "I am interested in the following topics",
-				$source = array(
+				"Topics",
+				"I am interested in the following topics",
+				array(
 					"1" => "Technology",
 					"2" => "Gardening",
 					"3" => "Cooking",
 					"4" => "Sports"
 				),
-				$value = "0"
+				"0"
 			),
 			new OptionsetField(
 				'Sex',
