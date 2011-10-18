@@ -25,7 +25,12 @@
 			<li>www.website.com</li>
 		</ul>
 		<div class="clear"><!-- --></div>
-		<p><a href="/article/">&laquo; Back to News</a></p>
+
+		
+		<% if Parent %>
+				<p><a href="$Parent.Link">Back to $Parent.MenuTitle</a></p>
+
+				<% end_if %>
 	</div><!-- /detail -->
 </div><!-- /grid_1 -->
 
@@ -37,4 +42,4 @@
 	<div class="widget">
 		<% include LatestBlog %>
 	</div><!-- /widget -->
-</div><!-- /grid_4 --> 
+</div><!-- /grid_4 -->

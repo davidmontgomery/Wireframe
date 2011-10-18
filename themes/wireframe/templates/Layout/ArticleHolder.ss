@@ -5,7 +5,7 @@
 <div class="grid_1">
 	<h1>$Title</h1>
 	<% if Children %>
-		<ul class="listing articles"><!-- Note: Add listing for extra style if required -->
+		<ul class="listing articles">
 			<% control ArticlePaginate %>
 			<li class="clearfix <% if Last %>last<% end_if %>">
 				<h2><a href="$Link">$Title</a></h2>
