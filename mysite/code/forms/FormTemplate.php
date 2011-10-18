@@ -9,6 +9,7 @@ class FormTemplate extends Form {
 			new TextareaField('Message'),
 			new CheckboxField('TermsConditions'),
 			new CheckboxSetField(
+
 				"Topics",
 				"I am interested in the following topics",
 				array(
