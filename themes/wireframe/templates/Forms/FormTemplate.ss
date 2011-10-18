@@ -36,6 +36,11 @@
 		<label for="$dataFieldByName(Sex).id">Sex:</label>
 		$dataFieldByName(Sex)
 	</div>
+	<div class="field radio">
+		<label for="$dataFieldByName(Topics).id">Topics:</label>
+		$dataFieldByName(Topics)
+	</div>
+	
 	$dataFieldByName(SecurityID)
 	<% if Actions %>
 		<div class="Actions">
