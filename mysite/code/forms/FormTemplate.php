@@ -2,23 +2,22 @@
 
 class FormTemplate extends Form {
 	function __construct($controller, $name) {
-
+		
 		$fields = new FieldSet(
 			new TextField('Name'),
 			new EmailField('Email'),
 			new TextareaField('Message'),
 			new CheckboxField('TermsConditions'),
 			new CheckboxSetField(
-
-				"Topics",
-				"I am interested in the following topics",
+				'Topics',
+				'I am interested in the following topics',
 				array(
-					"1" => "Technology",
-					"2" => "Gardening",
-					"3" => "Cooking",
-					"4" => "Sports"
+					'1' => 'Technology',
+					'2' => 'Gardening',
+					'3' => 'Cooking',
+					'4' => 'Sports'
 				),
-				"0"
+				'0'
 			),
 			new OptionsetField(
 				'Sex',
@@ -32,6 +31,7 @@ class FormTemplate extends Form {
 				'Title',
 				'',
 				array(
+					'' => 'Select',
 					'Mr' => 'Mr',
 					'Mrs' => 'Mrs',
 					'Ms' => 'Ms',
@@ -39,11 +39,11 @@ class FormTemplate extends Form {
 				)
 			)
 		);
-
+		
 		$actions = new FieldSet(
 			new FormAction('SendContactForm', 'Send')
 		);
-
+	
 		//return new Form($this, $name, $fields, $actions, $validator);
 		parent::__construct($controller, $name, $fields, $actions);
 	}

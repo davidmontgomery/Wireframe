@@ -4,6 +4,7 @@ class HomePage extends Page {
 	static $icon = 'themes/wireframe/images/icons/home';
 	
 	static $db = array(
+		'Name' => 'Text'
 	);
 
 	static $has_one = array(
@@ -15,6 +16,8 @@ class HomePage extends Page {
 	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
+		
+		$fields->addFieldToTab('Root.Content.Main', new TextareaField('Name', 'Name'),'Content');
 		
 		$manager = new ImageDataObjectManager(
 		$this, // Controller

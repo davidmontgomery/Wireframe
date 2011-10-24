@@ -3,7 +3,7 @@
 class ContactForm extends Form {
 	
 	function __construct($controller, $name) {
-
+		
 		$fields = new FieldSet(
 			new TextField('Name'),
 			new EmailField('Email'),
@@ -13,8 +13,8 @@ class ContactForm extends Form {
 		$actions = new FieldSet(
 			new FormAction('SendContactForm', 'Send')
 		);
-
-		//return new Form($this, $name, $fields, $actions, $validator);
+		
+		// return new Form($this, $name, $fields, $actions, $validator);
 		parent::__construct($controller, $name, $fields, $actions);
 	}
 	
@@ -24,5 +24,4 @@ class ContactForm extends Form {
 			'ContactForm'
 		));
 	}
-
 }

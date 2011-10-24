@@ -12,31 +12,34 @@
 		<ul></ul>
 	</div>
 	
-	<div class="field dropdown">
-		<label for="$dataFieldByName(Title).id">Title:</label>
-		$dataFieldByName(Title)
-	</div>
-	<div class="field text">
-		<label for="$dataFieldByName(Name).id">Name:</label>
-		$dataFieldByName(Name)
-	</div>
-	<div class="field text">
-		<label for="$dataFieldByName(Email).id">Email:</label>
-		$dataFieldByName(Email)
-	</div>
+	<fieldset>
+		<div class="field dropdown">
+					<label for="$dataFieldByName(Title).id">Title:</label>
+					$dataFieldByName(Title)
+				</div>
+		<div class="field text">
+			<label for="$dataFieldByName(Name).id">Name:</label>
+			$dataFieldByName(Name)	
+		</div>
+		<div class="field text">
+			<label for="$dataFieldByName(Email).id">Email:</label>
+			$dataFieldByName(Email)
+		</div>
+	</fieldset>
+	
 	<div class="field textarea">
 		<label for="$dataFieldByName(Message).id">Message:</label>
 		$dataFieldByName(Message)
 	</div>
 	<div class="field checkbox">
 		$dataFieldByName(TermsConditions)
-		<label for="$dataFieldByName(EmailUpdates).id">Send me email updates</label>
+		<label for="$dataFieldByName(TermsConditions).id">Send me email updates</label>
 	</div>
 	<div class="field radio">
 		<label for="$dataFieldByName(Sex).id">Sex:</label>
 		$dataFieldByName(Sex)
 	</div>
-	<div class="field radio">
+	<div class="field checkbox">
 		<label for="$dataFieldByName(Topics).id">Topics:</label>
 		$dataFieldByName(Topics)
 	</div>
