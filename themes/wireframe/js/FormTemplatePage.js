@@ -16,7 +16,8 @@
 			errorElement: "span",
 			errorClass: "error",
 			errorPlacement: function(label, elem) {
-			    elem.closest("fieldset").find(".messages").append(label);
+					var test = label.text();
+			    elem.closest("fieldset").find(".messages").append(test);
 			  },
 			wrapper: "li",
 			/* Adds to success message to the top list
