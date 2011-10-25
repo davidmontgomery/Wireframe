@@ -15,9 +15,9 @@
 		  },
 			errorElement: "span",
 			errorClass: "error",
-			validClass: "success",
-			errorContainer: "#errorBox",
-			errorLabelContainer: "#errorBox ul",
+			errorPlacement: function(label, elem) {
+			    elem.closest("fieldset").find(".messages").append(label);
+			  },
 			wrapper: "li",
 			/* Adds to success message to the top list
 			success: function (label) {

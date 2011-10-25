@@ -8,11 +8,13 @@
 	<% end_if %>
 	
 	<!-- Error block for jQuery messages -->
-	<div id="errorBox">
-		<ul></ul>
-	</div>
+	
 	
 	<fieldset>
+		<ul class="messages">
+
+		</ul>
+		
 		<div class="field dropdown">
 					<label for="$dataFieldByName(Title).id">Title:</label>
 					$dataFieldByName(Title)
@@ -27,6 +29,11 @@
 		</div>
 	</fieldset>
 	
+	<fieldset>
+		<ul class="messages">
+
+		</ul>
+		
 	<div class="field textarea">
 		<label for="$dataFieldByName(Message).id">Message:</label>
 		$dataFieldByName(Message)
@@ -43,7 +50,8 @@
 		<label for="$dataFieldByName(Topics).id">Topics:</label>
 		$dataFieldByName(Topics)
 	</div>
-	
+	</fieldset>
+		
 	$dataFieldByName(SecurityID)
 	<% if Actions %>
 		<div class="Actions">
