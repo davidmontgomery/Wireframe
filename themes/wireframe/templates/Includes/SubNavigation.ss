@@ -27,5 +27,5 @@
 				<% end_if %>
 				</li>
 		<% end_control %>
-	</ul>
+	</ul><!-- /subnav -->
 <% end_if %>

@@ -6,18 +6,18 @@
 				<div class="image_wrap">
 					<a href="$Link">
 						<% control FormattedCoverImage %>
-							<img src="$URL" alt="" />
+							<img src="$URL" alt="$Title" />
 						<% end_control %>
 					</a>
-				</div>
+				</div><!-- /image_wrap -->
 			<% end_if %>
-
+			
 			<div class="details">
 				<p>$Description.LimitWordCount(25)</p>
 				<p class="more"><a href="$Link">View album &raquo;</a></p>
-			</div>
+			</div><!-- /details -->
 		</li><% end_control %>
-	</ul>
+	</ul><!-- /listing -->
 <% else %>
-	<p>There are no albums added yet</p>
+	<p>There are no albums added yet.</p>
 <% end_if %>
