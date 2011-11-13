@@ -2,7 +2,7 @@
 	<% include BreadCrumbs %>
 </div><!-- /grid_full -->
 
-<div class="grid_2">
+<div class="grid_1">
 	<h1>$Title</h1>
 	$Content
 	<% if Success %>
@@ -10,7 +10,7 @@
 	<% else %>
 		$FormTemplate
 	<% end_if %>
-</div><!-- /grid_2 -->
+</div><!-- /grid_1 -->
 
 <div class="grid_4 last">
 	<div class="widget">

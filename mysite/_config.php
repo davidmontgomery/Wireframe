@@ -78,10 +78,10 @@ Director::set_dev_servers(array(
 if (Director::isLive()) {
 	// Site is in Live mode
 	$databaseConfig = array(
-		'type' => '',
-		'server' => '',
-		'username' => '',
-		'password' => '',
+		'type' => 'MySQLDatabase',
+		'server' => 'mysql1.openhost.net.nz:3306',
+		'username' => 'davidWireframe',
+		'password' => 'vanhalen5150',
 		'database' => $projectName
 	);
 	

@@ -4,6 +4,7 @@
 
 <div class="grid_1">
 	<h1>$Title</h1>
+	$Content
 	<% control Children.GroupedBy(Category) %>
 		<h3>$Category</h3>
 		<ul>
