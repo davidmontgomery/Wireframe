@@ -7,12 +7,12 @@
 	<% if Faqs %>
 		<ul class="listing faqs">
 			<% control Faqs %>
-			<li <% if Last %>class="last"<% end_if %> >
-				<p class="question"><span>Q.</span> $Question <a href="#">show</a></p>
-				<div>
-					<p>A. $Answer</p>
-				</div>
-			</li>
+				<li <% if Last %>class="last"<% end_if %> >
+					<p class="question"><span>Q.</span> $Question <a href="#">show</a></p>
+					<div>
+						<p>A. $Answer</p>
+					</div>
+				</li>
 			<% end_control %>
 		</ul><!-- /listing -->
 	<% end_if %>
@@ -26,4 +26,4 @@
 	<div class="widget">
 		<% include LatestBlog %>
 	</div><!-- /widget -->
-</div><!-- /grid_2 -->
+</div><!-- /grid_4 -->

@@ -12,6 +12,12 @@
 	<% end_if %>
 </div><!-- /grid_2 -->
 
-<div class="grid_2 last">
-	[Content]
-</div><!-- /grid_2 -->
+<div class="grid_4 last">
+	<div class="widget">
+		<% include LatestComment %>
+	</div><!-- /widget -->
+	
+	<div class="widget">
+		<% include LatestBlog %>
+	</div><!-- /widget -->
+</div><!-- /grid_4 -->

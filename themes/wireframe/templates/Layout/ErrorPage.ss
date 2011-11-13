@@ -4,7 +4,6 @@
 
 <div class="grid_1">
 	<h1>$Title</h1>
-	<p>[This is the custom Error Page]</p>
 	$Content
 </div><!-- /grid_1 -->
 

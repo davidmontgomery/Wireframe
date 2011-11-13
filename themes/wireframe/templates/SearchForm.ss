@@ -3,4 +3,4 @@
 	<span class="button">
 		<input type="submit" value="Go">
 	</span>
-</form>
+</form><!-- /searchForm -->

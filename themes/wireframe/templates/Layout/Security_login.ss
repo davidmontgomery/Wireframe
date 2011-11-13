@@ -11,7 +11,11 @@
 </div><!-- /grid_1 -->
 
 <div class="grid_4 last">
-	<% if Menu(2) %>
-		<% include SubNavigation %>
-	<% end_if %>
+	<div class="widget">
+		<% include LatestComment %>
+	</div><!-- /widget -->
+	
+	<div class="widget">
+		<% include LatestBlog %>
+	</div><!-- /widget -->
 </div><!-- /grid_4 -->

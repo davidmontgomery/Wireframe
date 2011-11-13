@@ -5,5 +5,4 @@
 <div class="grid_full">
 	<h1>$Title</h1>
 	<% include AlbumList %>
-</div><!-- /grid_1 -->
-
+</div><!-- /grid_full -->

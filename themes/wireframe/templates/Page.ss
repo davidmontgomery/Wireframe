@@ -8,26 +8,25 @@
 	<% base_tag %>
 	<title><% if MetaTitle %>$MetaTitle<% else %>$Title<% end_if %> &raquo; $SiteConfig.Title</title>
 	<meta name="description" content="<% if MetaDescription %>$MetaDescription<% else %>$SiteConfig.GlobalDescription<% end_if %>">
-  <meta name="keywords" content="<% if MetaKeywords %>$MetaKeywords<% else %>$SiteConfig.GlobalKeywords<% end_if %>">
+	<meta name="keywords" content="<% if MetaKeywords %>$MetaKeywords<% else %>$SiteConfig.GlobalKeywords<% end_if %>">
 </head>
 
 <body class="page_{$URLSegment} class_{$ClassName}">
 	<% include Accessibility %>
-
+	
 	<div id="container">
 		<div id="header">
 			<% if RecursiveBannerImage %>
 				$RecursiveBannerImage.CroppedImage(960,125)
 			<% end_if %>
-
-
-            
+			
 			<% include TopNav %>
 			$SearchForm
 			<% include Branding %>
 		</div><!-- /header -->
 		
 		<% include Navigation %>
+		
 		<div class="layout typography clearfix">
 			$Layout
 		</div><!-- /layout -->

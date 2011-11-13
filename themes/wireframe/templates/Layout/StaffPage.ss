@@ -3,7 +3,6 @@
 	
 	<div class="detail clearfix">
 		<h1>$Title</h1>
-		
 		<% if StaffPhoto %>
 			<% control StaffPhoto %>
 				$CroppedImage(275, 183)

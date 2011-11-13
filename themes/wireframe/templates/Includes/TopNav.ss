@@ -3,5 +3,5 @@
 		<% control ShowInTopMenu %>
 			<li><a href="$Link">$MenuTitle</a></li>
 		<% end_control %>
-	</ul>
+	</ul><!-- /top_nav -->
 <% end_if %>
