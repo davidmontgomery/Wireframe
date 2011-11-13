@@ -2,17 +2,17 @@
 
 class TestimonialPage extends Page {
 	static $icon = 'themes/wireframe/images/icons/testimonial';
-	
+
 	static $db = array(
 	);
-	
+
 	static $has_many = array(
 		'Testimonials' => 'Testimonial'
 	);
-	
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
-		
+
 		$manager = new DataObjectManager(
 		$this, // Controller
 		'Testimonials', // Source name
@@ -24,7 +24,7 @@ class TestimonialPage extends Page {
 		), // Headings
 			'getCMSFields_forPopup'
 		);
-		
+
 		$fields->removeFieldFromTab('Root.Content.Main', 'Content');
 		$fields->addFieldToTab('Root.Content.Main', $manager);
 		return $fields;
@@ -32,4 +32,5 @@ class TestimonialPage extends Page {
 }
 
 class TestimonialPage_Controller extends Page_Controller {
+
 }

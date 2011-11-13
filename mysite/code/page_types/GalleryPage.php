@@ -11,7 +11,7 @@ class GalleryPage extends Page {
 	static $has_many = array(
 		'GalleryImages' => 'GalleryImage'
 	);
-
+	
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 
@@ -48,5 +48,4 @@ class GalleryPage_Controller extends Page_Controller {
 
 		return $doSet ? $doSet : false;
 	}
-
 }

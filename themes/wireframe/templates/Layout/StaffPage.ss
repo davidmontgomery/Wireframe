@@ -1,16 +1,16 @@
 <div class="grid_1">
 	<% include BreadCrumbs %>
 	
-	<div class="detail">
+	<div class="detail clearfix">
 		<h1>$Title</h1>
-		<span class="date">$Date.Nice</span>
 		
-		<% if Photo %>
-			$Photo.SetRatioSize(275,275)
+		<% if StaffPhoto %>
+			<% control StaffPhoto %>
+				$CroppedImage(275, 183)
+			<% end_control %>
 		<% end_if %>
-		$Content
 		
-		<div class="clear"><!-- --></div>
+		$Content
 		
 		<% if Parent %>
 			<p><a href="$Parent.Link">Back to $Parent.MenuTitle</a></p>

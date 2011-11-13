@@ -2,7 +2,7 @@
 
 class ArticleHolder extends Page {
 	static $icon = 'themes/wireframe/images/icons/news';
-	
+
 	static $db = array(
 	);
 
@@ -11,7 +11,7 @@ class ArticleHolder extends Page {
 
 	static $allowed_children = array('ArticlePage');
 }
- 
+
 class ArticleHolder_Controller extends Page_Controller {
 
 	function OrderedChildren() {
@@ -28,11 +28,11 @@ class ArticleHolder_Controller extends Page_Controller {
 		$rss = new RSSFeed($this->Children(), $this->Link(), "My latest news");
 		$rss->outputToBrowser();
 	}
-    
+
 	// Paginate News Article Holder
 	function ArticlePaginate() {
 		$numArticles = 2; // Number of articles per page
-        
+		
 		if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
 		$SQL_start = (int)$_GET['start'];
 		$doSet = DataObject::get(
@@ -42,8 +42,7 @@ class ArticleHolder_Controller extends Page_Controller {
 			$join = "",
 			$limit = "{$SQL_start}, $numArticles"
 		);
-		
+
 		return $doSet ? $doSet : false;
 	}
-	
 }

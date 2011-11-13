@@ -1,15 +1,12 @@
 <?php
 
 class FormPage extends Page {
+
 	public static $db = array(
-		
 	);
 
 	public static $has_one = array(
-		
 	);
-
-
 }
 
 class FormPage_Controller extends Page_Controller {
@@ -18,7 +15,7 @@ class FormPage_Controller extends Page_Controller {
 
 		return new FormTemplate($this, 'FormTemplate');
 	}
-    
+
 	function SendContactForm($data) {
 		// Set data
 		$From = $data['Email'];
@@ -38,7 +35,7 @@ class FormPage_Controller extends Page_Controller {
 		// Return to submitted message
 		Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
 	}
-    
+
 	public function Success() {
 		return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
 	}

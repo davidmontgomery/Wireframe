@@ -23,7 +23,7 @@ class FaqPage extends Page {
 		), // Headings
 		'getCMSFields_forPopup'
 	);
-
+	
 		$fields->addFieldToTab('Root.Content.FAQs', $manager);
 		return $fields;
 	}

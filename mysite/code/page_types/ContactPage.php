@@ -34,7 +34,7 @@ class ContactPage_Controller extends Page_Controller {
 
 		return new ContactForm($this, 'ContactForm');
 	}
-    
+
 	function SendContactForm($data) {
 		// Set data
 		$From = $data['Email'];
@@ -54,7 +54,7 @@ class ContactPage_Controller extends Page_Controller {
 		// Return to submitted message
 		Director::redirect(Director::baseURL(). $this->URLSegment . "/?success=1");
 	}
-    
+
 	public function Success() {
 		return isset($_REQUEST['success']) && $_REQUEST['success'] == "1";
 	}
