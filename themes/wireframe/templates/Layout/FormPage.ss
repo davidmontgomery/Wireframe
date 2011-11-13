@@ -9,7 +9,7 @@
 		$SubmitText
 	<% else %>
 		$FormTemplate
-	<% end_if %>
+	<% end_if %>\
 </div><!-- /grid_1 -->
 
 <div class="grid_4 last">
