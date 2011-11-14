@@ -131,7 +131,7 @@ ul.listing.articles {
 	z-index: 0;
 	width: 924px;
 	height: 263px;
-	div {
+	.slide_container {
 		position: relative;
 		padding: 0;
 		margin: 0;
@@ -141,28 +141,35 @@ ul.listing.articles {
 			position: absolute;
 			top: 0;
 			left: 0;
-			z-index: 1;
+			z-index: -1;
 		}
-		p {
-			position: relative;
-			margin: 50px 0 0 10px;
-			z-index: 2;
-			width: 350px;
+		.slide_content {
+			position: absolute;
+			top: 180px;
+			left: 0px;
+			width: 250px;
+			display: block;
+			padding: 15px;
+			h2 {
+				margin: 0 0 0px 0;
+				padding: 0;
+			}
 		}
-		h3 {
-			position: relative;
-			margin: 50px 0 0 10px;
-			z-index: 2;
-			width: 350px;
-		}
+		
 	}
 }
 
 .banner_nav {
 	position: absolute;
 	bottom: 7px;
-	left: 10px;
+	left: 15px;
 	z-index: 1;
+	a {
+		margin-right: 5px;
+		&.activeSlide {
+				color: #333;
+		}
+	}
 }
 
 /*** Box ***/

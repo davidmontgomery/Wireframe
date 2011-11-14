@@ -71,7 +71,10 @@ form#searchForm {
   right: 15px;
 }
 form#searchForm input {
-  padding: 3px;
+  padding: 5px 3px;
+}
+form#searchForm input.text {
+  width: 110px;
 }
 /* --------------------------------------------------------
  * Form - email subscribe

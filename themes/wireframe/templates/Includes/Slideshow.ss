@@ -2,9 +2,11 @@
 	<% if BannerImages %>
 		<div class="slideshow">
 			<% control BannerImages %>
-				<div>
-					<h2>$Heading</h2>
-					<p>$Caption</p>
+				<div class="slide_container">
+					<div class="slide_content">
+						<h2>$Heading</h2>
+						<p>$Caption</p>
+					</div>
 					$MyBannerImage.CroppedImage(924, 263)
 				</div>
 			<% end_control %>

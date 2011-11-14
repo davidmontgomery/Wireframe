@@ -2,7 +2,7 @@
 	<% include BreadCrumbs %>
 	
 	<div class="detail clearfix">
-		<h1>Article</h1>
+		<h1>News</h1>
 		<h2>$Title</h2>
 		<span class="date">$Date.Nice</span>
 		

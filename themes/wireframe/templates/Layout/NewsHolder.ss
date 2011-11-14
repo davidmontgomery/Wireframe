@@ -6,7 +6,7 @@
 	<h1>$Title</h1>
 	<% if Children %>
 		<ul class="listing articles">
-			<% control ArticlePaginate %>
+			<% control NewsPaginate %>
 				<li class="clearfix <% if Last %>last<% end_if %>">
 					<h2><a href="$Link">$Title</a></h2>
 					<span class="date">$Date.Nice</span>
@@ -23,8 +23,8 @@
 			<% end_control %>
 		</ul><!-- /listing -->
 		
-		<% if ArticlePaginate.MoreThanOnePage %>
-			<% include ArticlePagination %>
+		<% if NewsPaginate.MoreThanOnePage %>
+			<% include NewsPagination %>
 		<% end_if %>
 	<% else %>
 		<p>There are no articles at the moment.</p>

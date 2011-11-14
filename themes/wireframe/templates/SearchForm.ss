@@ -1,5 +1,5 @@
 <form id="searchForm" $FormAttributes>
-	<input name="Search" type="text" placeholder="Search">
+	<input class="text" name="Search" type="text" placeholder="Search">
 	<span class="button">
 		<input type="submit" value="Go">
 	</span>

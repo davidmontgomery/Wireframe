@@ -1,6 +1,6 @@
 <?php
 
-class ArticlePage extends Page {
+class NewsPage extends Page {
 	static $icon = 'themes/wireframe/images/icons/news';
 
 	static $db = array(
@@ -42,6 +42,6 @@ class ArticlePage extends Page {
 	}
 }
 
-class ArticlePage_Controller extends Page_Controller {
+class NewsPage_Controller extends Page_Controller {
 
 }

@@ -1,6 +1,8 @@
 <?php
 
 class StaffHolder extends Page {
+	static $icon = 'themes/wireframe/images/icons/staff';
+	
 	static $db = array(
 	);
 

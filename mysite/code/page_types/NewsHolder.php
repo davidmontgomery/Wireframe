@@ -1,6 +1,6 @@
 <?php
 
-class ArticleHolder extends Page {
+class NewsHolder extends Page {
 	static $icon = 'themes/wireframe/images/icons/news';
 
 	static $db = array(
@@ -9,13 +9,13 @@ class ArticleHolder extends Page {
 	static $has_one = array(
 	);
 
-	static $allowed_children = array('ArticlePage');
+	static $allowed_children = array('NewsPage');
 }
 
-class ArticleHolder_Controller extends Page_Controller {
+class NewsHolder_Controller extends Page_Controller {
 
 	function OrderedChildren() {
-		return DataObject::get('ArticlePage', 'ParentID = ' . $this->ID, 'Date DESC');
+		return DataObject::get('NewsPage', 'ParentID = ' . $this->ID, 'Date DESC');
 	}
 
 	// RSS
@@ -30,17 +30,17 @@ class ArticleHolder_Controller extends Page_Controller {
 	}
 
 	// Paginate News Article Holder
-	function ArticlePaginate() {
-		$numArticles = 2; // Number of articles per page
+	function NewsPaginate() {
+		$numNews = 2; // Number of articles per page
 		
 		if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
 		$SQL_start = (int)$_GET['start'];
 		$doSet = DataObject::get(
-			$callerClass = "ArticlePage",
+			$callerClass = "NewsPage",
 			$filter = "`ParentID` = '".$this->ID."'",
 			$sort = "Date DESC",
 			$join = "",
-			$limit = "{$SQL_start}, $numArticles"
+			$limit = "{$SQL_start}, $numNews"
 		);
 
 		return $doSet ? $doSet : false;

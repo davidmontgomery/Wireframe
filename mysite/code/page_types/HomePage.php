@@ -31,7 +31,7 @@ class HomePage extends Page {
 		'getCMSFields_forPopup'
 		);
 
-		$fields->addFieldToTab('Root.Content.SliderImages', $manager);
+		$fields->addFieldToTab('Root.Content.Slideshow', $manager);
 		return $fields;
 	}
 }
