@@ -11,7 +11,7 @@
 		<% end_if %>
 			
 		$Content
-		<p><a href="/article/">&laquo; Back to News</a></p>
+		<p><a href="/news/">&laquo; Back to News</a></p>
 	</div><!-- /detail -->
 </div><!-- /grid_1 -->
 

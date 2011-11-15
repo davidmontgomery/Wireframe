@@ -21,6 +21,7 @@ class Page extends SiteTree {
 		$fields->addFieldToTab('Root.Behaviour', new CheckboxField('ShowInTopMenu', 'Show in top menu?'));
 		$fields->addFieldToTab('Root.Behaviour', new CheckboxField('ShowInMainMenu', 'Show in main menu?'));
 		$fields->addFieldToTab('Root.Behaviour', new CheckboxField('ShowInFooterMenu', 'Show in footer menu?'));
+		
 		return $fields;
 	}
 
@@ -61,55 +62,47 @@ class Page_Controller extends ContentController {
 				<script>DD_belatedPNG.fix(".pngfix");</script>
 			<![endif]-->
 		');
-
-		// CSS
-		$css = array(
-			CSS_PATH . '/reset.css',
-			CSS_PATH . '/variables.css',
-			CSS_PATH . '/css3.css',
-			CSS_PATH . '/editor.css',
-			CSS_PATH . '/layout.css',
-			CSS_PATH . '/form.css',
-			CSS_PATH . '/jquery.fancybox-1.3.4.css',
-			CSS_PATH . '/print.css'
-		);
-
-		// JS
-		$js = array(
-			JS_PATH . '/jquery-min.js',
-			JS_PATH . '/prettyPhoto.js',
-			JS_PATH . '/placeholder.js',
-			JS_PATH . '/accordion.js',
-			JS_PATH . '/jquery.cycle.js',
-			JS_PATH . '/jquery.fancybox-1.3.4.pack.js',
-			JS_PATH . '/hover-intent.js',
-			JS_PATH . '/jquery.moreless.1.0.js',
-			JS_PATH . '/general.js'
-		);
-
+		
 		// Modernizr - to be put in the document head section
 		Requirements::insertHeadTags('<script src="' . JS_PATH . '/modernizr-1.7.min.js"></script>');
 
-		// Requirements
-		foreach ($css as $c) {
-			Requirements::css($c);
-		}
-
-		foreach ($js as $j) {
-			Requirements::javascript($j);
-		}
-
 		// Combine: To test set to 'test' in _config
 		Requirements::set_combined_files_folder(COMBINE_PATH);
-		Requirements::combine_files('combined.css', $css);
-		Requirements::combine_files('combined.js', $js);
+		
+		// CSS
+		Requirements::combine_files(
+			'combined.css',
+			array(
+				CSS_PATH . '/reset.css',
+				CSS_PATH . '/variables.css',
+				CSS_PATH . '/css3.css',
+				CSS_PATH . '/editor.css',
+				CSS_PATH . '/layout.css',
+				CSS_PATH . '/form.css',
+				CSS_PATH . '/jquery.fancybox-1.3.4.css',
+				CSS_PATH . '/print.css'
+			)
+		);
+		
+		// JS
+		Requirements::combine_files(
+			'combined.js', 
+			array(
+				JS_PATH . '/jquery-min.js',
+				JS_PATH . '/prettyPhoto.js',
+				JS_PATH . '/placeholder.js',
+				JS_PATH . '/accordion.js',
+				JS_PATH . '/jquery.cycle.js',
+				JS_PATH . '/jquery.fancybox-1.3.4.pack.js',
+				JS_PATH . '/hover-intent.js',
+				JS_PATH . '/jquery.moreless.1.0.js',
+				JS_PATH . '/general.js'
+			)
+		);
 	}
 
 	// Latest News
-	function LatestNews($num = 1) {
-		$news = DataObject::get_one("NewsHolder");
-		return DataObject::get("NewsPage", "ParentID = $news->ID", "Date DESC", "", $num);
-	}
+
 
 	// Latest Testimonial
 	function LatestTestimonials($num = 1) {
@@ -125,12 +118,12 @@ class Page_Controller extends ContentController {
 	// Latest Blog catagories
 	public function LatestCatagories($num = 1) {
 		$articles = DataObject::get_one("BlogHolder");
-		return ($articles) ? DataObject::get("BlogEntry", "ParentID = $articles->ID", "Created DESC", "", $num) : false;
+		return ($articles) ? DataObject::get("BlogEntry", "ParentID = $articles->ID", "Created DESC", '', $num) : false;
 	}
 
 	// Latest comment
 	public function LatestComments($num = 1) {
-		return DataObject::get("PageComment",  "IsSpam = 0 AND NeedsModeration = 0", "Created DESC", "", $num);
+		return DataObject::get('PageComment',  'IsSpam = 0 AND NeedsModeration = 0', 'Created DESC', '', $num);
 	}
 
 	// Display Google map

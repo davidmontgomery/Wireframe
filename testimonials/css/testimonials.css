@@ -1,0 +1,14 @@
+/* --------------------------------------------------------
+ * Testimonials
+ * -------------------------------------------------------- */
+p.testimonial_name {
+	font-weight: bold;
+	position: relative;
+	margin: -6px 0 6px 0;
+}
+
+p.testimonial_position {
+	font-style: italic;
+	position: relative;
+	margin: -6px 0 6px 0;
+}

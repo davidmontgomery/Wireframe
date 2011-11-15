@@ -71,14 +71,6 @@ ul.listing h2 {
 ul.listing h2 a {
   text-decoration: none;
 }
-/*** Testimonials ***/
-/*** Articles ***/
-ul.listing.articles img {
-  margin-right: 18px;
-}
-ul.listing.articles li {
-  padding-bottom: 18px;
-}
 .detail img {
   float: left;
   margin: 0 18px 18px 0;
@@ -618,19 +610,6 @@ p.blog_date {
   margin: -8px 0 8px 0;
   font-style: italic;
   color: #999;
-}
-/* --------------------------------------------------------
- * Testimonials
- * -------------------------------------------------------- */
-.testimonial_name {
-  font-weight: bold;
-  position: relative;
-  margin: -6px 0 6px 0;
-}
-.testimonial_position {
-  font-style: italic;
-  position: relative;
-  margin: -18px 0 6px 0;
 }
 /* --------------------------------------------------------
  * Faqs

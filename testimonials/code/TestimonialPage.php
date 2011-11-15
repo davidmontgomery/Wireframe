@@ -33,4 +33,8 @@ class TestimonialPage extends Page {
 
 class TestimonialPage_Controller extends Page_Controller {
 
+	function init() {
+		parent::init();
+		Requirements::css('testimonials/css/testimonials.css');
+	}
 }
