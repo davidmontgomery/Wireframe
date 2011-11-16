@@ -16,18 +16,6 @@
 			}, 250);
 		});
 		
-		// Show / hide
-		$(".faqs p.question").click(function(e) {
-			var show = $(this).next('div');
-			e.preventDefault();
-			
-			if (show.is(":visible")) {
-				show.slideUp(500);
-			} else {
-				show.slideDown(500);
-			}
-		});
-		
 		var config = {
 			interval: 200,
 			over: tileOver,

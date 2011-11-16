@@ -31,7 +31,7 @@ class NewsHolder_Controller extends Page_Controller {
 
 	// Paginate News Article Holder
 	function NewsPaginate() {
-		$numNews = 2; // Number of articles per page
+		$numNews = 1; // Number of articles per page
 		
 		if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
 		$SQL_start = (int)$_GET['start'];

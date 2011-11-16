@@ -1,0 +1,12 @@
+/* --------------------------------------------------------
+ * Sitemap Page: Integrate into layout file.
+ * -------------------------------------------------------- */
+ul.sitemap {
+	li {
+		list-style: none;
+		margin: 0 0 10px 15px;
+	}
+	ul {
+		margin: 10px 0 15px 0;
+	}
+}

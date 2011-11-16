@@ -4,7 +4,7 @@
 
 <div class="grid_1">
 	<h1>$Title</h1>
-	<p><strong>strong</strong>, <em>dolor</em>, <a href="#">inline link</a>, <a href="https://www.test.com">external link</a>, <a href="http://www.test.com">external link to</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+	<p><strong>strong</strong>, <em>dolor</em>, <a href="#">inline link</a> et dolore <a href="http://www.test.com">external</a>. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 	<ul>
 		<li>List item</li>
@@ -34,10 +34,10 @@
 </div><!-- /grid_1 -->
 
 <div class="grid_4 last">
-	<h4>Heading level 3</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.rehenderit in vid est laborum.</p>
-	<h4>Heading level 3</h4>
-	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.rehenderit in vid est laborum.</p>
+	<h2>Heading level 2</h2>
+	<p>
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.rehenderit in vid est laborum. <a class="more" href="#">View more &rsaquo;</a>
+	</p>
 </div><!-- /grid_2 -->
 
 <div class="clear"><!-- --></div>
