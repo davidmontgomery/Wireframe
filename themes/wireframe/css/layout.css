@@ -35,6 +35,13 @@ a.external_link {
 .more {
   margin-top: -12px;
 }
+.decorate {
+  /* Remove this */
+
+  color: #fff;
+  margin-bottom: 36px !important;
+  background: pink;
+}
 /* --------------------------------------------------------
  * General listing
  * -------------------------------------------------------- */
@@ -500,11 +507,6 @@ html, body {
 }
 .grid_1.last {
   margin-right: 0;
-}
-.decorate {
-  color: #fff;
-  margin-bottom: 20px;
-  background: pink;
 }
 .grid_2 {
   float: left;
