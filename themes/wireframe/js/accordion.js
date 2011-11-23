@@ -1,4 +1,5 @@
 (function($) {
+	
 	$.fn.accordion = function(options) {
 		var defaults = {
 			speed: 1000
@@ -23,4 +24,5 @@
 			}
 		});
 	};
+	
 })(jQuery);

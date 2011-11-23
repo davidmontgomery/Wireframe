@@ -4,7 +4,7 @@ class StaffPage extends Page {
 	
 	static $db = array(
 		'Position' => 'Varchar(50)',
-		'Category' => "Enum('Category One ,Category Two, Category Three')",
+		'Category' => "Enum('CEO, Managers, General')",
 	);
 
 	static $has_one = array(

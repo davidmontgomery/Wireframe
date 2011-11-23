@@ -1,6 +1,6 @@
 <p class="pagination">
 	<% if NewsPaginate.PrevLink %>
-		<span class="prev"><a href="$ArticlePaginate.PrevLink">&laquo; Prev</a><span>
+		<span class="prev"><a href="$NewsPaginate.PrevLink">&laquo; Prev</a><span>
 	<% end_if %>
 
 	<% control NewsPaginate.Pages %>
@@ -12,6 +12,6 @@
 	<% end_control %>
 
 	<% if NewsPaginate.NextLink %>
-		<span class="next"><a href="$ArticlePaginate.NextLink">Next &raquo;</a></span>
+		<span class="next"><a href="$NewsPaginate.NextLink">Next &raquo;</a></span>
 	<% end_if %>
 </p><!-- /pagination -->
