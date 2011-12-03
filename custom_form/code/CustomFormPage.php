@@ -1,6 +1,6 @@
 <?php
 
-class FormPage extends Page {
+class CustomFormPage extends Page {
 
 	public static $db = array(
 	);
@@ -9,14 +9,14 @@ class FormPage extends Page {
 	);
 }
 
-class FormPage_Controller extends Page_Controller {
-	function FormTemplate() {
+class CustomFormPage_Controller extends Page_Controller {
+	function CustomFormTemplate() {
 		$Params = Director::urlParams();
 
-		return new FormTemplate($this, 'FormTemplate');
+		return new CustomFormTemplate($this, 'CustomFormTemplate');
 	}
 
-	function SendContactForm($data) {
+	function SendCustomFormPage($data) {
 		// Set data
 		$From = $data['Email'];
 		$To = $this->Mailto;
@@ -45,7 +45,7 @@ class FormPage_Controller extends Page_Controller {
 
 		// Custom JQuery validation
 		Validator::set_javascript_validation_handler('none');
-		Requirements::javascript(JS_PATH .  "/jquery.validate.js");
-		Requirements::javascript(JS_PATH . "/FormTemplatePage.js");
+		Requirements::javascript("custom_form/js/jquery.validate.js");
+		Requirements::javascript("custom_form/js/CustomFormTemplatePage.js");
 	}
 }
