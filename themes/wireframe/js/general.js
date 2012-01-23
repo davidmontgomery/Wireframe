@@ -1,48 +1,50 @@
 (function($) {
 	$(document).ready(function() {
-		
+
+
+
 		// Flexi-search
 		var $searchInput = $('#searchForm input.text');
-		
+
 		$searchInput.bind('focus', function() {
 			$searchInput.animate({
 				'width' : '200px'
 			}, 250);
 		});
-		
+
 		$searchInput.bind('blur', function() {
 			$searchInput.animate({
 				'width' : '110px'
 			}, 250);
 		});
-		
+
 		var config = {
 			interval: 200,
 			over: tileOver,
 			timeout: 500,
 			out: tileOut
 		};
-		
+
 		$(".tile").hoverIntent(config);
-		
+
 		// Panel Slide
 		function tileOver() {
 			var $caption = $(this).find('.caption');
 			var $body = $(this).find('.body');
 			var height = $body.height();
-			
+
 			$body.css({
 				'height' : 0,
 				'display' : 'block'
 			}).animate({
 				'height' : '+' + height + 'px'
 			}, 250);
-			
+
 			$caption.animate({
 				'margin-top' : '-' + height + 'px'
 			}, 250);
 		}
-		
+
 		function tileOut() {
 				var $caption = $(this).find('.caption');
 				var $body = $(this).find('.body');
@@ -61,7 +63,7 @@
 					'margin-top' : 0
 				}, 250);
 		}
-		
+
 		// Tooltip
 		$('a.tooltip').hover(
 			function() {
@@ -69,12 +71,12 @@
 				var $pos = $el.offset();
 				var $xPos = $pos.left;
 				var $yPos = $pos.top - 40;
-				
+
 				$('body').append('<div class="tooltip_container"></div>');
-					
+
 				var $title = $el.attr('title');
 				$el.attr('title', '');
-			
+
 				$('body').find('.tooltip_container').html($title).fadeIn(250).css({
 					'left' : $xPos,
 					'top' : $yPos
@@ -89,13 +91,13 @@
 				});
 			}
 		);
-		
+
 		// External link
 		$("a[href*='http://']:not([href*='" + location.hostname+"']),[href*='https://']:not([href*='" + location.hostname + "'])")
 		.addClass('external_link')
 		.attr('target','_blank')
 		.attr('title','Opens new window');
-		
+
 		// Cycle
 		$('.slideshow').before('<div class="banner_nav clearfix">').cycle({
 			fx: 'scrollLeft',
@@ -105,16 +107,16 @@
 			timeout: 5000,
 			pause: 1
 		});
-		
+
 		// Accordion
 		$('.accordion').accordion({
 			speed : 500
 		});
-		
+
 		// Fancybox
 		$('#various1').attr('href', '#inline1'); // need this for inline box to work with SS
-		
-		$('#various1, #example5, a[rel=fancybox]').fancybox({
+
+		$('#various1, #example5, a[rel=example_group]').fancybox({
 			'padding' : 10,
 			'margin' : 40,
 			'opacity' : false,
@@ -158,6 +160,6 @@
 			onClosed : function(){},
 			onError : function(){}
 		});
-		
+
 	});
 })(jQuery);
