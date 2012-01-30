@@ -31,17 +31,17 @@ class NewsHolder_Controller extends Page_Controller {
 
 	// Paginate News Article Holder
 	function NewsPaginate() {
-		$numNews = 1; // Number of articles per page
+		$numNews = 3; // Number of articles per page
 		
 		if(!isset($_GET['start']) || !is_numeric($_GET['start']) || (int)$_GET['start'] < 1) $_GET['start'] = 0;
-		$SQL_start = (int)$_GET['start'];
-		$doSet = DataObject::get(
-			$callerClass = "NewsPage",
-			$filter = "`ParentID` = '".$this->ID."'",
-			$sort = "Date DESC",
-			$join = "",
-			$limit = "{$SQL_start}, $numNews"
-		);
+			$SQL_start = (int)$_GET['start'];
+			$doSet = DataObject::get(
+				$callerClass = "NewsPage",
+				$filter = "`ParentID` = '".$this->ID."'",
+				$sort = "Date DESC",
+				$join = "",
+				$limit = "{$SQL_start}, $numNews"
+			);
 
 		return $doSet ? $doSet : false;
 	}

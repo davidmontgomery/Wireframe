@@ -1,8 +1,9 @@
 <div class="grid_1">
 	<% include BreadCrumbs %>
-	
-	<h1>$Title</h1>
-	$Content
+	<div class="t-normal">
+		<h1>$Title</h1>
+		$Content
+	</div><!-- .t-normal -->
 	$Form
 	$PageComments
 </div><!-- /grid_1 -->

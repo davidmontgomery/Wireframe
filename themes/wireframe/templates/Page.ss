@@ -11,27 +11,28 @@
 	<meta name="keywords" content="<% if MetaKeywords %>$MetaKeywords<% else %>$SiteConfig.GlobalKeywords<% end_if %>">
 </head>
 
+
 <body class="page_{$URLSegment} class_{$ClassName}">
 	<% include Accessibility %>
-	
+
 	<div id="container">
 		<div id="header">
 			<% if RecursiveBannerImage %>
 				$RecursiveBannerImage.CroppedImage(960,125)
 			<% end_if %>
-			
+
 			<% include TopNav %>
 			$SearchForm
 			<% include Branding %>
 		</div><!-- /header -->
-		
+
 		<% include Navigation %>
-		
-		<div class="layout typography clearfix">
+
+	<div class="layout typography clearfix">
 			$Layout
-		</div><!-- /layout -->
+	</div><!-- /layout -->
 	</div><!-- /container -->
-	
+
 	<% include Footer %>
 	<% include GoogleAnalytics %>
 </body>

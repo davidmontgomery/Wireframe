@@ -6,12 +6,12 @@
 	<% else %>
 		<p id="{$FormName}_error" class="message $MessageType"></p>
 	<% end_if %>
-	
+
 	<!-- Error block for jQuery messages -->
 	<div id="errorBox">
 		<ul></ul>
 	</div>
-	
+
 	<div class="field text">
 		<label for="$dataFieldByName(Name).id">Name:</label>
 		$dataFieldByName(Name)

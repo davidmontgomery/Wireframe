@@ -2,7 +2,7 @@
 	$(document).ready(function() {
 		
 		// http:docs.jquery.com/Plugins/Validation/validate
-		$("#FormTemplate_FormTemplate").validate({
+		$("#CustomFormTemplate_CustomFormTemplate").validate({
 			//debug: true,
 			// highlight adds a class of errorClass on the field div
 			highlight: function(element, errorClass, validClass) {

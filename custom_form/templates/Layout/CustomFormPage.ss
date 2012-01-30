@@ -8,7 +8,7 @@
 	<% if Success %>
 		$SubmitText
 	<% else %>
-		$FormTemplate
+		$CustomFormTemplate
 	<% end_if %>
 </div><!-- /grid_1 -->
 
@@ -16,7 +16,7 @@
 	<div class="widget">
 		<% include LatestComment %>
 	</div><!-- /widget -->
-	
+
 	<div class="widget">
 		<% include LatestBlog %>
 	</div><!-- /widget -->
