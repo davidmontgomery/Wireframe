@@ -639,10 +639,10 @@ p.blog_date {
 /* --------------------------------------------------------
  * Media queries
  * -------------------------------------------------------- */
-@media all and (orientation:portrait) {
+@media all and (orientation: portrait) {
   /* Style adjustments for portrait mode goes here */
 }
-@media all and (orientation:landscape) {
+@media all and (orientation: landscape) {
   /* Style adjustments for landscape mode goes here */
 }
 /* Grade-A Mobile Browsers (Opera Mobile, Mobile Safari, Android Chrome)
