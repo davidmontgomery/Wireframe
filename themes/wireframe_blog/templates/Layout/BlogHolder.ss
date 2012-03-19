@@ -16,9 +16,9 @@
 	<% if BlogEntries %>
 		<ul class="listing">
 			<% control BlogEntries %>
-				<li <% if Last %>class="last"<% end_if %>>
-					<% include BlogSummary %>
-				</li>
+			<li <% if Last %>class="last"<% end_if %>>
+				<% include BlogSummary %>
+			</li>
 			<% end_control %>
 		</ul><!-- /listing -->
 	<% else %>
