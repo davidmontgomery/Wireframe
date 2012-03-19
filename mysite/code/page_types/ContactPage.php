@@ -2,7 +2,7 @@
 
 class ContactPage extends Page {
 	static $icon = 'themes/wireframe/images/icons/contact';
-		
+
 	static $db = array(
 		'Mailto' => 'Varchar(100)',
 		'SubmitText' => 'HTMLText',
@@ -11,11 +11,11 @@ class ContactPage extends Page {
 		'ShowGoogleMap' => 'Boolean',
 		'AddressBlock' => 'HTMLText'
 	);
-	
+
 	public static $defaults = array(
 		'AddressBlock' => '<p>My Business<br />7 Minerva St<br />Newtown<br />Wellington 6012<br />New Zealand</p>'
 	);
-	
+
 	function getCMSFields() {
 		$fields = parent::getCMSFields();
 		$fields->addFieldToTab('Root.Content.GoogleMap', new CheckboxField ('ShowGoogleMap', 'Show Google Map'));
@@ -23,7 +23,7 @@ class ContactPage extends Page {
 		$fields->addFieldToTab('Root.Content.	', new HTMLEditorField('AddressBlock','Address', 10));
 		$fields->addFieldToTab('Root.Content.OnSubmission', new TextField('Mailto', 'Email submissions to'));
 		$fields->addFieldToTab('Root.Content.OnSubmission', new HTMLEditorField('SubmitText', 'Text on Submission'));
-		
+
 		return $fields;
 	}
 }

@@ -1,9 +1,9 @@
 <?php
 
 /**********************
- * 
+ *
  * Settings
- * 
+ *
  **********************/
 $project          = 'mysite'; // Sets mysite directory
 $projectName      = 'wireframe'; // Sets theme directory name
@@ -13,18 +13,18 @@ $adminEmail       = 'hello@davidmontgomery.co.nz'; // Sets administrators email 
 
 
 /**********************
- * 
+ *
  * Theme
- * 
+ *
  **********************/
 SSViewer::set_theme($projectName);
 BlogTree::$default_entries_limit = 3;
 
 
 /**********************
- * 
+ *
  * Constants
- * 
+ *
  **********************/
 global $databaseConfig;
 global $database;
@@ -38,9 +38,9 @@ define('SITE_NAME', $siteName);
 
 
 /**********************
- * 
+ *
  * CMS Tree icons
- * 
+ *
  **********************/
 Page::$icon = array('themes/wireframe/images/icons/page','file');
 ErrorPage::$icon = array('themes/wireframe/images/icons/error','file');
@@ -50,9 +50,9 @@ BlogEntry::$icon = array('themes/wireframe/images/icons/post','file');
 // ImageGalleryPage::$icon = array('themes/wireframe/images/icons/gallery','file');
 
 /**********************
- * 
+ *
  * Environment
- * 
+ *
  **********************/
 Validator::set_javascript_validation_handler('none');
 // Director::set_environment_type('live');
@@ -61,9 +61,9 @@ Validator::set_javascript_validation_handler('none');
 
 
 /**********************
- * 
+ *
  * Extensions
- * 
+ *
  **********************/
 DataObject::add_extension('SiteConfig', 'CustomSiteConfig');
 DataObject::add_extension('BlogEntry', 'BlogEntryDecorator');
@@ -75,22 +75,8 @@ Director::set_dev_servers(array(
 ));
 
 
-if (Director::isLive()) {
-	// Site is in Live mode
-	$databaseConfig = array(
-		'type' => 'MySQLDatabase',
-		'server' => 'mysql1.openhost.net.nz:3306',
-		'username' => 'davidWireframe',
-		'password' => 'vanhalen5150',
-		'database' => $projectName
-	);
-	
-} else if (Director::isDev()) {
-	// Site is in Dev and Test mode
-	SSViewer::flush_template_cache(); // Prevents needing ?flush=1 on the end of a URL
-} else {
-	// Site is Test
-}
+require_once("conf/ConfigureFromEnv.php");
+$databaseConfig["database"] = "dev_wireframe";
 
 // Local database settings
 $database = $projectName;
@@ -98,32 +84,32 @@ require_once("conf/ConfigureFromEnv.php");
 
 
 /**********************
- * 
+ *
  * Misc
- * 
+ *
  **********************/
 File::$allowed_extensions[] = 'pdf';
 
 
 /**********************
- * 
+ *
  * Admin customisation
- * 
+ *
  **********************/
 //CMSMenu::remove_menu_item('ReportAdmin');
 
 
 /**********************
- * 
+ *
  * CMS Rebranding
- * 
+ *
  **********************/
 LeftAndMain::setApplicationName('Wireframe');
 LeftAndMain::setLogo('themes/wireframe/images/cms-logo.png', 'margin-top: -3px;');
 LeftAndMain::set_loading_image('themes/wireframe/images/CMSLoading.gif');
 //LeftAndMain::require_css('themes/wireframe/css/cms.css');
- 
- 
+
+
 /**********************
 *
 * Emails
