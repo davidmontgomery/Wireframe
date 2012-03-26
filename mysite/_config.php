@@ -74,10 +74,6 @@ Director::set_dev_servers(array(
 	$projectName
 ));
 
-
-require_once("conf/ConfigureFromEnv.php");
-$databaseConfig["database"] = "dev_wireframe";
-
 // Local database settings
 $database = $projectName;
 require_once("conf/ConfigureFromEnv.php");
